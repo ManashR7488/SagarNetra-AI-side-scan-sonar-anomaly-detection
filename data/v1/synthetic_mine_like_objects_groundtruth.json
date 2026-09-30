@@ -1,0 +1,195 @@
+{
+  "scenario": "synthetic_mine_like_objects",
+  "description": "Sandy seabed with ripples: six cylinders (mine-like / pipe sections), two containers, a pipeline, curved track, heave dropouts.",
+  "synthetic": true,
+  "sonar": {
+    "frequency_khz": 450,
+    "slant_range_m": 50.0,
+    "samples_per_side": 1000,
+    "ping_rate_hz": 10.0
+  },
+  "survey": {
+    "pings": 2000,
+    "speed_mps": 1.5,
+    "track_length_m": 299.9,
+    "start": {
+      "latitude": 13.062,
+      "longitude": 80.345,
+      "time": "2026-09-29T06:00:00+00:00"
+    },
+    "heading_deg": 95.0,
+    "turn_deg": -25.0,
+    "altitude_m": 12.0
+  },
+  "objects": [
+    {
+      "id": "GT-02",
+      "kind": "container",
+      "expected_class": "debris",
+      "man_made": true,
+      "latitude": 13.0621896,
+      "longitude": 80.3456987,
+      "ping_index": 500,
+      "side": "port",
+      "ground_range_m": 26,
+      "slant_sample": 570,
+      "length_m": 6.1,
+      "width_m": 2.4,
+      "height_m": 2.6,
+      "orientation_deg": 35
+    },
+    {
+      "id": "GT-03",
+      "kind": "container",
+      "expected_class": "debris",
+      "man_made": true,
+      "latitude": 13.0618555,
+      "longitude": 80.3474595,
+      "ping_index": 1734,
+      "side": "starboard",
+      "ground_range_m": 31,
+      "slant_sample": 666,
+      "length_m": 6.1,
+      "width_m": 2.4,
+      "height_m": 2.6,
+      "orientation_deg": -20
+    },
+    {
+      "id": "GT-04",
+      "kind": "cylinder",
+      "expected_class": "mine_like_object",
+      "man_made": true,
+      "latitude": 13.0618101,
+      "longitude": 80.3453576,
+      "ping_index": 267,
+      "side": "starboard",
+      "ground_range_m": 18,
+      "slant_sample": 432,
+      "length_m": 2.902076229444716,
+      "width_m": 0.575302864440946,
+      "height_m": 0.8,
+      "orientation_deg": 10
+    },
+    {
+      "id": "GT-05",
+      "kind": "cylinder",
+      "expected_class": "mine_like_object",
+      "man_made": true,
+      "latitude": 13.0622668,
+      "longitude": 80.3460117,
+      "ping_index": 734,
+      "side": "port",
+      "ground_range_m": 35,
+      "slant_sample": 739,
+      "length_m": 2.930545043364641,
+      "width_m": 0.8150906505291134,
+      "height_m": 0.8,
+      "orientation_deg": 80
+    },
+    {
+      "id": "GT-06",
+      "kind": "cylinder",
+      "expected_class": "mine_like_object",
+      "man_made": true,
+      "latitude": 13.0618687,
+      "longitude": 80.346531,
+      "ping_index": 1100,
+      "side": "starboard",
+      "ground_range_m": 12,
+      "slant_sample": 341,
+      "length_m": 2.5668315026675597,
+      "width_m": 0.7638429069963797,
+      "height_m": 0.8,
+      "orientation_deg": 45
+    },
+    {
+      "id": "GT-07",
+      "kind": "cylinder",
+      "expected_class": "mine_like_object",
+      "man_made": true,
+      "latitude": 13.0621562,
+      "longitude": 80.3468204,
+      "ping_index": 1334,
+      "side": "port",
+      "ground_range_m": 16,
+      "slant_sample": 401,
+      "length_m": 2.455272275880771,
+      "width_m": 0.8669053198571364,
+      "height_m": 0.8,
+      "orientation_deg": 120
+    },
+    {
+      "id": "GT-08",
+      "kind": "cylinder",
+      "expected_class": "mine_like_object",
+      "man_made": true,
+      "latitude": 13.0617371,
+      "longitude": 80.3472349,
+      "ping_index": 1567,
+      "side": "starboard",
+      "ground_range_m": 38,
+      "slant_sample": 796,
+      "length_m": 2.0799158474401667,
+      "width_m": 0.7397263969078324,
+      "height_m": 0.8,
+      "orientation_deg": 150
+    },
+    {
+      "id": "GT-09",
+      "kind": "cylinder",
+      "expected_class": "mine_like_object",
+      "man_made": true,
+      "latitude": 13.0624451,
+      "longitude": 80.3475183,
+      "ping_index": 1900,
+      "side": "port",
+      "ground_range_m": 30,
+      "slant_sample": 645,
+      "length_m": 2.7770916742459804,
+      "width_m": 0.5539045806484519,
+      "height_m": 0.8,
+      "orientation_deg": 5
+    }
+  ],
+  "pipelines": [
+    {
+      "kind": "pipeline",
+      "y": 120,
+      "x": 0,
+      "length": 1000000000.0,
+      "width": 0.35,
+      "height": 0.45,
+      "angle": 70,
+      "reflect": 2.2,
+      "label": "mine_like_object",
+      "seed": 40,
+      "id": "GT-01"
+    }
+  ],
+  "dropouts": [
+    {
+      "first_ping": 1363,
+      "pings": 3
+    },
+    {
+      "first_ping": 148,
+      "pings": 1
+    },
+    {
+      "first_ping": 1456,
+      "pings": 1
+    },
+    {
+      "first_ping": 1707,
+      "pings": 4
+    },
+    {
+      "first_ping": 87,
+      "pings": 4
+    },
+    {
+      "first_ping": 467,
+      "pings": 2
+    }
+  ]
+}

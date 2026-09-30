@@ -1,0 +1,593 @@
+{
+  "area": "CHN",
+  "name": "Chennai Port approaches",
+  "origin": {
+    "latitude": 13.1,
+    "longitude": 80.335
+  },
+  "sonar_profile": "SIM-DF400/900",
+  "survey_lines": [
+    "CHN-L01",
+    "CHN-L02",
+    "CHN-L03",
+    "CHN-L04",
+    "CHN-L05",
+    "CHN-L06",
+    "CHN-L07",
+    "CHN-L08"
+  ],
+  "seabed": {
+    "depth_m": 18,
+    "slope": [
+      0.004,
+      0.0
+    ],
+    "mud": 0.35,
+    "gravel": 0.08,
+    "rock": 0.02,
+    "rock_height": 1.5,
+    "reef": 0.0,
+    "sandwave_amp": 0.35,
+    "sandwave_len": 35,
+    "ripple_amp": 0.05,
+    "ripple_len": 1.4,
+    "trawl_marks": 2,
+    "pockmarks": 0,
+    "tide_amp": 0.55,
+    "temp_c": 28.5,
+    "salinity": 33.8
+  },
+  "synthetic": true,
+  "objects": [
+    {
+      "object_id": "CHN-OBJ-001",
+      "kind": "shipwreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "intact hull",
+      "latitude": 13.1004832,
+      "longitude": 80.3364464,
+      "size_m": {
+        "length": 62.0,
+        "width": 9.26,
+        "height": 7.34
+      },
+      "azimuth_deg": 238.2,
+      "imaged_by_lines": [
+        "CHN-L05",
+        "CHN-L06"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-002",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1005594,
+      "longitude": 80.3367907,
+      "size_m": {
+        "length": 1.97,
+        "width": 1.17,
+        "height": 0.82
+      },
+      "azimuth_deg": 323.2,
+      "imaged_by_lines": [
+        "CHN-L06",
+        "CHN-L07"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-003",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.100443,
+      "longitude": 80.3369363,
+      "size_m": {
+        "length": 1.4,
+        "width": 0.99,
+        "height": 0.62
+      },
+      "azimuth_deg": 128.9,
+      "imaged_by_lines": [
+        "CHN-L06",
+        "CHN-L07"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-004",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1000582,
+      "longitude": 80.3365077,
+      "size_m": {
+        "length": 1.59,
+        "width": 0.4,
+        "height": 0.25
+      },
+      "azimuth_deg": 342.9,
+      "imaged_by_lines": []
+    },
+    {
+      "object_id": "CHN-OBJ-005",
+      "kind": "shipwreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "broken in two",
+      "latitude": 13.1027326,
+      "longitude": 80.3338737,
+      "size_m": {
+        "length": 34.0,
+        "width": 4.82,
+        "height": 3.79
+      },
+      "azimuth_deg": 225.6,
+      "imaged_by_lines": [
+        "CHN-L02",
+        "CHN-L03"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-006",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1025466,
+      "longitude": 80.3335807,
+      "size_m": {
+        "length": 2.64,
+        "width": 0.77,
+        "height": 0.2
+      },
+      "azimuth_deg": 276.8,
+      "imaged_by_lines": [
+        "CHN-L02"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-007",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1024884,
+      "longitude": 80.3337804,
+      "size_m": {
+        "length": 2.2,
+        "width": 0.86,
+        "height": 0.64
+      },
+      "azimuth_deg": 71.2,
+      "imaged_by_lines": [
+        "CHN-L02",
+        "CHN-L03"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-008",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1026972,
+      "longitude": 80.3335111,
+      "size_m": {
+        "length": 2.08,
+        "width": 1.03,
+        "height": 0.28
+      },
+      "azimuth_deg": 117.0,
+      "imaged_by_lines": [
+        "CHN-L01",
+        "CHN-L02"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-009",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.102558,
+      "longitude": 80.3340211,
+      "size_m": {
+        "length": 2.48,
+        "width": 0.99,
+        "height": 0.39
+      },
+      "azimuth_deg": 97.7,
+      "imaged_by_lines": [
+        "CHN-L02",
+        "CHN-L03"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-010",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1028784,
+      "longitude": 80.333663,
+      "size_m": {
+        "length": 1.76,
+        "width": 0.42,
+        "height": 0.52
+      },
+      "azimuth_deg": 154.2,
+      "imaged_by_lines": [
+        "CHN-L02"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-011",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.102426,
+      "longitude": 80.3336804,
+      "size_m": {
+        "length": 2.04,
+        "width": 1.03,
+        "height": 0.55
+      },
+      "azimuth_deg": 210.5,
+      "imaged_by_lines": [
+        "CHN-L02"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-012",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container",
+      "latitude": 13.1004884,
+      "longitude": 80.3375596,
+      "size_m": {
+        "length": 6.06,
+        "width": 2.44,
+        "height": 2.59
+      },
+      "azimuth_deg": 65.2,
+      "imaged_by_lines": [
+        "CHN-L07"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-013",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container",
+      "latitude": 13.1004339,
+      "longitude": 80.3363398,
+      "size_m": {
+        "length": 6.06,
+        "width": 2.44,
+        "height": 2.59
+      },
+      "azimuth_deg": 34.3,
+      "imaged_by_lines": [
+        "CHN-L05",
+        "CHN-L06"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-014",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container",
+      "latitude": 13.1020958,
+      "longitude": 80.3358966,
+      "size_m": {
+        "length": 6.06,
+        "width": 2.44,
+        "height": 2.59
+      },
+      "azimuth_deg": 159.4,
+      "imaged_by_lines": [
+        "CHN-L04"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-015",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container (on its side)",
+      "latitude": 13.0996444,
+      "longitude": 80.3369661,
+      "size_m": {
+        "length": 12.19,
+        "width": 2.59,
+        "height": 2.44
+      },
+      "azimuth_deg": 135.1,
+      "imaged_by_lines": [
+        "CHN-L07"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-016",
+      "kind": "tyre_cluster",
+      "class": "debris",
+      "man_made": true,
+      "notes": "10 dumped tyres",
+      "latitude": 13.1024656,
+      "longitude": 80.3357928,
+      "size_m": {
+        "length": 10.0,
+        "width": 10.0,
+        "height": 0.45
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "CHN-L04"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-017",
+      "kind": "tyre_cluster",
+      "class": "debris",
+      "man_made": true,
+      "notes": "8 dumped tyres",
+      "latitude": 13.1015299,
+      "longitude": 80.3336364,
+      "size_m": {
+        "length": 10.0,
+        "width": 10.0,
+        "height": 0.45
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "CHN-L02",
+        "CHN-L03"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-018",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1007294,
+      "longitude": 80.3366803,
+      "size_m": {
+        "length": 1.4,
+        "width": 0.71,
+        "height": 0.58
+      },
+      "azimuth_deg": 21.2,
+      "imaged_by_lines": [
+        "CHN-L06"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-019",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1012524,
+      "longitude": 80.3367455,
+      "size_m": {
+        "length": 2.47,
+        "width": 0.55,
+        "height": 0.38
+      },
+      "azimuth_deg": 88.0,
+      "imaged_by_lines": [
+        "CHN-L06"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-020",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1020706,
+      "longitude": 80.3359044,
+      "size_m": {
+        "length": 0.59,
+        "width": 0.91,
+        "height": 0.67
+      },
+      "azimuth_deg": 255.3,
+      "imaged_by_lines": [
+        "CHN-L04"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-021",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1025397,
+      "longitude": 80.334628,
+      "size_m": {
+        "length": 1.49,
+        "width": 0.94,
+        "height": 0.83
+      },
+      "azimuth_deg": 113.1,
+      "imaged_by_lines": []
+    },
+    {
+      "object_id": "CHN-OBJ-022",
+      "kind": "anchor_chain",
+      "class": "debris",
+      "man_made": true,
+      "notes": "anchor with chain",
+      "latitude": 13.102273,
+      "longitude": 80.3349235,
+      "size_m": {
+        "length": 2.2,
+        "width": 1.6,
+        "height": 0.35
+      },
+      "azimuth_deg": 62.0,
+      "imaged_by_lines": [
+        "CHN-L03",
+        "CHN-L04"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-023",
+      "kind": "human_body",
+      "class": "human_body",
+      "man_made": true,
+      "notes": "drowning victim (SAR target)",
+      "latitude": 13.1019422,
+      "longitude": 80.3335529,
+      "size_m": {
+        "length": 1.75,
+        "width": 0.45,
+        "height": 0.28
+      },
+      "azimuth_deg": 315.5,
+      "imaged_by_lines": [
+        "CHN-L02"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-024",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 13.1020043,
+      "longitude": 80.3365889,
+      "size_m": {
+        "length": 15.0,
+        "width": 11.58,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "CHN-L06"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-025",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 13.1015352,
+      "longitude": 80.3363766,
+      "size_m": {
+        "length": 18.16,
+        "width": 8.36,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "CHN-L05",
+        "CHN-L06"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-026",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 13.1022006,
+      "longitude": 80.3335126,
+      "size_m": {
+        "length": 20.27,
+        "width": 8.51,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "CHN-L02"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-027",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 13.1016338,
+      "longitude": 80.3337146,
+      "size_m": {
+        "length": 2.1,
+        "width": 1.36,
+        "height": 1.07
+      },
+      "azimuth_deg": 183.9,
+      "imaged_by_lines": [
+        "CHN-L02",
+        "CHN-L03"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-028",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 13.1015812,
+      "longitude": 80.3332683,
+      "size_m": {
+        "length": 0.98,
+        "width": 0.71,
+        "height": 0.53
+      },
+      "azimuth_deg": 288.1,
+      "imaged_by_lines": [
+        "CHN-L02"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-029",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 13.1017671,
+      "longitude": 80.3348155,
+      "size_m": {
+        "length": 2.11,
+        "width": 1.79,
+        "height": 1.88
+      },
+      "azimuth_deg": 130.8,
+      "imaged_by_lines": [
+        "CHN-L03",
+        "CHN-L04"
+      ]
+    },
+    {
+      "object_id": "CHN-OBJ-030",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 13.1013005,
+      "longitude": 80.3365255,
+      "size_m": {
+        "length": 2.27,
+        "width": 1.93,
+        "height": 1.07
+      },
+      "azimuth_deg": 112.6,
+      "imaged_by_lines": [
+        "CHN-L05",
+        "CHN-L06"
+      ]
+    }
+  ]
+}

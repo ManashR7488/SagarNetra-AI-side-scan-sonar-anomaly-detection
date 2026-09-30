@@ -1,0 +1,101 @@
+{
+  "name": "shipwreck_segmenter",
+  "task": "segment",
+  "architecture": "yolo11s-seg",
+  "classes": [
+    "shipwreck"
+  ],
+  "hazard": {
+    "shipwreck": true
+  },
+  "input": {
+    "imgsz": 1024,
+    "color": "grayscale replicated to 3 channels (BGR)"
+  },
+  "tiling": {
+    "tile": 1024,
+    "overlap": 0.25,
+    "nms_iou": 0.5
+  },
+  "thresholds": {
+    "shipwreck": {
+      "conf": 0.295,
+      "f1": 0.2361
+    }
+  },
+  "default_conf": 0.25,
+  "test_metrics": {
+    "box": [
+      {
+        "class": "shipwreck",
+        "precision": 0.3155,
+        "recall": 0.2217,
+        "mAP50": 0.1872,
+        "mAP50-95": 0.0804
+      },
+      {
+        "class": "ALL",
+        "precision": 0.3155,
+        "recall": 0.2217,
+        "mAP50": 0.1872,
+        "mAP50-95": 0.0804
+      }
+    ],
+    "mask": [
+      {
+        "class": "shipwreck",
+        "precision": 0.3149,
+        "recall": 0.2298,
+        "mAP50": 0.1736,
+        "mAP50-95": 0.0736
+      },
+      {
+        "class": "ALL",
+        "precision": 0.3149,
+        "recall": 0.2298,
+        "mAP50": 0.1736,
+        "mAP50-95": 0.0736
+      }
+    ]
+  },
+  "train_device_speed_ms": {
+    "preprocess": 4.2468427440383785,
+    "inference": 37.87585171501676,
+    "loss": 0.001657783651403778,
+    "postprocess": 2.408235356167738
+  },
+  "cpu_onnx_latency_ms_per_tile": 362.8,
+  "datasets": {
+    "ai4shipwrecks": {
+      "train": {
+        "images": 396,
+        "shipwreck": 1136,
+        "background": 132
+      },
+      "val": {
+        "images": 99,
+        "shipwreck": 184,
+        "background": 34
+      },
+      "test": {
+        "images": 379,
+        "shipwreck": 618,
+        "background": 126
+      }
+    },
+    "terrain_neg": {
+      "train": {
+        "images": 150,
+        "background": 150
+      }
+    },
+    "speckle_aug": {
+      "train": {
+        "images": 81
+      }
+    }
+  },
+  "trained_at": "2026-09-29 03:10:29",
+  "epochs": 120,
+  "quick_test": false
+}

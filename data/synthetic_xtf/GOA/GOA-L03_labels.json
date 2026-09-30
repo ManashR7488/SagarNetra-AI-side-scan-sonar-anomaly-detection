@@ -1,0 +1,336 @@
+{
+  "file": "GOA/GOA-L03.xtf",
+  "area": "GOA",
+  "area_name": "Mormugao harbour & beach (SAR)",
+  "line": "GOA-L03",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-CHIRP455",
+    "description": "Hull-mounted 455 kHz CHIRP side imaging (small craft, SAR)",
+    "platform": "hull",
+    "channels": [
+      {
+        "frequency_khz": 455,
+        "slant_range_m": 30,
+        "samples_per_side": 900,
+        "horizontal_beam_deg": 0.8,
+        "vertical_beam_deg": 55,
+        "tilt_deg": 30
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1560,
+    "ping_rate_hz": 12.0,
+    "duration_s": 129.9,
+    "start_time": "2026-10-18T04:21:08.513380+00:00",
+    "end_time": "2026-10-18T04:23:18.430047+00:00",
+    "start": {
+      "latitude": 15.4155127,
+      "longitude": 73.7899731
+    },
+    "end": {
+      "latitude": 15.4148976,
+      "longitude": 73.7923586
+    },
+    "course_deg": 105.0,
+    "speed_kn": 3.97,
+    "water_depth_m": [
+      6.84,
+      8.8
+    ],
+    "towfish_depth_m_mean": 0.4,
+    "altitude_m_mean": 7.42,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1542.8,
+    "water_temp_c_mean": 29.01,
+    "recorded_position_error_m_mean": 0.98
+  },
+  "conditions": {
+    "surface_return": true,
+    "sea_state": 3,
+    "dropouts": 0,
+    "tvg_mismatch": -0.11755042534835805
+  },
+  "dropouts": [],
+  "waterfall_px": [
+    7947,
+    1800
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "GOA-OBJ-002",
+      "kind": "human_body",
+      "class": "human_body",
+      "man_made": true,
+      "notes": "drowning victim (SAR target)",
+      "latitude": 15.4151817,
+      "longitude": 73.7918781,
+      "water_depth_m": 8.26,
+      "size_m": {
+        "length": 1.75,
+        "width": 0.45,
+        "height": 0.28
+      },
+      "azimuth_deg": 187.7,
+      "side": "port",
+      "ground_range_m": 15.74,
+      "pings": [
+        1249,
+        1251
+      ],
+      "samples": [
+        505,
+        550
+      ],
+      "visible_samples": 89,
+      "bbox_px": [
+        348.0,
+        6361.7,
+        396.0,
+        6379.0
+      ],
+      "time_utc": "2026-10-18T04:22:52.680047+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-005",
+      "kind": "tyre",
+      "class": "debris",
+      "man_made": true,
+      "notes": "single tyre",
+      "latitude": 15.4152232,
+      "longitude": 73.7914049,
+      "water_depth_m": 7.81,
+      "size_m": {
+        "length": 0.7,
+        "width": 0.7,
+        "height": 0.22
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 7.04,
+      "pings": [
+        952,
+        953
+      ],
+      "samples": [
+        308,
+        313
+      ],
+      "visible_samples": 10,
+      "bbox_px": [
+        585.0,
+        4848.7,
+        593.0,
+        4860.9
+      ],
+      "time_utc": "2026-10-18T04:22:27.846713+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-013",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 7 derelict crab pots",
+      "latitude": 15.41543,
+      "longitude": 73.7913191,
+      "water_depth_m": 8.02,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 274.3,
+      "side": "port",
+      "ground_range_m": 26.93,
+      "pings": [
+        862,
+        868
+      ],
+      "samples": [
+        829,
+        849
+      ],
+      "visible_samples": 102,
+      "bbox_px": [
+        49.0,
+        4390.2,
+        72.0,
+        4427.9
+      ],
+      "time_utc": "2026-10-18T04:22:20.596713+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-014",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 7 derelict crab pots",
+      "latitude": 15.4154667,
+      "longitude": 73.7911784,
+      "water_depth_m": 7.94,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 29.9,
+      "side": "port",
+      "ground_range_m": 27.1,
+      "pings": [
+        770,
+        774
+      ],
+      "samples": [
+        830,
+        857
+      ],
+      "visible_samples": 92,
+      "bbox_px": [
+        41.0,
+        3921.6,
+        71.0,
+        3949.0
+      ],
+      "time_utc": "2026-10-18T04:22:12.846713+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-015",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 7 derelict crab pots",
+      "latitude": 15.4154776,
+      "longitude": 73.7910402,
+      "water_depth_m": 7.82,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 114.7,
+      "side": "port",
+      "ground_range_m": 24.62,
+      "pings": [
+        680,
+        685
+      ],
+      "samples": [
+        761,
+        781
+      ],
+      "visible_samples": 101,
+      "bbox_px": [
+        117.0,
+        3463.1,
+        140.0,
+        3495.6
+      ],
+      "time_utc": "2026-10-18T04:22:05.346713+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-023",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 15.415608,
+      "longitude": 73.790534,
+      "water_depth_m": 7.49,
+      "size_m": {
+        "length": 15.29,
+        "width": 8.88,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 25.99,
+      "pings": [
+        297,
+        388
+      ],
+      "samples": [
+        725,
+        899
+      ],
+      "visible_samples": 2039,
+      "bbox_px": [
+        0.0,
+        1512.0,
+        176.0,
+        1982.7
+      ],
+      "time_utc": "2026-10-18T04:21:37.013380+00:00",
+      "school_height_above_seabed_m": 3.7
+    },
+    {
+      "object_id": "GOA-OBJ-008",
+      "kind": "tyre_cluster",
+      "class": "debris",
+      "man_made": true,
+      "notes": "13 dumped tyres",
+      "latitude": 15.4151871,
+      "longitude": 73.7909887,
+      "water_depth_m": 7.33,
+      "size_m": {
+        "length": 10.0,
+        "width": 10.0,
+        "height": 0.45
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 8.05,
+      "pings": [
+        679,
+        721
+      ],
+      "samples": [
+        254,
+        373
+      ],
+      "visible_samples": 117,
+      "bbox_px": [
+        1153.0,
+        3458.0,
+        1275.0,
+        3679.0
+      ],
+      "time_utc": "2026-10-18T04:22:06.846713+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-021",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 15.4152151,
+      "longitude": 73.7903036,
+      "water_depth_m": 6.66,
+      "size_m": {
+        "length": 0.62,
+        "width": 0.94,
+        "height": 0.73
+      },
+      "azimuth_deg": 180.0,
+      "side": "starboard",
+      "ground_range_m": 22.13,
+      "pings": [
+        263,
+        268
+      ],
+      "samples": [
+        686,
+        703
+      ],
+      "visible_samples": 72,
+      "bbox_px": [
+        1585.0,
+        1338.8,
+        1605.0,
+        1371.3
+      ],
+      "time_utc": "2026-10-18T04:21:30.596713+00:00"
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+{
+  "summary": {
+    "files": 14,
+    "per_class": {
+      "shipwreck": {
+        "targets": 4,
+        "found": 3,
+        "class_correct": 3,
+        "recall": 0.75
+      },
+      "debris": {
+        "targets": 36,
+        "found": 9,
+        "class_correct": 1,
+        "recall": 0.25
+      },
+      "human_body": {
+        "targets": 1,
+        "found": 0,
+        "class_correct": 0,
+        "recall": 0.0
+      },
+      "mine_like_object": {
+        "targets": 15,
+        "found": 1,
+        "class_correct": 1,
+        "recall": 0.067
+      }
+    },
+    "false_positives": 46,
+    "false_positives_on_natural_rock": 9,
+    "false_positive_classes": {
+      "shipwreck": 36,
+      "aircraft_wreck": 7,
+      "debris": 3
+    },
+    "geotag_error_m": {
+      "median": 2.57,
+      "p90": 11.15
+    },
+    "mean_seconds_per_file": 18.8
+  },
+  "files": [
+    {
+      "file": "AND/AND-L04.xtf",
+      "area": "AND",
+      "ms": 32280.6,
+      "targets": [
+        {
+          "class": "shipwreck",
+          "kind": "shipwreck",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "wreck_debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "wreck_debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        }
+      ],
+      "confirmed": 3,
+      "false_positives": 3,
+      "fp_on_natural_rock": 0,
+      "fp_classes": {
+        "shipwreck": 1,
+        "aircraft_wreck": 2
+      },
+      "suppressed": 1
+    },
+    {
+      "file": "AND/AND-L05.xtf",
+      "area": "AND",
+      "ms": 29006.5,
+      "targets": [
+        {
+          "class": "debris",
+          "kind": "concrete_blocks",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 2.5701000708627117
+        }
+      ],
+      "confirmed": 6,
+      "false_positives": 5,
+      "fp_on_natural_rock": 1,
+      "fp_classes": {
+        "aircraft_wreck": 1,
+        "shipwreck": 4
+      },
+      "suppressed": 3
+    },
+    {
+      "file": "CHN/CHN-L04.xtf",
+      "area": "CHN",
+      "ms": 16458.8,
+      "targets": [
+        {
+          "class": "debris",
+          "kind": "container",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 0.662535676634392
+        },
+        {
+          "class": "debris",
+          "kind": "tyre_cluster",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "anchor_chain",
+          "found": false
+        }
+      ],
+      "confirmed": 4,
+      "false_positives": 3,
+      "fp_on_natural_rock": 1,
+      "fp_classes": {
+        "shipwreck": 2,
+        "debris": 1
+      },
+      "suppressed": 1
+    },
+    {
+      "file": "CHN/CHN-L05.xtf",
+      "area": "CHN",
+      "ms": 15867.4,
+      "targets": [
+        {
+          "class": "shipwreck",
+          "kind": "shipwreck",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 16.20027014647484
+        },
+        {
+          "class": "debris",
+          "kind": "container",
+          "found": false
+        }
+      ],
+      "confirmed": 3,
+      "false_positives": 2,
+      "fp_on_natural_rock": 1,
+      "fp_classes": {
+        "debris": 1,
+        "shipwreck": 1
+      },
+      "suppressed": 8
+    },
+    {
+      "file": "GOA/GOA-L04.xtf",
+      "area": "GOA",
+      "ms": 31637.7,
+      "targets": [
+        {
+          "class": "human_body",
+          "kind": "human_body",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "tyre_cluster",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": true,
+          "pred": "mine_like_object",
+          "geo_err_m": 0.556078730103291
+        }
+      ],
+      "confirmed": 8,
+      "false_positives": 7,
+      "fp_on_natural_rock": 0,
+      "fp_classes": {
+        "shipwreck": 7
+      },
+      "suppressed": 6
+    },
+    {
+      "file": "GOA/GOA-L05.xtf",
+      "area": "GOA",
+      "ms": 29691.4,
+      "targets": [
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "shipwreck",
+          "kind": "boat_wreck",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 0.378215211882359
+        }
+      ],
+      "confirmed": 6,
+      "false_positives": 5,
+      "fp_on_natural_rock": 0,
+      "fp_classes": {
+        "shipwreck": 5
+      },
+      "suppressed": 0
+    },
+    {
+      "file": "KOC/KOC-L04.xtf",
+      "area": "KOC",
+      "ms": 24046.7,
+      "targets": [
+        {
+          "class": "debris",
+          "kind": "ghost_net",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "ghost_net",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 2.3527238360915805
+        },
+        {
+          "class": "debris",
+          "kind": "ghost_net",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 4.904228778226023
+        },
+        {
+          "class": "debris",
+          "kind": "ghost_net",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 1.6375373973084757
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        }
+      ],
+      "confirmed": 9,
+      "false_positives": 6,
+      "fp_on_natural_rock": 2,
+      "fp_classes": {
+        "shipwreck": 6
+      },
+      "suppressed": 2
+    },
+    {
+      "file": "KOC/KOC-L05.xtf",
+      "area": "KOC",
+      "ms": 25028.0,
+      "targets": [
+        {
+          "class": "debris",
+          "kind": "ghost_net",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "ghost_net",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 1.3645476300126385
+        }
+      ],
+      "confirmed": 5,
+      "false_positives": 4,
+      "fp_on_natural_rock": 1,
+      "fp_classes": {
+        "shipwreck": 4
+      },
+      "suppressed": 1
+    },
+    {
+      "file": "MAN/MAN-L04.xtf",
+      "area": "MAN",
+      "ms": 15923.6,
+      "targets": [],
+      "confirmed": 5,
+      "false_positives": 5,
+      "fp_on_natural_rock": 1,
+      "fp_classes": {
+        "aircraft_wreck": 2,
+        "shipwreck": 3
+      },
+      "suppressed": 4
+    },
+    {
+      "file": "MAN/MAN-L05.xtf",
+      "area": "MAN",
+      "ms": 13294.4,
+      "targets": [],
+      "confirmed": 6,
+      "false_positives": 6,
+      "fp_on_natural_rock": 2,
+      "fp_classes": {
+        "debris": 1,
+        "aircraft_wreck": 2,
+        "shipwreck": 3
+      },
+      "suppressed": 3
+    },
+    {
+      "file": "MUM/MUM-L04.xtf",
+      "area": "MUM",
+      "ms": 7462.0,
+      "targets": [
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        }
+      ],
+      "confirmed": 0,
+      "false_positives": 0,
+      "fp_on_natural_rock": 0,
+      "fp_classes": {},
+      "suppressed": 0
+    },
+    {
+      "file": "MUM/MUM-L05.xtf",
+      "area": "MUM",
+      "ms": 7901.0,
+      "targets": [
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "anchor_chain",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "anchor_chain",
+          "found": false
+        }
+      ],
+      "confirmed": 0,
+      "false_positives": 0,
+      "fp_on_natural_rock": 0,
+      "fp_classes": {},
+      "suppressed": 3
+    },
+    {
+      "file": "VIZ/VIZ-L04.xtf",
+      "area": "VIZ",
+      "ms": 7576.5,
+      "targets": [
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": true,
+          "pred": "debris",
+          "geo_err_m": 3.768267634228318
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "mine_cylinder",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "mine_cylinder",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "manta_mine",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "manta_mine",
+          "found": false
+        },
+        {
+          "class": "shipwreck",
+          "kind": "shipwreck",
+          "found": true,
+          "pred": "shipwreck",
+          "geo_err_m": 11.75072848643573
+        },
+        {
+          "class": "debris",
+          "kind": "wreck_debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "wreck_debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "wreck_debris",
+          "found": true,
+          "pred": "mine_like_object",
+          "geo_err_m": 2.933498798308704
+        },
+        {
+          "class": "debris",
+          "kind": "wreck_debris",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        }
+      ],
+      "confirmed": 3,
+      "false_positives": 0,
+      "fp_on_natural_rock": 0,
+      "fp_classes": {},
+      "suppressed": 1
+    },
+    {
+      "file": "VIZ/VIZ-L05.xtf",
+      "area": "VIZ",
+      "ms": 7473.0,
+      "targets": [
+        {
+          "class": "mine_like_object",
+          "kind": "mine_cylinder",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "pipeline",
+          "found": false
+        },
+        {
+          "class": "debris",
+          "kind": "debris",
+          "found": false
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "mine_cylinder",
+          "found": true,
+          "pred": "mine_like_object",
+          "geo_err_m": 8.736025938155628
+        },
+        {
+          "class": "mine_like_object",
+          "kind": "manta_mine",
+          "found": false
+        }
+      ],
+      "confirmed": 1,
+      "false_positives": 0,
+      "fp_on_natural_rock": 0,
+      "fp_classes": {},
+      "suppressed": 3
+    }
+  ]
+}

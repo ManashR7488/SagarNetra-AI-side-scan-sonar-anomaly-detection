@@ -1,0 +1,74 @@
+{
+  "file": "CHN/CHN-L08.xtf",
+  "area": "CHN",
+  "area_name": "Chennai Port approaches",
+  "line": "CHN-L08",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF400/900",
+    "description": "Dual-frequency towed side-scan, 400/900 kHz CHIRP class",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 400,
+        "slant_range_m": 75,
+        "samples_per_side": 1000,
+        "horizontal_beam_deg": 0.46,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 20
+      },
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.28,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 20
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1211,
+    "ping_rate_hz": 9.75,
+    "duration_s": 124.1,
+    "start_time": "2026-10-03T02:51:06.776171+00:00",
+    "end_time": "2026-10-03T02:53:10.836321+00:00",
+    "start": {
+      "latitude": 13.1019362,
+      "longitude": 80.3390003
+    },
+    "end": {
+      "latitude": 13.0997095,
+      "longitude": 80.3381418
+    },
+    "course_deg": 200.0,
+    "speed_kn": 4.2,
+    "water_depth_m": [
+      17.34,
+      18.82
+    ],
+    "towfish_depth_m_mean": 6.33,
+    "altitude_m_mean": 11.47,
+    "layback_m_mean": 37.08,
+    "sound_speed_mps_mean": 1540.5,
+    "water_temp_c_mean": 28.22,
+    "recorded_position_error_m_mean": 1.88
+  },
+  "conditions": {
+    "sea_state": 1,
+    "dropouts": 1,
+    "tvg_mismatch": 0.030448245112529082
+  },
+  "dropouts": [
+    {
+      "first_ping": 174,
+      "pings": 3
+    }
+  ],
+  "waterfall_px": [
+    3531,
+    2000
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": []
+}

@@ -1,0 +1,62 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.claude
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# python 
+.venv
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+__pycache__/
+
+# dotenv environment variables file
+.env
+.env.*
+
+
+# ...but keep the documented templates
+!.env.example
+
+# test output / caches
+.coverage
+htmlcov/
+*.egg-info/
+
+# App uploads when storage falls back to local disk
+server/uploads/
+
+# Synthetic survey data: 56 XTF lines (~490 MB) are regenerated with ai/tools/generate_xtf.py.
+# Only three demo lines are versioned; labels, navigation, manifest and previews are all kept.
+data/synthetic_xtf/**/*.xtf
+!data/synthetic_xtf/AND/AND-L03.xtf
+!data/synthetic_xtf/VIZ/VIZ-L03.xtf
+!data/synthetic_xtf/CHN/CHN-L02.xtf
+
+# Duplicate training checkpoints (best.pt / best.onnx are the ones the service loads)
+ai/models/**/last.pt
+
+
+docs/*.md

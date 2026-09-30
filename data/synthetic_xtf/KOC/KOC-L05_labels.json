@@ -1,0 +1,282 @@
+{
+  "file": "KOC/KOC-L05.xtf",
+  "area": "KOC",
+  "area_name": "Kochi fishing grounds",
+  "line": "KOC-L05",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-SS600",
+    "description": "Single-frequency 600 kHz towed side-scan (derelict gear surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 600,
+        "slant_range_m": 50,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 18
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-09T03:44:59.578654+00:00",
+    "end_time": "2026-10-09T03:47:40.661987+00:00",
+    "start": {
+      "latitude": 9.9295613,
+      "longitude": 76.1399447
+    },
+    "end": {
+      "latitude": 9.9304154,
+      "longitude": 76.1425358
+    },
+    "course_deg": 75.0,
+    "speed_kn": 3.58,
+    "water_depth_m": [
+      12.16,
+      16.16
+    ],
+    "towfish_depth_m_mean": 7.0,
+    "altitude_m_mean": 6.72,
+    "layback_m_mean": 36.9,
+    "sound_speed_mps_mean": 1541.7,
+    "water_temp_c_mean": 28.68,
+    "recorded_position_error_m_mean": 1.09
+  },
+  "conditions": {
+    "sea_state": 3,
+    "dropouts": 3,
+    "tvg_mismatch": 0.04203928159851972
+  },
+  "dropouts": [
+    {
+      "first_ping": 1313,
+      "pings": 6
+    },
+    {
+      "first_ping": 682,
+      "pings": 7
+    },
+    {
+      "first_ping": 1574,
+      "pings": 2
+    }
+  ],
+  "waterfall_px": [
+    6141,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "KOC-OBJ-003",
+      "kind": "ghost_net",
+      "class": "debris",
+      "man_made": true,
+      "notes": "derelict fishing net",
+      "latitude": 9.9300167,
+      "longitude": 76.1405031,
+      "water_depth_m": 14.6,
+      "size_m": {
+        "length": 8.15,
+        "width": 2.11,
+        "height": 0.3
+      },
+      "azimuth_deg": 292.2,
+      "side": "port",
+      "ground_range_m": 23.1,
+      "pings": [
+        440,
+        477
+      ],
+      "samples": [
+        474,
+        586
+      ],
+      "visible_samples": 1606,
+      "bbox_px": [
+        476.6,
+        1396.1,
+        583.7,
+        1518.8
+      ],
+      "time_utc": "2026-10-09T03:45:37.745321+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-048",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.9303473,
+      "longitude": 76.1417769,
+      "water_depth_m": 12.62,
+      "size_m": {
+        "length": 10.81,
+        "width": 6.81,
+        "height": 2.42
+      },
+      "azimuth_deg": 205.7,
+      "side": "port",
+      "ground_range_m": 19.43,
+      "pings": [
+        1389,
+        1447
+      ],
+      "samples": [
+        351,
+        559
+      ],
+      "visible_samples": 8623,
+      "bbox_px": [
+        501.7,
+        4409.5,
+        698.3,
+        4598.8
+      ],
+      "time_utc": "2026-10-09T03:46:57.745321+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-040",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.9300222,
+      "longitude": 76.1408765,
+      "water_depth_m": 13.91,
+      "size_m": {
+        "length": 11.22,
+        "width": 9.8,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 11.49,
+      "pings": [
+        683,
+        756
+      ],
+      "samples": [
+        301,
+        516
+      ],
+      "visible_samples": 1917,
+      "bbox_px": [
+        541.7,
+        2167.7,
+        744.8,
+        2404.7
+      ],
+      "time_utc": "2026-10-09T03:45:59.495321+00:00",
+      "school_height_above_seabed_m": 6.5
+    },
+    {
+      "object_id": "KOC-OBJ-041",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.9303169,
+      "longitude": 76.1423301,
+      "water_depth_m": 12.12,
+      "size_m": {
+        "length": 13.96,
+        "width": 11.93,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 0.54,
+      "pings": [
+        1751,
+        1841
+      ],
+      "samples": [
+        72,
+        330
+      ],
+      "visible_samples": 2776,
+      "bbox_px": [
+        714.9,
+        5558.9,
+        958.0,
+        5849.9
+      ],
+      "time_utc": "2026-10-09T03:47:29.245321+00:00",
+      "school_height_above_seabed_m": 5.5
+    },
+    {
+      "object_id": "KOC-OBJ-045",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.929931,
+      "longitude": 76.1411681,
+      "water_depth_m": 13.48,
+      "size_m": {
+        "length": 14.83,
+        "width": 9.79,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 7.11,
+      "pings": [
+        860,
+        957
+      ],
+      "samples": [
+        113,
+        134
+      ],
+      "visible_samples": 239,
+      "bbox_px": [
+        897.3,
+        2729.7,
+        919.8,
+        3042.9
+      ],
+      "time_utc": "2026-10-09T03:46:15.245321+00:00",
+      "school_height_above_seabed_m": 3.9
+    },
+    {
+      "object_id": "KOC-OBJ-006",
+      "kind": "ghost_net",
+      "class": "debris",
+      "man_made": true,
+      "notes": "derelict fishing net draped over rock",
+      "latitude": 9.9298496,
+      "longitude": 76.1420815,
+      "water_depth_m": 12.34,
+      "size_m": {
+        "length": 11.82,
+        "width": 2.33,
+        "height": 0.3
+      },
+      "azimuth_deg": 26.8,
+      "side": "starboard",
+      "ground_range_m": 42.96,
+      "pings": [
+        1512,
+        1559
+      ],
+      "samples": [
+        850,
+        1048
+      ],
+      "visible_samples": 3004,
+      "bbox_px": [
+        1814.3,
+        4800.0,
+        2001.5,
+        4954.4
+      ],
+      "time_utc": "2026-10-09T03:47:07.495321+00:00"
+    }
+  ]
+}

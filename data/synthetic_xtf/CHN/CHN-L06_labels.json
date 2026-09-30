@@ -1,0 +1,430 @@
+{
+  "file": "CHN/CHN-L06.xtf",
+  "area": "CHN",
+  "area_name": "Chennai Port approaches",
+  "line": "CHN-L06",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF400/900",
+    "description": "Dual-frequency towed side-scan, 400/900 kHz CHIRP class",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 400,
+        "slant_range_m": 75,
+        "samples_per_side": 1000,
+        "horizontal_beam_deg": 0.46,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 20
+      },
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.28,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 20
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1211,
+    "ping_rate_hz": 9.75,
+    "duration_s": 124.1,
+    "start_time": "2026-10-03T02:30:21.449641+00:00",
+    "end_time": "2026-10-03T02:32:25.509791+00:00",
+    "start": {
+      "latitude": 13.1024833,
+      "longitude": 80.3373666
+    },
+    "end": {
+      "latitude": 13.1003344,
+      "longitude": 80.3364015
+    },
+    "course_deg": 200.0,
+    "speed_kn": 4.04,
+    "water_depth_m": [
+      17.03,
+      18.26
+    ],
+    "towfish_depth_m_mean": 8.5,
+    "altitude_m_mean": 8.9,
+    "layback_m_mean": 42.19,
+    "sound_speed_mps_mean": 1540.5,
+    "water_temp_c_mean": 28.23,
+    "recorded_position_error_m_mean": 2.94
+  },
+  "conditions": {
+    "sea_state": 4,
+    "dropouts": 3,
+    "tvg_mismatch": 0.07561695976901606,
+    "gain_change": [
+      0.6884832425342624,
+      1.4
+    ],
+    "surface_return": true
+  },
+  "dropouts": [
+    {
+      "first_ping": 630,
+      "pings": 6
+    },
+    {
+      "first_ping": 1095,
+      "pings": 5
+    },
+    {
+      "first_ping": 42,
+      "pings": 3
+    }
+  ],
+  "waterfall_px": [
+    3483,
+    2000
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "CHN-OBJ-001",
+      "kind": "shipwreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "intact hull",
+      "latitude": 13.1004832,
+      "longitude": 80.3364464,
+      "water_depth_m": 17.37,
+      "size_m": {
+        "length": 62.0,
+        "width": 9.26,
+        "height": 7.34
+      },
+      "azimuth_deg": 238.2,
+      "side": "port",
+      "ground_range_m": 6.13,
+      "pings": [
+        1038,
+        1150
+      ],
+      "samples": [
+        117,
+        223
+      ],
+      "visible_samples": 5349,
+      "bbox_px": [
+        775.0,
+        2984.4,
+        884.0,
+        3311.4
+      ],
+      "time_utc": "2026-10-03T02:32:13.616422+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-001",
+      "kind": "shipwreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "intact hull",
+      "latitude": 13.1004832,
+      "longitude": 80.3364464,
+      "water_depth_m": 17.37,
+      "size_m": {
+        "length": 62.0,
+        "width": 9.26,
+        "height": 7.34
+      },
+      "azimuth_deg": 238.2,
+      "side": "starboard",
+      "ground_range_m": 5.83,
+      "pings": [
+        1089,
+        1210
+      ],
+      "samples": [
+        117,
+        271
+      ],
+      "visible_samples": 7228,
+      "bbox_px": [
+        1116.0,
+        3131.1,
+        1273.0,
+        3482.0
+      ],
+      "time_utc": "2026-10-03T02:32:19.255519+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-002",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1005594,
+      "longitude": 80.3367907,
+      "water_depth_m": 17.46,
+      "size_m": {
+        "length": 1.97,
+        "width": 1.17,
+        "height": 0.82
+      },
+      "azimuth_deg": 323.2,
+      "side": "port",
+      "ground_range_m": 25.2,
+      "pings": [
+        1055,
+        1064
+      ],
+      "samples": [
+        342,
+        369
+      ],
+      "visible_samples": 152,
+      "bbox_px": [
+        629.0,
+        3033.3,
+        659.0,
+        3064.1
+      ],
+      "time_utc": "2026-10-03T02:32:10.027905+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-003",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.100443,
+      "longitude": 80.3369363,
+      "water_depth_m": 17.53,
+      "size_m": {
+        "length": 1.4,
+        "width": 0.99,
+        "height": 0.62
+      },
+      "azimuth_deg": 128.9,
+      "side": "port",
+      "ground_range_m": 44.76,
+      "pings": [
+        1088,
+        1092
+      ],
+      "samples": [
+        599,
+        616
+      ],
+      "visible_samples": 65,
+      "bbox_px": [
+        382.0,
+        3128.2,
+        402.0,
+        3144.6
+      ],
+      "time_utc": "2026-10-03T02:32:13.206305+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-018",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1007294,
+      "longitude": 80.3366803,
+      "water_depth_m": 17.39,
+      "size_m": {
+        "length": 1.4,
+        "width": 0.71,
+        "height": 0.58
+      },
+      "azimuth_deg": 21.2,
+      "side": "port",
+      "ground_range_m": 6.85,
+      "pings": [
+        997,
+        1003
+      ],
+      "samples": [
+        145,
+        150
+      ],
+      "visible_samples": 36,
+      "bbox_px": [
+        848.0,
+        2866.5,
+        856.0,
+        2888.6
+      ],
+      "time_utc": "2026-10-03T02:32:03.978691+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-013",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container",
+      "latitude": 13.1004339,
+      "longitude": 80.3363398,
+      "water_depth_m": 17.36,
+      "size_m": {
+        "length": 6.06,
+        "width": 2.44,
+        "height": 2.59
+      },
+      "azimuth_deg": 34.3,
+      "side": "starboard",
+      "ground_range_m": 14.33,
+      "pings": [
+        1191,
+        1210
+      ],
+      "samples": [
+        207,
+        241
+      ],
+      "visible_samples": 547,
+      "bbox_px": [
+        1206.0,
+        3424.5,
+        1243.0,
+        3482.0
+      ],
+      "time_utc": "2026-10-03T02:32:24.484501+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-019",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1012524,
+      "longitude": 80.3367455,
+      "water_depth_m": 17.45,
+      "size_m": {
+        "length": 2.47,
+        "width": 0.55,
+        "height": 0.38
+      },
+      "azimuth_deg": 88.0,
+      "side": "starboard",
+      "ground_range_m": 8.81,
+      "pings": [
+        741,
+        746
+      ],
+      "samples": [
+        157,
+        178
+      ],
+      "visible_samples": 55,
+      "bbox_px": [
+        1156.0,
+        2130.2,
+        1180.0,
+        2149.5
+      ],
+      "time_utc": "2026-10-03T02:31:37.628725+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-030",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 13.1013005,
+      "longitude": 80.3365255,
+      "water_depth_m": 17.36,
+      "size_m": {
+        "length": 2.27,
+        "width": 1.93,
+        "height": 1.07
+      },
+      "azimuth_deg": 112.6,
+      "side": "starboard",
+      "ground_range_m": 32.92,
+      "pings": [
+        763,
+        769
+      ],
+      "samples": [
+        440,
+        469
+      ],
+      "visible_samples": 169,
+      "bbox_px": [
+        1439.0,
+        2193.5,
+        1471.0,
+        2215.6
+      ],
+      "time_utc": "2026-10-03T02:31:39.986893+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-024",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 13.1020043,
+      "longitude": 80.3365889,
+      "water_depth_m": 17.61,
+      "size_m": {
+        "length": 15.0,
+        "width": 11.58,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 55.28,
+      "pings": [
+        366,
+        435
+      ],
+      "samples": [
+        694,
+        847
+      ],
+      "visible_samples": 1298,
+      "bbox_px": [
+        1693.0,
+        1051.7,
+        1849.0,
+        1255.0
+      ],
+      "time_utc": "2026-10-03T02:31:02.461261+00:00",
+      "school_height_above_seabed_m": 3.1
+    },
+    {
+      "object_id": "CHN-OBJ-025",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 13.1015352,
+      "longitude": 80.3363766,
+      "water_depth_m": 17.34,
+      "size_m": {
+        "length": 18.16,
+        "width": 8.36,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 57.61,
+      "pings": [
+        624,
+        707
+      ],
+      "samples": [
+        761,
+        872
+      ],
+      "visible_samples": 1072,
+      "bbox_px": [
+        1760.0,
+        1793.7,
+        1874.0,
+        2037.3
+      ],
+      "time_utc": "2026-10-03T02:31:29.631459+00:00",
+      "school_height_above_seabed_m": 8.5
+    }
+  ]
+}

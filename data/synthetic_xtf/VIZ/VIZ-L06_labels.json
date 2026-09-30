@@ -1,0 +1,278 @@
+{
+  "file": "VIZ/VIZ-L06.xtf",
+  "area": "VIZ",
+  "area_name": "Visakhapatnam exercise area",
+  "line": "VIZ-L06",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF100/500",
+    "description": "Dual-frequency towed side-scan, 100/500 kHz class (route & mine surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 100,
+        "slant_range_m": 100,
+        "samples_per_side": 900,
+        "horizontal_beam_deg": 1.0,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 15
+      },
+      {
+        "frequency_khz": 500,
+        "slant_range_m": 50,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 15
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1276,
+    "ping_rate_hz": 7.31,
+    "duration_s": 174.3,
+    "start_time": "2026-10-06T03:01:30.608893+00:00",
+    "end_time": "2026-10-06T03:04:24.908278+00:00",
+    "start": {
+      "latitude": 17.6359821,
+      "longitude": 83.3315549
+    },
+    "end": {
+      "latitude": 17.6385128,
+      "longitude": 83.3290613
+    },
+    "course_deg": 315.0,
+    "speed_kn": 4.34,
+    "water_depth_m": [
+      43.93,
+      45.48
+    ],
+    "towfish_depth_m_mean": 33.5,
+    "altitude_m_mean": 11.1,
+    "layback_m_mean": 95.26,
+    "sound_speed_mps_mean": 1535.8,
+    "water_temp_c_mean": 26.11,
+    "recorded_position_error_m_mean": 5.67
+  },
+  "conditions": {
+    "sea_state": 1,
+    "dropouts": 0,
+    "tvg_mismatch": 0.10959862502645987,
+    "gain_change": [
+      0.3801833593958508,
+      1.4
+    ]
+  },
+  "dropouts": [],
+  "waterfall_px": [
+    3487,
+    1800
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "VIZ-OBJ-015",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~35% buried",
+      "latitude": 17.6389317,
+      "longitude": 83.3311211,
+      "water_depth_m": 42.95,
+      "size_m": {
+        "length": 1052.1,
+        "width": 0.55,
+        "height": 0.47
+      },
+      "azimuth_deg": 223.9,
+      "side": "port",
+      "ground_range_m": 188.89,
+      "pings": [
+        838,
+        841
+      ],
+      "samples": [
+        100,
+        899
+      ],
+      "visible_samples": 849,
+      "bbox_px": [
+        0.0,
+        2289.1,
+        801.0,
+        2302.0
+      ],
+      "time_utc": "2026-10-06T03:03:25.304723+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-015",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~35% buried",
+      "latitude": 17.6389317,
+      "longitude": 83.3311211,
+      "water_depth_m": 42.95,
+      "size_m": {
+        "length": 1052.1,
+        "width": 0.55,
+        "height": 0.47
+      },
+      "azimuth_deg": 223.9,
+      "side": "starboard",
+      "ground_range_m": 188.74,
+      "pings": [
+        832,
+        838
+      ],
+      "samples": [
+        100,
+        899
+      ],
+      "visible_samples": 1073,
+      "bbox_px": [
+        999.0,
+        2272.7,
+        1799.0,
+        2293.8
+      ],
+      "time_utc": "2026-10-06T03:03:24.757902+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-002",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6366112,
+      "longitude": 83.3314804,
+      "water_depth_m": 44.09,
+      "size_m": {
+        "length": 1.95,
+        "width": 0.66,
+        "height": 0.66
+      },
+      "azimuth_deg": 146.4,
+      "side": "starboard",
+      "ground_range_m": 35.2,
+      "pings": [
+        205,
+        210
+      ],
+      "samples": [
+        329,
+        335
+      ],
+      "visible_samples": 31,
+      "bbox_px": [
+        1228.0,
+        559.2,
+        1237.0,
+        577.6
+      ],
+      "time_utc": "2026-10-06T03:01:58.906911+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-007",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6383353,
+      "longitude": 83.330243,
+      "water_depth_m": 43.01,
+      "size_m": {
+        "length": 1.79,
+        "width": 0.61,
+        "height": 0.61
+      },
+      "azimuth_deg": 330.4,
+      "side": "starboard",
+      "ground_range_m": 77.53,
+      "pings": [
+        932,
+        936
+      ],
+      "samples": [
+        701,
+        708
+      ],
+      "visible_samples": 28,
+      "bbox_px": [
+        1600.0,
+        2545.9,
+        1610.0,
+        2561.6
+      ],
+      "time_utc": "2026-10-06T03:03:38.291736+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-022",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6368543,
+      "longitude": 83.331654,
+      "water_depth_m": 43.99,
+      "size_m": {
+        "length": 1.27,
+        "width": 1.06,
+        "height": 0.45
+      },
+      "azimuth_deg": 245.4,
+      "side": "starboard",
+      "ground_range_m": 66.98,
+      "pings": [
+        224,
+        227
+      ],
+      "samples": [
+        605,
+        615
+      ],
+      "visible_samples": 32,
+      "bbox_px": [
+        1504.0,
+        611.1,
+        1517.0,
+        624.1
+      ],
+      "time_utc": "2026-10-06T03:02:01.367608+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-030",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 17.637653,
+      "longitude": 83.3307761,
+      "water_depth_m": 43.5,
+      "size_m": {
+        "length": 0.89,
+        "width": 0.88,
+        "height": 1.28
+      },
+      "azimuth_deg": 45.3,
+      "side": "starboard",
+      "ground_range_m": 61.67,
+      "pings": [
+        647,
+        648
+      ],
+      "samples": [
+        560,
+        567
+      ],
+      "visible_samples": 13,
+      "bbox_px": [
+        1459.0,
+        1767.1,
+        1469.0,
+        1774.6
+      ],
+      "time_utc": "2026-10-06T03:02:59.057287+00:00"
+    }
+  ]
+}

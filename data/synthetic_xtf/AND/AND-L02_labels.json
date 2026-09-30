@@ -1,0 +1,374 @@
+{
+  "file": "AND/AND-L02.xtf",
+  "area": "AND",
+  "area_name": "Andaman - Ross Island approaches",
+  "line": "AND-L02",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-AUV900",
+    "description": "AUV-mounted 900 kHz side-scan, INS navigation",
+    "platform": "auv",
+    "channels": [
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.25,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 12
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-15T00:39:28.148003+00:00",
+    "end_time": "2026-10-15T00:42:09.231336+00:00",
+    "start": {
+      "latitude": 11.6728402,
+      "longitude": 92.7770037
+    },
+    "end": {
+      "latitude": 11.6750441,
+      "longitude": 92.7761921
+    },
+    "course_deg": 340.0,
+    "speed_kn": 3.15,
+    "water_depth_m": [
+      29.4,
+      31.59
+    ],
+    "towfish_depth_m_mean": 25.54,
+    "altitude_m_mean": 5.04,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1540.6,
+    "water_temp_c_mean": 28.52,
+    "recorded_position_error_m_mean": 0.47
+  },
+  "conditions": {
+    "sea_state": 1,
+    "dropouts": 1,
+    "tvg_mismatch": -0.09587063402630117
+  },
+  "dropouts": [
+    {
+      "first_ping": 1420,
+      "pings": 4
+    }
+  ],
+  "waterfall_px": [
+    6676,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "AND-OBJ-001",
+      "kind": "aircraft",
+      "class": "aircraft_wreck",
+      "man_made": true,
+      "notes": "WWII-era aircraft wreck",
+      "latitude": 11.674345,
+      "longitude": 92.7763536,
+      "water_depth_m": 30.73,
+      "size_m": {
+        "length": 15.72,
+        "width": 20.25,
+        "height": 2.3
+      },
+      "azimuth_deg": 127.2,
+      "side": "port",
+      "ground_range_m": 11.11,
+      "pings": [
+        1296,
+        1408
+      ],
+      "samples": [
+        191,
+        501
+      ],
+      "visible_samples": 11154,
+      "bbox_px": [
+        555.7,
+        4472.7,
+        847.2,
+        4864.7
+      ],
+      "time_utc": "2026-10-15T00:41:20.814670+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-006",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 11.6748887,
+      "longitude": 92.7759795,
+      "water_depth_m": 29.97,
+      "size_m": {
+        "length": 1.61,
+        "width": 0.42,
+        "height": 0.42
+      },
+      "azimuth_deg": 233.7,
+      "side": "port",
+      "ground_range_m": 27.57,
+      "pings": [
+        1865,
+        1869
+      ],
+      "samples": [
+        750,
+        791
+      ],
+      "visible_samples": 119,
+      "bbox_px": [
+        285.7,
+        6436.8,
+        326.8,
+        6456.1
+      ],
+      "time_utc": "2026-10-15T00:42:03.731336+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-010",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6739025,
+      "longitude": 92.7762441,
+      "water_depth_m": 30.95,
+      "size_m": {
+        "length": 1.6,
+        "width": 1.03,
+        "height": 0.78
+      },
+      "azimuth_deg": 227.0,
+      "side": "port",
+      "ground_range_m": 39.36,
+      "pings": [
+        1010,
+        1021
+      ],
+      "samples": [
+        1066,
+        1099
+      ],
+      "visible_samples": 261,
+      "bbox_px": [
+        0.0,
+        3485.4,
+        32.7,
+        3528.9
+      ],
+      "time_utc": "2026-10-15T00:40:52.731336+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-019",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6741901,
+      "longitude": 92.7761917,
+      "water_depth_m": 30.71,
+      "size_m": {
+        "length": 7.89,
+        "width": 4.49,
+        "height": 1.04
+      },
+      "azimuth_deg": 352.4,
+      "side": "port",
+      "ground_range_m": 33.67,
+      "pings": [
+        1234,
+        1294
+      ],
+      "samples": [
+        873,
+        997
+      ],
+      "visible_samples": 5816,
+      "bbox_px": [
+        94.0,
+        4258.7,
+        212.3,
+        4471.2
+      ],
+      "time_utc": "2026-10-15T00:41:13.481336+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-022",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6741708,
+      "longitude": 92.7762032,
+      "water_depth_m": 30.74,
+      "size_m": {
+        "length": 9.25,
+        "width": 6.58,
+        "height": 1.88
+      },
+      "azimuth_deg": 232.4,
+      "side": "port",
+      "ground_range_m": 33.24,
+      "pings": [
+        1220,
+        1274
+      ],
+      "samples": [
+        800,
+        1055
+      ],
+      "visible_samples": 10607,
+      "bbox_px": [
+        40.0,
+        4210.3,
+        280.3,
+        4402.2
+      ],
+      "time_utc": "2026-10-15T00:41:12.064670+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-011",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6744164,
+      "longitude": 92.7765903,
+      "water_depth_m": 30.87,
+      "size_m": {
+        "length": 1.65,
+        "width": 0.81,
+        "height": 0.82
+      },
+      "azimuth_deg": 86.8,
+      "side": "starboard",
+      "ground_range_m": 15.81,
+      "pings": [
+        1336,
+        1343
+      ],
+      "samples": [
+        434,
+        475
+      ],
+      "visible_samples": 239,
+      "bbox_px": [
+        1427.0,
+        4610.8,
+        1468.1,
+        4640.4
+      ],
+      "time_utc": "2026-10-15T00:41:19.731336+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-018",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6745923,
+      "longitude": 92.7766788,
+      "water_depth_m": 30.8,
+      "size_m": {
+        "length": 4.71,
+        "width": 5.81,
+        "height": 2.45
+      },
+      "azimuth_deg": 92.9,
+      "side": "starboard",
+      "ground_range_m": 31.73,
+      "pings": [
+        1435,
+        1481
+      ],
+      "samples": [
+        818,
+        962
+      ],
+      "visible_samples": 5244,
+      "bbox_px": [
+        1784.5,
+        4952.5,
+        1921.5,
+        5116.7
+      ],
+      "time_utc": "2026-10-15T00:41:29.648003+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-020",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6749389,
+      "longitude": 92.7763335,
+      "water_depth_m": 30.24,
+      "size_m": {
+        "length": 4.79,
+        "width": 6.22,
+        "height": 2.15
+      },
+      "azimuth_deg": 80.9,
+      "side": "starboard",
+      "ground_range_m": 10.43,
+      "pings": [
+        1796,
+        1840
+      ],
+      "samples": [
+        261,
+        383
+      ],
+      "visible_samples": 4323,
+      "bbox_px": [
+        1266.0,
+        6198.6,
+        1382.5,
+        6356.0
+      ],
+      "time_utc": "2026-10-15T00:41:59.648003+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-014",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 11.6740312,
+      "longitude": 92.7765727,
+      "water_depth_m": 31.15,
+      "size_m": {
+        "length": 18.48,
+        "width": 4.59,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 0.83,
+      "pings": [
+        960,
+        1102
+      ],
+      "samples": [
+        50,
+        112
+      ],
+      "visible_samples": 1038,
+      "bbox_px": [
+        1069.5,
+        3312.8,
+        1130.2,
+        3808.5
+      ],
+      "time_utc": "2026-10-15T00:40:54.064670+00:00",
+      "school_height_above_seabed_m": 3.4
+    }
+  ]
+}

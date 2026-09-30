@@ -1,0 +1,314 @@
+{
+  "file": "KOC/KOC-L01.xtf",
+  "area": "KOC",
+  "area_name": "Kochi fishing grounds",
+  "line": "KOC-L01",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-SS600",
+    "description": "Single-frequency 600 kHz towed side-scan (derelict gear surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 600,
+        "slant_range_m": 50,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 18
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-09T03:00:00+00:00",
+    "end_time": "2026-10-09T03:02:41.083333+00:00",
+    "start": {
+      "latitude": 9.9319572,
+      "longitude": 76.1393074
+    },
+    "end": {
+      "latitude": 9.9324703,
+      "longitude": 76.141867
+    },
+    "course_deg": 75.0,
+    "speed_kn": 3.43,
+    "water_depth_m": [
+      14.32,
+      16.93
+    ],
+    "towfish_depth_m_mean": 9.73,
+    "altitude_m_mean": 5.47,
+    "layback_m_mean": 44.2,
+    "sound_speed_mps_mean": 1541.9,
+    "water_temp_c_mean": 28.75,
+    "recorded_position_error_m_mean": 2.48
+  },
+  "conditions": {
+    "sea_state": 4,
+    "dropouts": 2,
+    "tvg_mismatch": 0.12409049638901601,
+    "gain_change": [
+      0.6431298502349663,
+      1.4
+    ],
+    "surface_return": true
+  },
+  "dropouts": [
+    {
+      "first_ping": 441,
+      "pings": 4
+    },
+    {
+      "first_ping": 1618,
+      "pings": 3
+    }
+  ],
+  "waterfall_px": [
+    5879,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "KOC-OBJ-007",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 8 derelict crab pots",
+      "latitude": 9.932551,
+      "longitude": 76.1411636,
+      "water_depth_m": 15.05,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 223.5,
+      "side": "port",
+      "ground_range_m": 22.69,
+      "pings": [
+        1452,
+        1458
+      ],
+      "samples": [
+        503,
+        521
+      ],
+      "visible_samples": 71,
+      "bbox_px": [
+        537.1,
+        4412.8,
+        556.8,
+        4436.1
+      ],
+      "time_utc": "2026-10-09T03:02:01.250000+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-008",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 8 derelict crab pots",
+      "latitude": 9.9324317,
+      "longitude": 76.1411931,
+      "water_depth_m": 14.88,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 349.7,
+      "side": "port",
+      "ground_range_m": 9.03,
+      "pings": [
+        1450,
+        1453
+      ],
+      "samples": [
+        222,
+        239
+      ],
+      "visible_samples": 68,
+      "bbox_px": [
+        799.6,
+        4406.7,
+        818.3,
+        4420.9
+      ],
+      "time_utc": "2026-10-09T03:02:00.916667+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-009",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 8 derelict crab pots",
+      "latitude": 9.9323319,
+      "longitude": 76.1412409,
+      "water_depth_m": 14.73,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 254.2,
+      "side": "starboard",
+      "ground_range_m": 3.02,
+      "pings": [
+        1462,
+        1467
+      ],
+      "samples": [
+        133,
+        139
+      ],
+      "visible_samples": 42,
+      "bbox_px": [
+        1146.8,
+        4443.2,
+        1155.3,
+        4463.4
+      ],
+      "time_utc": "2026-10-09T03:02:02+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-010",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 8 derelict crab pots",
+      "latitude": 9.9322318,
+      "longitude": 76.141307,
+      "water_depth_m": 14.56,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 157.5,
+      "side": "starboard",
+      "ground_range_m": 15.59,
+      "pings": [
+        1491,
+        1495
+      ],
+      "samples": [
+        354,
+        372
+      ],
+      "visible_samples": 80,
+      "bbox_px": [
+        1352.5,
+        4531.4,
+        1372.2,
+        4548.6
+      ],
+      "time_utc": "2026-10-09T03:02:04.416667+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-011",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 8 derelict crab pots",
+      "latitude": 9.9321098,
+      "longitude": 76.1413375,
+      "water_depth_m": 14.38,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 55.8,
+      "side": "starboard",
+      "ground_range_m": 29.57,
+      "pings": [
+        1489,
+        1496
+      ],
+      "samples": [
+        653,
+        670
+      ],
+      "visible_samples": 89,
+      "bbox_px": [
+        1630.9,
+        4525.3,
+        1649.6,
+        4551.6
+      ],
+      "time_utc": "2026-10-09T03:02:04.333333+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-012",
+      "kind": "crab_pot",
+      "class": "debris",
+      "man_made": true,
+      "notes": "string of 8 derelict crab pots",
+      "latitude": 9.9320125,
+      "longitude": 76.1413934,
+      "water_depth_m": 14.22,
+      "size_m": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "azimuth_deg": 310.0,
+      "side": "starboard",
+      "ground_range_m": 41.57,
+      "pings": [
+        1512,
+        1517
+      ],
+      "samples": [
+        912,
+        933
+      ],
+      "visible_samples": 73,
+      "bbox_px": [
+        1872.0,
+        4595.2,
+        1894.5,
+        4615.4
+      ],
+      "time_utc": "2026-10-09T03:02:06.166667+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-046",
+      "kind": "boat_wreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "small fishing / supply boat",
+      "latitude": 9.9320683,
+      "longitude": 76.1414447,
+      "water_depth_m": 14.25,
+      "size_m": {
+        "length": 10.77,
+        "width": 3.23,
+        "height": 1.85
+      },
+      "azimuth_deg": 48.3,
+      "side": "starboard",
+      "ground_range_m": 36.96,
+      "pings": [
+        1526,
+        1584
+      ],
+      "samples": [
+        762,
+        896
+      ],
+      "visible_samples": 3661,
+      "bbox_px": [
+        1732.4,
+        4637.8,
+        1860.0,
+        4819.1
+      ],
+      "time_utc": "2026-10-09T03:02:09.583333+00:00"
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "file": "MAN/MAN-L04.xtf",
+  "area": "MAN",
+  "area_name": "Gulf of Mannar rocky reef (natural only)",
+  "line": "MAN-L04",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-SS600",
+    "description": "Single-frequency 600 kHz towed side-scan (derelict gear surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 600,
+        "slant_range_m": 50,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 18
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-21T03:08:06.288884+00:00",
+    "end_time": "2026-10-21T03:10:47.372217+00:00",
+    "start": {
+      "latitude": 9.2026898,
+      "longitude": 79.1511259
+    },
+    "end": {
+      "latitude": 9.2003369,
+      "longitude": 79.1499076
+    },
+    "course_deg": 210.0,
+    "speed_kn": 3.58,
+    "water_depth_m": [
+      15.08,
+      15.83
+    ],
+    "towfish_depth_m_mean": 8.65,
+    "altitude_m_mean": 6.73,
+    "layback_m_mean": 41.99,
+    "sound_speed_mps_mean": 1543.7,
+    "water_temp_c_mean": 29.12,
+    "recorded_position_error_m_mean": 1.16
+  },
+  "conditions": {
+    "sea_state": 4,
+    "dropouts": 5,
+    "tvg_mismatch": 0.10244364257648883,
+    "surface_return": true
+  },
+  "dropouts": [
+    {
+      "first_ping": 497,
+      "pings": 3
+    },
+    {
+      "first_ping": 860,
+      "pings": 7
+    },
+    {
+      "first_ping": 919,
+      "pings": 7
+    },
+    {
+      "first_ping": 666,
+      "pings": 3
+    },
+    {
+      "first_ping": 1823,
+      "pings": 5
+    }
+  ],
+  "waterfall_px": [
+    6027,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "MAN-OBJ-006",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2002219,
+      "longitude": 79.1502968,
+      "water_depth_m": 15.53,
+      "size_m": {
+        "length": 10.1,
+        "width": 3.97,
+        "height": 3.0
+      },
+      "azimuth_deg": 242.2,
+      "side": "port",
+      "ground_range_m": 47.25,
+      "pings": [
+        1808,
+        1873
+      ],
+      "samples": [
+        982,
+        1099
+      ],
+      "visible_samples": 4456,
+      "bbox_px": [
+        0.0,
+        5633.3,
+        110.8,
+        5841.0
+      ],
+      "time_utc": "2026-10-21T03:10:39.622217+00:00"
+    },
+    {
+      "object_id": "MAN-OBJ-008",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2007633,
+      "longitude": 79.1506677,
+      "water_depth_m": 14.98,
+      "size_m": {
+        "length": 10.1,
+        "width": 7.09,
+        "height": 2.94
+      },
+      "azimuth_deg": 270.8,
+      "side": "port",
+      "ground_range_m": 53.68,
+      "pings": [
+        1367,
+        1395
+      ],
+      "samples": [
+        1078,
+        1099
+      ],
+      "visible_samples": 427,
+      "bbox_px": [
+        0.0,
+        4259.0,
+        21.5,
+        4351.4
+      ],
+      "time_utc": "2026-10-21T03:10:01.372217+00:00"
+    },
+    {
+      "object_id": "MAN-OBJ-012",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.200559,
+      "longitude": 79.1501736,
+      "water_depth_m": 15.43,
+      "size_m": {
+        "length": 2.32,
+        "width": 2.14,
+        "height": 0.91
+      },
+      "azimuth_deg": 310.4,
+      "side": "port",
+      "ground_range_m": 17.26,
+      "pings": [
+        1674,
+        1685
+      ],
+      "samples": [
+        387,
+        430
+      ],
+      "visible_samples": 379,
+      "bbox_px": [
+        621.8,
+        5215.8,
+        664.7,
+        5255.1
+      ],
+      "time_utc": "2026-10-21T03:10:26.205551+00:00"
+    },
+    {
+      "object_id": "MAN-OBJ-018",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2008226,
+      "longitude": 79.1505428,
+      "water_depth_m": 15.06,
+      "size_m": {
+        "length": 2.37,
+        "width": 2.18,
+        "height": 1.17
+      },
+      "azimuth_deg": 175.4,
+      "side": "port",
+      "ground_range_m": 38.48,
+      "pings": [
+        1372,
+        1384
+      ],
+      "samples": [
+        838,
+        878
+      ],
+      "visible_samples": 395,
+      "bbox_px": [
+        204.7,
+        4274.6,
+        244.9,
+        4317.1
+      ],
+      "time_utc": "2026-10-21T03:10:01.122217+00:00"
+    },
+    {
+      "object_id": "MAN-OBJ-029",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.2013403,
+      "longitude": 79.1508228,
+      "water_depth_m": 14.66,
+      "size_m": {
+        "length": 23.18,
+        "width": 4.74,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 37.05,
+      "pings": [
+        859,
+        1012
+      ],
+      "samples": [
+        934,
+        1037
+      ],
+      "visible_samples": 2006,
+      "bbox_px": [
+        56.7,
+        2675.9,
+        155.5,
+        3157.9
+      ],
+      "time_utc": "2026-10-21T03:09:24.205551+00:00",
+      "school_height_above_seabed_m": 4.1
+    },
+    {
+      "object_id": "MAN-OBJ-004",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2004032,
+      "longitude": 79.1498657,
+      "water_depth_m": 15.54,
+      "size_m": {
+        "length": 4.69,
+        "width": 3.49,
+        "height": 2.87
+      },
+      "azimuth_deg": 28.3,
+      "side": "starboard",
+      "ground_range_m": 3.91,
+      "pings": [
+        1865,
+        1893
+      ],
+      "samples": [
+        155,
+        192
+      ],
+      "visible_samples": 832,
+      "bbox_px": [
+        1167.3,
+        5811.0,
+        1204.7,
+        5903.3
+      ],
+      "time_utc": "2026-10-21T03:10:42.872217+00:00"
+    },
+    {
+      "object_id": "MAN-OBJ-019",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2007428,
+      "longitude": 79.1498492,
+      "water_depth_m": 15.47,
+      "size_m": {
+        "length": 2.66,
+        "width": 2.65,
+        "height": 0.51
+      },
+      "azimuth_deg": 128.6,
+      "side": "starboard",
+      "ground_range_m": 23.81,
+      "pings": [
+        1658,
+        1673
+      ],
+      "samples": [
+        517,
+        573
+      ],
+      "visible_samples": 707,
+      "bbox_px": [
+        1504.3,
+        5165.9,
+        1559.3,
+        5217.8
+      ],
+      "time_utc": "2026-10-21T03:10:25.038884+00:00"
+    },
+    {
+      "object_id": "MAN-OBJ-026",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.2014391,
+      "longitude": 79.1499774,
+      "water_depth_m": 15.38,
+      "size_m": {
+        "length": 24.57,
+        "width": 9.9,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 49.2,
+      "pings": [
+        1100,
+        1262
+      ],
+      "samples": [
+        795,
+        1012
+      ],
+      "visible_samples": 4142,
+      "bbox_px": [
+        1763.1,
+        3427.0,
+        1968.0,
+        3936.9
+      ],
+      "time_utc": "2026-10-21T03:09:44.705551+00:00",
+      "school_height_above_seabed_m": 5.9
+    }
+  ]
+}

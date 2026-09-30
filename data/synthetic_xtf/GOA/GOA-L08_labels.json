@@ -1,0 +1,152 @@
+{
+  "file": "GOA/GOA-L08.xtf",
+  "area": "GOA",
+  "area_name": "Mormugao harbour & beach (SAR)",
+  "line": "GOA-L08",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-CHIRP455",
+    "description": "Hull-mounted 455 kHz CHIRP side imaging (small craft, SAR)",
+    "platform": "hull",
+    "channels": [
+      {
+        "frequency_khz": 455,
+        "slant_range_m": 30,
+        "samples_per_side": 900,
+        "horizontal_beam_deg": 0.8,
+        "vertical_beam_deg": 55,
+        "tilt_deg": 30
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1560,
+    "ping_rate_hz": 12.0,
+    "duration_s": 129.9,
+    "start_time": "2026-10-18T05:14:24.552474+00:00",
+    "end_time": "2026-10-18T05:16:34.469141+00:00",
+    "start": {
+      "latitude": 15.4132451,
+      "longitude": 73.7918188
+    },
+    "end": {
+      "latitude": 15.4139357,
+      "longitude": 73.7894443
+    },
+    "course_deg": 285.0,
+    "speed_kn": 4.01,
+    "water_depth_m": [
+      6.66,
+      7.62
+    ],
+    "towfish_depth_m_mean": 0.4,
+    "altitude_m_mean": 6.71,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1542.6,
+    "water_temp_c_mean": 28.9,
+    "recorded_position_error_m_mean": 0.89
+  },
+  "conditions": {
+    "surface_return": true,
+    "sea_state": 2,
+    "dropouts": 5,
+    "tvg_mismatch": -0.1471592536103596
+  },
+  "dropouts": [
+    {
+      "first_ping": 207,
+      "pings": 5
+    },
+    {
+      "first_ping": 69,
+      "pings": 7
+    },
+    {
+      "first_ping": 1290,
+      "pings": 5
+    },
+    {
+      "first_ping": 721,
+      "pings": 2
+    },
+    {
+      "first_ping": 648,
+      "pings": 7
+    }
+  ],
+  "waterfall_px": [
+    7983,
+    1800
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "GOA-OBJ-001",
+      "kind": "human_body",
+      "class": "human_body",
+      "man_made": true,
+      "notes": "drowning victim (SAR target)",
+      "latitude": 15.4136657,
+      "longitude": 73.7914194,
+      "water_depth_m": 6.63,
+      "size_m": {
+        "length": 1.75,
+        "width": 0.45,
+        "height": 0.28
+      },
+      "azimuth_deg": 323.9,
+      "side": "starboard",
+      "ground_range_m": 29.29,
+      "pings": [
+        295,
+        299
+      ],
+      "samples": [
+        886,
+        899
+      ],
+      "visible_samples": 43,
+      "bbox_px": [
+        1785.0,
+        1508.6,
+        1799.0,
+        1536.2
+      ],
+      "time_utc": "2026-10-18T05:14:49.302474+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-019",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 15.4140298,
+      "longitude": 73.7900769,
+      "water_depth_m": 6.21,
+      "size_m": {
+        "length": 1.67,
+        "width": 0.41,
+        "height": 0.83
+      },
+      "azimuth_deg": 134.9,
+      "side": "starboard",
+      "ground_range_m": 28.95,
+      "pings": [
+        1188,
+        1197
+      ],
+      "samples": [
+        876,
+        899
+      ],
+      "visible_samples": 107,
+      "bbox_px": [
+        1775.0,
+        6078.4,
+        1799.0,
+        6131.5
+      ],
+      "time_utc": "2026-10-18T05:16:03.885807+00:00"
+    }
+  ]
+}

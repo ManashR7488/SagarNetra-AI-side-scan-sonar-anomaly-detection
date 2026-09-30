@@ -1,0 +1,622 @@
+{
+  "area": "VIZ",
+  "name": "Visakhapatnam exercise area",
+  "origin": {
+    "latitude": 17.64,
+    "longitude": 83.33
+  },
+  "sonar_profile": "SIM-DF100/500",
+  "survey_lines": [
+    "VIZ-L01",
+    "VIZ-L02",
+    "VIZ-L03",
+    "VIZ-L04",
+    "VIZ-L05",
+    "VIZ-L06",
+    "VIZ-L07",
+    "VIZ-L08"
+  ],
+  "seabed": {
+    "depth_m": 42,
+    "slope": [
+      0.0,
+      -0.01
+    ],
+    "mud": 0.1,
+    "gravel": 0.25,
+    "rock": 0.03,
+    "rock_height": 1.5,
+    "reef": 0.0,
+    "sandwave_amp": 0.8,
+    "sandwave_len": 60,
+    "ripple_amp": 0.03,
+    "ripple_len": 1.4,
+    "trawl_marks": 0,
+    "pockmarks": 0,
+    "tide_amp": 0.7,
+    "temp_c": 27.5,
+    "salinity": 33.5
+  },
+  "synthetic": true,
+  "objects": [
+    {
+      "object_id": "VIZ-OBJ-001",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6370171,
+      "longitude": 83.327909,
+      "size_m": {
+        "length": 2.57,
+        "width": 0.55,
+        "height": 0.55
+      },
+      "azimuth_deg": 278.2,
+      "imaged_by_lines": [
+        "VIZ-L07",
+        "VIZ-L08"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-002",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6366112,
+      "longitude": 83.3314804,
+      "size_m": {
+        "length": 1.95,
+        "width": 0.66,
+        "height": 0.66
+      },
+      "azimuth_deg": 146.4,
+      "imaged_by_lines": [
+        "VIZ-L06"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-003",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6359598,
+      "longitude": 83.3298586,
+      "size_m": {
+        "length": 1.94,
+        "width": 0.63,
+        "height": 0.63
+      },
+      "azimuth_deg": 47.6,
+      "imaged_by_lines": [
+        "VIZ-L07"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-004",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6396012,
+      "longitude": 83.333196,
+      "size_m": {
+        "length": 1.65,
+        "width": 0.69,
+        "height": 0.69
+      },
+      "azimuth_deg": 329.1,
+      "imaged_by_lines": [
+        "VIZ-L03"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-005",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6399934,
+      "longitude": 83.3304423,
+      "size_m": {
+        "length": 1.84,
+        "width": 0.68,
+        "height": 0.68
+      },
+      "azimuth_deg": 329.7,
+      "imaged_by_lines": [
+        "VIZ-L05"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-006",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6402652,
+      "longitude": 83.3318218,
+      "size_m": {
+        "length": 2.02,
+        "width": 0.61,
+        "height": 0.61
+      },
+      "azimuth_deg": 302.9,
+      "imaged_by_lines": [
+        "VIZ-L03",
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-007",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6383353,
+      "longitude": 83.330243,
+      "size_m": {
+        "length": 1.79,
+        "width": 0.61,
+        "height": 0.61
+      },
+      "azimuth_deg": 330.4,
+      "imaged_by_lines": [
+        "VIZ-L05",
+        "VIZ-L06"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-008",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6401034,
+      "longitude": 83.3316615,
+      "size_m": {
+        "length": 2.33,
+        "width": 0.62,
+        "height": 0.62
+      },
+      "azimuth_deg": 178.3,
+      "imaged_by_lines": [
+        "VIZ-L03",
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-009",
+      "kind": "manta_mine",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "truncated-cone bottom mine",
+      "latitude": 17.6399915,
+      "longitude": 83.3310399,
+      "size_m": {
+        "length": 0.92,
+        "width": 0.92,
+        "height": 0.49
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-010",
+      "kind": "manta_mine",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "truncated-cone bottom mine",
+      "latitude": 17.6388335,
+      "longitude": 83.3293947,
+      "size_m": {
+        "length": 0.95,
+        "width": 0.95,
+        "height": 0.4
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "VIZ-L05"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-011",
+      "kind": "manta_mine",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "truncated-cone bottom mine",
+      "latitude": 17.6399188,
+      "longitude": 83.3331183,
+      "size_m": {
+        "length": 1.15,
+        "width": 1.15,
+        "height": 0.41
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "VIZ-L02",
+        "VIZ-L03"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-012",
+      "kind": "manta_mine",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "truncated-cone bottom mine",
+      "latitude": 17.639334,
+      "longitude": 83.331815,
+      "size_m": {
+        "length": 1.16,
+        "width": 1.16,
+        "height": 0.4
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-013",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 17.6394715,
+      "longitude": 83.3330059,
+      "size_m": {
+        "length": 1.73,
+        "width": 0.3,
+        "height": 0.3
+      },
+      "azimuth_deg": 164.7,
+      "imaged_by_lines": [
+        "VIZ-L03"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-014",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 17.6356432,
+      "longitude": 83.3294479,
+      "size_m": {
+        "length": 1.52,
+        "width": 0.45,
+        "height": 0.45
+      },
+      "azimuth_deg": 97.9,
+      "imaged_by_lines": [
+        "VIZ-L07",
+        "VIZ-L08"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-015",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~35% buried",
+      "latitude": 17.6389317,
+      "longitude": 83.3311211,
+      "size_m": {
+        "length": 1052.1,
+        "width": 0.55,
+        "height": 0.47
+      },
+      "azimuth_deg": 223.9,
+      "imaged_by_lines": [
+        "VIZ-L01",
+        "VIZ-L02",
+        "VIZ-L03",
+        "VIZ-L04",
+        "VIZ-L05",
+        "VIZ-L06",
+        "VIZ-L07",
+        "VIZ-L08"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-016",
+      "kind": "shipwreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "intact hull",
+      "latitude": 17.6395606,
+      "longitude": 83.3325614,
+      "size_m": {
+        "length": 72.0,
+        "width": 10.7,
+        "height": 7.06
+      },
+      "azimuth_deg": 292.3,
+      "imaged_by_lines": [
+        "VIZ-L03",
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-017",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6392174,
+      "longitude": 83.3328448,
+      "size_m": {
+        "length": 2.66,
+        "width": 0.79,
+        "height": 0.78
+      },
+      "azimuth_deg": 9.1,
+      "imaged_by_lines": [
+        "VIZ-L03",
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-018",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6399893,
+      "longitude": 83.3326245,
+      "size_m": {
+        "length": 2.7,
+        "width": 0.33,
+        "height": 0.89
+      },
+      "azimuth_deg": 250.1,
+      "imaged_by_lines": [
+        "VIZ-L03"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-019",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6392262,
+      "longitude": 83.3319949,
+      "size_m": {
+        "length": 1.69,
+        "width": 0.78,
+        "height": 0.74
+      },
+      "azimuth_deg": 241.6,
+      "imaged_by_lines": [
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-020",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6389366,
+      "longitude": 83.3322174,
+      "size_m": {
+        "length": 1.71,
+        "width": 0.54,
+        "height": 0.53
+      },
+      "azimuth_deg": 283.3,
+      "imaged_by_lines": [
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-021",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.639079,
+      "longitude": 83.3323079,
+      "size_m": {
+        "length": 1.48,
+        "width": 0.87,
+        "height": 0.24
+      },
+      "azimuth_deg": 359.2,
+      "imaged_by_lines": [
+        "VIZ-L03",
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-022",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6368543,
+      "longitude": 83.331654,
+      "size_m": {
+        "length": 1.27,
+        "width": 1.06,
+        "height": 0.45
+      },
+      "azimuth_deg": 245.4,
+      "imaged_by_lines": [
+        "VIZ-L06"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-023",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6401869,
+      "longitude": 83.331156,
+      "size_m": {
+        "length": 0.81,
+        "width": 0.5,
+        "height": 0.53
+      },
+      "azimuth_deg": 84.2,
+      "imaged_by_lines": [
+        "VIZ-L03",
+        "VIZ-L04"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-024",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6382533,
+      "longitude": 83.3316872,
+      "size_m": {
+        "length": 0.79,
+        "width": 1.07,
+        "height": 0.81
+      },
+      "azimuth_deg": 144.0,
+      "imaged_by_lines": [
+        "VIZ-L04",
+        "VIZ-L05"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-025",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6365782,
+      "longitude": 83.3285534,
+      "size_m": {
+        "length": 0.93,
+        "width": 1.07,
+        "height": 0.36
+      },
+      "azimuth_deg": 353.2,
+      "imaged_by_lines": [
+        "VIZ-L07",
+        "VIZ-L08"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-026",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 17.6387539,
+      "longitude": 83.3306277,
+      "size_m": {
+        "length": 1.8,
+        "width": 1.32,
+        "height": 1.11
+      },
+      "azimuth_deg": 79.8,
+      "imaged_by_lines": [
+        "VIZ-L05"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-027",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 17.640321,
+      "longitude": 83.3344265,
+      "size_m": {
+        "length": 1.18,
+        "width": 0.94,
+        "height": 0.53
+      },
+      "azimuth_deg": 235.4,
+      "imaged_by_lines": [
+        "VIZ-L01",
+        "VIZ-L02"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-028",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 17.6401526,
+      "longitude": 83.3325687,
+      "size_m": {
+        "length": 2.32,
+        "width": 1.88,
+        "height": 1.17
+      },
+      "azimuth_deg": 216.5,
+      "imaged_by_lines": [
+        "VIZ-L03"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-029",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 17.6388302,
+      "longitude": 83.3335936,
+      "size_m": {
+        "length": 1.37,
+        "width": 1.25,
+        "height": 1.59
+      },
+      "azimuth_deg": 118.9,
+      "imaged_by_lines": [
+        "VIZ-L03"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-030",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 17.637653,
+      "longitude": 83.3307761,
+      "size_m": {
+        "length": 0.89,
+        "width": 0.88,
+        "height": 1.28
+      },
+      "azimuth_deg": 45.3,
+      "imaged_by_lines": [
+        "VIZ-L05",
+        "VIZ-L06"
+      ]
+    },
+    {
+      "object_id": "VIZ-OBJ-031",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 17.640721,
+      "longitude": 83.3334671,
+      "size_m": {
+        "length": 2.05,
+        "width": 1.73,
+        "height": 1.75
+      },
+      "azimuth_deg": 173.0,
+      "imaged_by_lines": [
+        "VIZ-L02"
+      ]
+    }
+  ]
+}

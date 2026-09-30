@@ -1,0 +1,246 @@
+{
+  "file": "AND/AND-L04.xtf",
+  "area": "AND",
+  "area_name": "Andaman - Ross Island approaches",
+  "line": "AND-L04",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-AUV900",
+    "description": "AUV-mounted 900 kHz side-scan, INS navigation",
+    "platform": "auv",
+    "channels": [
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.25,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 12
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-15T01:04:06.846150+00:00",
+    "end_time": "2026-10-15T01:06:47.929483+00:00",
+    "start": {
+      "latitude": 11.672538,
+      "longitude": 92.7761555
+    },
+    "end": {
+      "latitude": 11.6747494,
+      "longitude": 92.7753541
+    },
+    "course_deg": 340.0,
+    "speed_kn": 3.15,
+    "water_depth_m": [
+      29.17,
+      31.17
+    ],
+    "towfish_depth_m_mean": 22.31,
+    "altitude_m_mean": 7.92,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1540.6,
+    "water_temp_c_mean": 28.56,
+    "recorded_position_error_m_mean": 0.25
+  },
+  "conditions": {
+    "sea_state": 2,
+    "dropouts": 3,
+    "tvg_mismatch": -0.01501422114000528
+  },
+  "dropouts": [
+    {
+      "first_ping": 32,
+      "pings": 7
+    },
+    {
+      "first_ping": 916,
+      "pings": 6
+    },
+    {
+      "first_ping": 1613,
+      "pings": 4
+    }
+  ],
+  "waterfall_px": [
+    6686,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "AND-OBJ-002",
+      "kind": "shipwreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "intact hull",
+      "latitude": 11.6734281,
+      "longitude": 92.7762263,
+      "water_depth_m": 31.2,
+      "size_m": {
+        "length": 40.0,
+        "width": 7.09,
+        "height": 4.68
+      },
+      "azimuth_deg": 310.1,
+      "side": "starboard",
+      "ground_range_m": 40.94,
+      "pings": [
+        616,
+        782
+      ],
+      "samples": [
+        854,
+        1099
+      ],
+      "visible_samples": 16938,
+      "bbox_px": [
+        1818.0,
+        2128.6,
+        2047.0,
+        2707.9
+      ],
+      "time_utc": "2026-10-15T01:05:05.096150+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-003",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6730037,
+      "longitude": 92.7763223,
+      "water_depth_m": 31.48,
+      "size_m": {
+        "length": 1.0,
+        "width": 0.96,
+        "height": 0.47
+      },
+      "azimuth_deg": 269.3,
+      "side": "starboard",
+      "ground_range_m": 34.71,
+      "pings": [
+        291,
+        299
+      ],
+      "samples": [
+        963,
+        995
+      ],
+      "visible_samples": 187,
+      "bbox_px": [
+        1919.5,
+        1005.0,
+        1952.2,
+        1038.1
+      ],
+      "time_utc": "2026-10-15T01:04:31.429483+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-004",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6732101,
+      "longitude": 92.7761202,
+      "water_depth_m": 31.19,
+      "size_m": {
+        "length": 1.81,
+        "width": 0.8,
+        "height": 0.87
+      },
+      "azimuth_deg": 316.0,
+      "side": "starboard",
+      "ground_range_m": 21.72,
+      "pings": [
+        502,
+        515
+      ],
+      "samples": [
+        617,
+        653
+      ],
+      "visible_samples": 271,
+      "bbox_px": [
+        1597.4,
+        1734.5,
+        1633.8,
+        1784.9
+      ],
+      "time_utc": "2026-10-15T01:04:49.179483+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-009",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6747221,
+      "longitude": 92.775548,
+      "water_depth_m": 29.7,
+      "size_m": {
+        "length": 0.75,
+        "width": 0.77,
+        "height": 0.24
+      },
+      "azimuth_deg": 260.2,
+      "side": "starboard",
+      "ground_range_m": 18.99,
+      "pings": [
+        1851,
+        1855
+      ],
+      "samples": [
+        557,
+        575
+      ],
+      "visible_samples": 81,
+      "bbox_px": [
+        1541.5,
+        6398.1,
+        1561.2,
+        6417.3
+      ],
+      "time_utc": "2026-10-15T01:06:41.262817+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-015",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 11.6732318,
+      "longitude": 92.7759755,
+      "water_depth_m": 31.03,
+      "size_m": {
+        "length": 12.1,
+        "width": 10.57,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 7.69,
+      "pings": [
+        517,
+        605
+      ],
+      "samples": [
+        81,
+        369
+      ],
+      "visible_samples": 3188,
+      "bbox_px": [
+        1098.4,
+        1786.3,
+        1369.4,
+        2096.0
+      ],
+      "time_utc": "2026-10-15T01:04:53.596150+00:00",
+      "school_height_above_seabed_m": 8.8
+    }
+  ]
+}

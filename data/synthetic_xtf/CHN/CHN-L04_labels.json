@@ -1,0 +1,249 @@
+{
+  "file": "CHN/CHN-L04.xtf",
+  "area": "CHN",
+  "area_name": "Chennai Port approaches",
+  "line": "CHN-L04",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF400/900",
+    "description": "Dual-frequency towed side-scan, 400/900 kHz CHIRP class",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 400,
+        "slant_range_m": 75,
+        "samples_per_side": 1000,
+        "horizontal_beam_deg": 0.46,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 20
+      },
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.28,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 20
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1211,
+    "ping_rate_hz": 9.75,
+    "duration_s": 124.1,
+    "start_time": "2026-10-03T02:07:11.315284+00:00",
+    "end_time": "2026-10-03T02:09:15.375434+00:00",
+    "start": {
+      "latitude": 13.1030778,
+      "longitude": 80.3357153
+    },
+    "end": {
+      "latitude": 13.1009218,
+      "longitude": 80.3349493
+    },
+    "course_deg": 200.0,
+    "speed_kn": 3.95,
+    "water_depth_m": [
+      16.58,
+      16.89
+    ],
+    "towfish_depth_m_mean": 6.79,
+    "altitude_m_mean": 9.89,
+    "layback_m_mean": 40.03,
+    "sound_speed_mps_mean": 1540.5,
+    "water_temp_c_mean": 28.22,
+    "recorded_position_error_m_mean": 1.78
+  },
+  "conditions": {
+    "sea_state": 2,
+    "dropouts": 2,
+    "tvg_mismatch": 0.006976112849621713
+  },
+  "dropouts": [
+    {
+      "first_ping": 147,
+      "pings": 4
+    },
+    {
+      "first_ping": 669,
+      "pings": 2
+    }
+  ],
+  "waterfall_px": [
+    3388,
+    2000
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "CHN-OBJ-014",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container",
+      "latitude": 13.1020958,
+      "longitude": 80.3358966,
+      "water_depth_m": 17.26,
+      "size_m": {
+        "length": 6.06,
+        "width": 2.44,
+        "height": 2.59
+      },
+      "azimuth_deg": 159.4,
+      "side": "port",
+      "ground_range_m": 58.77,
+      "pings": [
+        478,
+        498
+      ],
+      "samples": [
+        757,
+        830
+      ],
+      "visible_samples": 676,
+      "bbox_px": [
+        168.0,
+        1336.3,
+        244.0,
+        1397.0
+      ],
+      "time_utc": "2026-10-03T02:08:01.349460+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-016",
+      "kind": "tyre_cluster",
+      "class": "debris",
+      "man_made": true,
+      "notes": "10 dumped tyres",
+      "latitude": 13.1024656,
+      "longitude": 80.3357928,
+      "water_depth_m": 17.27,
+      "size_m": {
+        "length": 10.0,
+        "width": 10.0,
+        "height": 0.45
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 35.04,
+      "pings": [
+        313,
+        330
+      ],
+      "samples": [
+        446,
+        532
+      ],
+      "visible_samples": 36,
+      "bbox_px": [
+        466.0,
+        874.7,
+        555.0,
+        927.0
+      ],
+      "time_utc": "2026-10-03T02:07:44.227109+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-020",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1020706,
+      "longitude": 80.3359044,
+      "water_depth_m": 17.26,
+      "size_m": {
+        "length": 0.59,
+        "width": 0.91,
+        "height": 0.67
+      },
+      "azimuth_deg": 255.3,
+      "side": "port",
+      "ground_range_m": 60.46,
+      "pings": [
+        496,
+        497
+      ],
+      "samples": [
+        813,
+        820
+      ],
+      "visible_samples": 15,
+      "bbox_px": [
+        178.0,
+        1386.7,
+        188.0,
+        1394.2
+      ],
+      "time_utc": "2026-10-03T02:08:02.169693+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-022",
+      "kind": "anchor_chain",
+      "class": "debris",
+      "man_made": true,
+      "notes": "anchor with chain",
+      "latitude": 13.102273,
+      "longitude": 80.3349235,
+      "water_depth_m": 16.75,
+      "size_m": {
+        "length": 2.2,
+        "width": 1.6,
+        "height": 0.35
+      },
+      "azimuth_deg": 62.0,
+      "side": "starboard",
+      "ground_range_m": 47.43,
+      "pings": [
+        561,
+        567
+      ],
+      "samples": [
+        636,
+        655
+      ],
+      "visible_samples": 57,
+      "bbox_px": [
+        1635.0,
+        1568.5,
+        1657.0,
+        1590.1
+      ],
+      "time_utc": "2026-10-03T02:08:09.141668+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-029",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 13.1017671,
+      "longitude": 80.3348155,
+      "water_depth_m": 16.76,
+      "size_m": {
+        "length": 2.11,
+        "width": 1.79,
+        "height": 1.88
+      },
+      "azimuth_deg": 130.8,
+      "side": "starboard",
+      "ground_range_m": 40.92,
+      "pings": [
+        814,
+        827
+      ],
+      "samples": [
+        547,
+        574
+      ],
+      "visible_samples": 288,
+      "bbox_px": [
+        1546.0,
+        2276.3,
+        1576.0,
+        2317.5
+      ],
+      "time_utc": "2026-10-03T02:08:35.389105+00:00"
+    }
+  ]
+}

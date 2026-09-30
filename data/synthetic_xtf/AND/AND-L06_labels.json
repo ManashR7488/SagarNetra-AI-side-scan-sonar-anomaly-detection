@@ -1,0 +1,148 @@
+{
+  "file": "AND/AND-L06.xtf",
+  "area": "AND",
+  "area_name": "Andaman - Ross Island approaches",
+  "line": "AND-L06",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-AUV900",
+    "description": "AUV-mounted 900 kHz side-scan, INS navigation",
+    "platform": "auv",
+    "channels": [
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.25,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 12
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-15T01:28:35.357760+00:00",
+    "end_time": "2026-10-15T01:31:16.441093+00:00",
+    "start": {
+      "latitude": 11.6722306,
+      "longitude": 92.7752931
+    },
+    "end": {
+      "latitude": 11.6744661,
+      "longitude": 92.7744889
+    },
+    "course_deg": 340.0,
+    "speed_kn": 3.18,
+    "water_depth_m": [
+      28.59,
+      30.69
+    ],
+    "towfish_depth_m_mean": 23.16,
+    "altitude_m_mean": 6.51,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1540.7,
+    "water_temp_c_mean": 28.61,
+    "recorded_position_error_m_mean": 0.58
+  },
+  "conditions": {
+    "sea_state": 4,
+    "dropouts": 3,
+    "tvg_mismatch": 0.04093766124334941,
+    "gain_change": [
+      0.44719700678033125,
+      1.4
+    ],
+    "interference": 49
+  },
+  "dropouts": [
+    {
+      "first_ping": 116,
+      "pings": 7
+    },
+    {
+      "first_ping": 440,
+      "pings": 3
+    },
+    {
+      "first_ping": 186,
+      "pings": 3
+    }
+  ],
+  "waterfall_px": [
+    6753,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "AND-OBJ-007",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 11.6731608,
+      "longitude": 92.774595,
+      "water_depth_m": 29.39,
+      "size_m": {
+        "length": 1.78,
+        "width": 0.48,
+        "height": 0.48
+      },
+      "azimuth_deg": 213.4,
+      "side": "port",
+      "ground_range_m": 36.42,
+      "pings": [
+        917,
+        925
+      ],
+      "samples": [
+        996,
+        1036
+      ],
+      "visible_samples": 158,
+      "bbox_px": [
+        57.6,
+        3200.9,
+        97.8,
+        3234.3
+      ],
+      "time_utc": "2026-10-15T01:29:52.107760+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-013",
+      "kind": "concrete_blocks",
+      "class": "debris",
+      "man_made": true,
+      "notes": "artificial reef concrete modules",
+      "latitude": 11.6732769,
+      "longitude": 92.7751226,
+      "water_depth_m": 30.06,
+      "size_m": {
+        "length": 15.0,
+        "width": 15.0,
+        "height": 2.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 21.99,
+      "pings": [
+        839,
+        895
+      ],
+      "samples": [
+        491,
+        773
+      ],
+      "visible_samples": 3357,
+      "bbox_px": [
+        1480.1,
+        2928.6,
+        1745.5,
+        3129.6
+      ],
+      "time_utc": "2026-10-15T01:29:47.607760+00:00"
+    }
+  ]
+}

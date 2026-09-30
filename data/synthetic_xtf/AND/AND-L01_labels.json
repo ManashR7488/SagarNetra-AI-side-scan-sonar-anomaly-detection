@@ -1,0 +1,178 @@
+{
+  "file": "AND/AND-L01.xtf",
+  "area": "AND",
+  "area_name": "Andaman - Ross Island approaches",
+  "line": "AND-L01",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-AUV900",
+    "description": "AUV-mounted 900 kHz side-scan, INS navigation",
+    "platform": "auv",
+    "channels": [
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.25,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 12
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-15T00:30:00+00:00",
+    "end_time": "2026-10-15T00:32:41.083333+00:00",
+    "start": {
+      "latitude": 11.6757096,
+      "longitude": 92.7764618
+    },
+    "end": {
+      "latitude": 11.6734632,
+      "longitude": 92.777271
+    },
+    "course_deg": 160.0,
+    "speed_kn": 3.2,
+    "water_depth_m": [
+      30.49,
+      32.7
+    ],
+    "towfish_depth_m_mean": 24.63,
+    "altitude_m_mean": 6.96,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1540.4,
+    "water_temp_c_mean": 28.45,
+    "recorded_position_error_m_mean": 0.23
+  },
+  "conditions": {
+    "sea_state": 3,
+    "dropouts": 3,
+    "tvg_mismatch": -0.07830730598189534,
+    "interference": 119
+  },
+  "dropouts": [
+    {
+      "first_ping": 1510,
+      "pings": 3
+    },
+    {
+      "first_ping": 1375,
+      "pings": 6
+    },
+    {
+      "first_ping": 57,
+      "pings": 2
+    }
+  ],
+  "waterfall_px": [
+    6787,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "AND-OBJ-011",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6744164,
+      "longitude": 92.7765903,
+      "water_depth_m": 30.87,
+      "size_m": {
+        "length": 1.65,
+        "width": 0.81,
+        "height": 0.82
+      },
+      "azimuth_deg": 86.8,
+      "side": "starboard",
+      "ground_range_m": 34.49,
+      "pings": [
+        1009,
+        1015
+      ],
+      "samples": [
+        946,
+        988
+      ],
+      "visible_samples": 229,
+      "bbox_px": [
+        1903.6,
+        3539.9,
+        1945.7,
+        3566.5
+      ],
+      "time_utc": "2026-10-15T00:31:24.333333+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-018",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6745923,
+      "longitude": 92.7766788,
+      "water_depth_m": 30.8,
+      "size_m": {
+        "length": 4.71,
+        "width": 5.81,
+        "height": 2.45
+      },
+      "azimuth_deg": 92.9,
+      "side": "starboard",
+      "ground_range_m": 18.8,
+      "pings": [
+        878,
+        921
+      ],
+      "samples": [
+        479,
+        615
+      ],
+      "visible_samples": 4672,
+      "bbox_px": [
+        1468.9,
+        3080.2,
+        1598.4,
+        3236.6
+      ],
+      "time_utc": "2026-10-15T00:31:14.916667+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-020",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6749389,
+      "longitude": 92.7763335,
+      "water_depth_m": 30.24,
+      "size_m": {
+        "length": 4.79,
+        "width": 6.22,
+        "height": 2.15
+      },
+      "azimuth_deg": 80.9,
+      "side": "starboard",
+      "ground_range_m": 41.23,
+      "pings": [
+        516,
+        548
+      ],
+      "samples": [
+        1081,
+        1099
+      ],
+      "visible_samples": 433,
+      "bbox_px": [
+        2029.3,
+        1809.8,
+        2047.0,
+        1927.6
+      ],
+      "time_utc": "2026-10-15T00:30:44.333333+00:00"
+    }
+  ]
+}

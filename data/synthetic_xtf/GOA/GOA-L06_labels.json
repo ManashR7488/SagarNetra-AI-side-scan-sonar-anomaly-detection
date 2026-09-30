@@ -1,0 +1,183 @@
+{
+  "file": "GOA/GOA-L06.xtf",
+  "area": "GOA",
+  "area_name": "Mormugao harbour & beach (SAR)",
+  "line": "GOA-L06",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-CHIRP455",
+    "description": "Hull-mounted 455 kHz CHIRP side imaging (small craft, SAR)",
+    "platform": "hull",
+    "channels": [
+      {
+        "frequency_khz": 455,
+        "slant_range_m": 30,
+        "samples_per_side": 900,
+        "horizontal_beam_deg": 0.8,
+        "vertical_beam_deg": 55,
+        "tilt_deg": 30
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1560,
+    "ping_rate_hz": 12.0,
+    "duration_s": 129.9,
+    "start_time": "2026-10-18T04:51:10.016459+00:00",
+    "end_time": "2026-10-18T04:53:19.933126+00:00",
+    "start": {
+      "latitude": 15.4138794,
+      "longitude": 73.7920395
+    },
+    "end": {
+      "latitude": 15.4145074,
+      "longitude": 73.7897214
+    },
+    "course_deg": 285.0,
+    "speed_kn": 3.81,
+    "water_depth_m": [
+      5.04,
+      6.63
+    ],
+    "towfish_depth_m_mean": 0.4,
+    "altitude_m_mean": 5.35,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1542.7,
+    "water_temp_c_mean": 28.99,
+    "recorded_position_error_m_mean": 0.85
+  },
+  "conditions": {
+    "surface_return": true,
+    "sea_state": 2,
+    "dropouts": 3,
+    "tvg_mismatch": -0.10176414740474225,
+    "gain_change": [
+      0.4988103251158478,
+      1.4
+    ]
+  },
+  "dropouts": [
+    {
+      "first_ping": 651,
+      "pings": 2
+    },
+    {
+      "first_ping": 140,
+      "pings": 5
+    },
+    {
+      "first_ping": 1172,
+      "pings": 1
+    }
+  ],
+  "waterfall_px": [
+    7756,
+    1800
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "GOA-OBJ-004",
+      "kind": "human_body",
+      "class": "human_body",
+      "man_made": true,
+      "notes": "drowning victim (SAR target)",
+      "latitude": 15.4140283,
+      "longitude": 73.7907509,
+      "water_depth_m": 6.36,
+      "size_m": {
+        "length": 1.75,
+        "width": 0.45,
+        "height": 0.28
+      },
+      "azimuth_deg": 67.6,
+      "side": "port",
+      "ground_range_m": 26.46,
+      "pings": [
+        804,
+        811
+      ],
+      "samples": [
+        793,
+        825
+      ],
+      "visible_samples": 100,
+      "bbox_px": [
+        73.0,
+        3996.3,
+        108.0,
+        4038.1
+      ],
+      "time_utc": "2026-10-18T04:52:17.266459+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-024",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 15.414305,
+      "longitude": 73.7903131,
+      "water_depth_m": 6.2,
+      "size_m": {
+        "length": 16.49,
+        "width": 10.94,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "port",
+      "ground_range_m": 8.4,
+      "pings": [
+        1076,
+        1175
+      ],
+      "samples": [
+        62,
+        300
+      ],
+      "visible_samples": 2843,
+      "bbox_px": [
+        598.0,
+        5348.7,
+        839.0,
+        5847.8
+      ],
+      "time_utc": "2026-10-18T04:52:43.766459+00:00",
+      "school_height_above_seabed_m": 3.2
+    },
+    {
+      "object_id": "GOA-OBJ-016",
+      "kind": "boat_wreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "small fishing / supply boat",
+      "latitude": 15.414362,
+      "longitude": 73.7911021,
+      "water_depth_m": 6.63,
+      "size_m": {
+        "length": 8.6,
+        "width": 2.58,
+        "height": 1.82
+      },
+      "azimuth_deg": 147.8,
+      "side": "starboard",
+      "ground_range_m": 19.38,
+      "pings": [
+        636,
+        673
+      ],
+      "samples": [
+        515,
+        700
+      ],
+      "visible_samples": 2843,
+      "bbox_px": [
+        1414.0,
+        3161.1,
+        1602.0,
+        3352.0
+      ],
+      "time_utc": "2026-10-18T04:52:04.516459+00:00"
+    }
+  ]
+}

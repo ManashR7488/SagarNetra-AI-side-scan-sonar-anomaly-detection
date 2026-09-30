@@ -1,0 +1,255 @@
+{
+  "file": "VIZ/VIZ-L08.xtf",
+  "area": "VIZ",
+  "area_name": "Visakhapatnam exercise area",
+  "line": "VIZ-L08",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF100/500",
+    "description": "Dual-frequency towed side-scan, 100/500 kHz class (route & mine surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 100,
+        "slant_range_m": 100,
+        "samples_per_side": 900,
+        "horizontal_beam_deg": 1.0,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 15
+      },
+      {
+        "frequency_khz": 500,
+        "slant_range_m": 50,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 15
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1276,
+    "ping_rate_hz": 7.31,
+    "duration_s": 174.3,
+    "start_time": "2026-10-06T03:23:08.650874+00:00",
+    "end_time": "2026-10-06T03:26:02.950259+00:00",
+    "start": {
+      "latitude": 17.6344659,
+      "longitude": 83.3299328
+    },
+    "end": {
+      "latitude": 17.636944,
+      "longitude": 83.3274171
+    },
+    "course_deg": 315.0,
+    "speed_kn": 4.3,
+    "water_depth_m": [
+      46.87,
+      49.31
+    ],
+    "towfish_depth_m_mean": 36.6,
+    "altitude_m_mean": 11.83,
+    "layback_m_mean": 121.49,
+    "sound_speed_mps_mean": 1535.8,
+    "water_temp_c_mean": 26.11,
+    "recorded_position_error_m_mean": 7.75
+  },
+  "conditions": {
+    "sea_state": 4,
+    "dropouts": 3,
+    "tvg_mismatch": -0.14468983398203591,
+    "interference": 97,
+    "surface_return": true
+  },
+  "dropouts": [
+    {
+      "first_ping": 884,
+      "pings": 4
+    },
+    {
+      "first_ping": 137,
+      "pings": 5
+    },
+    {
+      "first_ping": 305,
+      "pings": 7
+    }
+  ],
+  "waterfall_px": [
+    3470,
+    1800
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "VIZ-OBJ-015",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~35% buried",
+      "latitude": 17.6389317,
+      "longitude": 83.3311211,
+      "water_depth_m": 42.95,
+      "size_m": {
+        "length": 1052.1,
+        "width": 0.55,
+        "height": 0.47
+      },
+      "azimuth_deg": 223.9,
+      "side": "port",
+      "ground_range_m": 438.67,
+      "pings": [
+        886,
+        896
+      ],
+      "samples": [
+        107,
+        784
+      ],
+      "visible_samples": 924,
+      "bbox_px": [
+        114.0,
+        2408.4,
+        794.0,
+        2440.3
+      ],
+      "time_utc": "2026-10-06T03:25:10.455385+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-015",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~35% buried",
+      "latitude": 17.6389317,
+      "longitude": 83.3311211,
+      "water_depth_m": 42.95,
+      "size_m": {
+        "length": 1052.1,
+        "width": 0.55,
+        "height": 0.47
+      },
+      "azimuth_deg": 223.9,
+      "side": "starboard",
+      "ground_range_m": 438.49,
+      "pings": [
+        876,
+        886
+      ],
+      "samples": [
+        107,
+        899
+      ],
+      "visible_samples": 1311,
+      "bbox_px": [
+        1006.0,
+        2381.2,
+        1799.0,
+        2413.1
+      ],
+      "time_utc": "2026-10-06T03:25:09.088331+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-001",
+      "kind": "mine_cylinder",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "cylindrical mine-like object",
+      "latitude": 17.6370171,
+      "longitude": 83.327909,
+      "water_depth_m": 46.29,
+      "size_m": {
+        "length": 2.57,
+        "width": 0.55,
+        "height": 0.55
+      },
+      "azimuth_deg": 278.2,
+      "side": "starboard",
+      "ground_range_m": 51.4,
+      "pings": [
+        1186,
+        1191
+      ],
+      "samples": [
+        468,
+        481
+      ],
+      "visible_samples": 32,
+      "bbox_px": [
+        1367.0,
+        3224.3,
+        1383.0,
+        3242.6
+      ],
+      "time_utc": "2026-10-06T03:25:51.056889+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-014",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 17.6356432,
+      "longitude": 83.3294479,
+      "water_depth_m": 47.62,
+      "size_m": {
+        "length": 1.52,
+        "width": 0.45,
+        "height": 0.45
+      },
+      "azimuth_deg": 97.9,
+      "side": "starboard",
+      "ground_range_m": 52.99,
+      "pings": [
+        458,
+        462
+      ],
+      "samples": [
+        484,
+        492
+      ],
+      "visible_samples": 19,
+      "bbox_px": [
+        1383.0,
+        1244.5,
+        1394.0,
+        1260.1
+      ],
+      "time_utc": "2026-10-06T03:24:11.535358+00:00"
+    },
+    {
+      "object_id": "VIZ-OBJ-025",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 17.6365782,
+      "longitude": 83.3285534,
+      "water_depth_m": 46.8,
+      "size_m": {
+        "length": 0.93,
+        "width": 1.07,
+        "height": 0.36
+      },
+      "azimuth_deg": 353.2,
+      "side": "starboard",
+      "ground_range_m": 61.49,
+      "pings": [
+        912,
+        913
+      ],
+      "samples": [
+        559,
+        567
+      ],
+      "visible_samples": 17,
+      "bbox_px": [
+        1458.0,
+        2479.1,
+        1469.0,
+        2486.6
+      ],
+      "time_utc": "2026-10-06T03:25:13.326199+00:00"
+    }
+  ]
+}

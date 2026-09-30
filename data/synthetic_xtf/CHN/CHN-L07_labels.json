@@ -1,0 +1,212 @@
+{
+  "file": "CHN/CHN-L07.xtf",
+  "area": "CHN",
+  "area_name": "Chennai Port approaches",
+  "line": "CHN-L07",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF400/900",
+    "description": "Dual-frequency towed side-scan, 400/900 kHz CHIRP class",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 400,
+        "slant_range_m": 75,
+        "samples_per_side": 1000,
+        "horizontal_beam_deg": 0.46,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 20
+      },
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.28,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 20
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1211,
+    "ping_rate_hz": 9.75,
+    "duration_s": 124.1,
+    "start_time": "2026-10-03T02:41:21.952785+00:00",
+    "end_time": "2026-10-03T02:43:26.012935+00:00",
+    "start": {
+      "latitude": 13.0991589,
+      "longitude": 80.3369246
+    },
+    "end": {
+      "latitude": 13.1013459,
+      "longitude": 80.337841
+    },
+    "course_deg": 20.0,
+    "speed_kn": 4.12,
+    "water_depth_m": [
+      17.27,
+      17.72
+    ],
+    "towfish_depth_m_mean": 8.5,
+    "altitude_m_mean": 8.9,
+    "layback_m_mean": 40.5,
+    "sound_speed_mps_mean": 1540.1,
+    "water_temp_c_mean": 28.02,
+    "recorded_position_error_m_mean": 1.83
+  },
+  "conditions": {
+    "sea_state": 4,
+    "dropouts": 1,
+    "tvg_mismatch": -0.0009802101974186739,
+    "surface_return": true
+  },
+  "dropouts": [
+    {
+      "first_ping": 668,
+      "pings": 6
+    }
+  ],
+  "waterfall_px": [
+    3509,
+    2000
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "CHN-OBJ-002",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1005594,
+      "longitude": 80.3367907,
+      "water_depth_m": 17.46,
+      "size_m": {
+        "length": 1.97,
+        "width": 1.17,
+        "height": 0.82
+      },
+      "azimuth_deg": 323.2,
+      "side": "port",
+      "ground_range_m": 74.5,
+      "pings": [
+        686,
+        691
+      ],
+      "samples": [
+        987,
+        999
+      ],
+      "visible_samples": 52,
+      "bbox_px": [
+        0.0,
+        1986.8,
+        14.0,
+        2006.1
+      ],
+      "time_utc": "2026-10-03T02:42:32.492771+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-003",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.100443,
+      "longitude": 80.3369363,
+      "water_depth_m": 17.53,
+      "size_m": {
+        "length": 1.4,
+        "width": 0.99,
+        "height": 0.62
+      },
+      "azimuth_deg": 128.9,
+      "side": "port",
+      "ground_range_m": 55.14,
+      "pings": [
+        661,
+        664
+      ],
+      "samples": [
+        736,
+        753
+      ],
+      "visible_samples": 57,
+      "bbox_px": [
+        245.0,
+        1914.3,
+        265.0,
+        1927.9
+      ],
+      "time_utc": "2026-10-03T02:42:29.827016+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-015",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container (on its side)",
+      "latitude": 13.0996444,
+      "longitude": 80.3369661,
+      "water_depth_m": 17.85,
+      "size_m": {
+        "length": 12.19,
+        "width": 2.59,
+        "height": 2.44
+      },
+      "azimuth_deg": 135.1,
+      "side": "port",
+      "ground_range_m": 19.48,
+      "pings": [
+        259,
+        298
+      ],
+      "samples": [
+        215,
+        361
+      ],
+      "visible_samples": 1808,
+      "bbox_px": [
+        637.0,
+        749.5,
+        786.0,
+        867.4
+      ],
+      "time_utc": "2026-10-03T02:41:50.455861+00:00"
+    },
+    {
+      "object_id": "CHN-OBJ-012",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container",
+      "latitude": 13.1004884,
+      "longitude": 80.3375596,
+      "water_depth_m": 17.78,
+      "size_m": {
+        "length": 6.06,
+        "width": 2.44,
+        "height": 2.59
+      },
+      "azimuth_deg": 65.2,
+      "side": "starboard",
+      "ground_range_m": 5.87,
+      "pings": [
+        765,
+        790
+      ],
+      "samples": [
+        125,
+        167
+      ],
+      "visible_samples": 474,
+      "bbox_px": [
+        1124.0,
+        2215.7,
+        1169.0,
+        2293.0
+      ],
+      "time_utc": "2026-10-03T02:42:41.617857+00:00"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Not needed by the deployed API (keeps the upload and function bundle small)
+.venv
+.env
+**/__pycache__
+.pytest_cache
+tests
+tools
+notebooks
+test.py
+models/AI4Shipwrecks
+models/**/*.pt
+models/**/test_eval
+models/**/*.png
+models/**/*.jpg
+models/**/*.csv
+models/**/*.yaml

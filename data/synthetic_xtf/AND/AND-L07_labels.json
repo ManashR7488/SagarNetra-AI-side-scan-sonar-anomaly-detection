@@ -1,0 +1,151 @@
+{
+  "file": "AND/AND-L07.xtf",
+  "area": "AND",
+  "area_name": "Andaman - Ross Island approaches",
+  "line": "AND-L07",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-AUV900",
+    "description": "AUV-mounted 900 kHz side-scan, INS navigation",
+    "platform": "auv",
+    "channels": [
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.25,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 12
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-15T01:37:47.042285+00:00",
+    "end_time": "2026-10-15T01:40:28.125618+00:00",
+    "start": {
+      "latitude": 11.6747838,
+      "longitude": 92.7738643
+    },
+    "end": {
+      "latitude": 11.6725437,
+      "longitude": 92.7746755
+    },
+    "course_deg": 160.0,
+    "speed_kn": 3.19,
+    "water_depth_m": [
+      27.58,
+      29.92
+    ],
+    "towfish_depth_m_mean": 22.2,
+    "altitude_m_mean": 6.57,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1540.6,
+    "water_temp_c_mean": 28.54,
+    "recorded_position_error_m_mean": 0.45
+  },
+  "conditions": {
+    "sea_state": 2,
+    "dropouts": 5,
+    "tvg_mismatch": -0.12502477325654857
+  },
+  "dropouts": [
+    {
+      "first_ping": 559,
+      "pings": 7
+    },
+    {
+      "first_ping": 1468,
+      "pings": 1
+    },
+    {
+      "first_ping": 249,
+      "pings": 4
+    },
+    {
+      "first_ping": 899,
+      "pings": 1
+    },
+    {
+      "first_ping": 1288,
+      "pings": 4
+    }
+  ],
+  "waterfall_px": [
+    6773,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "AND-OBJ-007",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 11.6731608,
+      "longitude": 92.774595,
+      "water_depth_m": 29.39,
+      "size_m": {
+        "length": 1.78,
+        "width": 0.48,
+        "height": 0.48
+      },
+      "azimuth_deg": 213.4,
+      "side": "port",
+      "ground_range_m": 14.27,
+      "pings": [
+        1443,
+        1451
+      ],
+      "samples": [
+        413,
+        450
+      ],
+      "visible_samples": 150,
+      "bbox_px": [
+        603.2,
+        5052.5,
+        640.5,
+        5086.0
+      ],
+      "time_utc": "2026-10-15T01:39:47.625618+00:00"
+    },
+    {
+      "object_id": "AND-OBJ-008",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 11.6743261,
+      "longitude": 92.7740886,
+      "water_depth_m": 28.1,
+      "size_m": {
+        "length": 1.38,
+        "width": 0.37,
+        "height": 0.37
+      },
+      "azimuth_deg": 177.1,
+      "side": "port",
+      "ground_range_m": 5.99,
+      "pings": [
+        388,
+        397
+      ],
+      "samples": [
+        240,
+        252
+      ],
+      "visible_samples": 64,
+      "bbox_px": [
+        787.5,
+        1357.8,
+        801.6,
+        1394.8
+      ],
+      "time_utc": "2026-10-15T01:38:19.708952+00:00"
+    }
+  ]
+}

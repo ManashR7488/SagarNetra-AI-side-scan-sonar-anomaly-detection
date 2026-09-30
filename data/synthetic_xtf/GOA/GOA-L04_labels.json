@@ -1,0 +1,285 @@
+{
+  "file": "GOA/GOA-L04.xtf",
+  "area": "GOA",
+  "area_name": "Mormugao harbour & beach (SAR)",
+  "line": "GOA-L04",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-CHIRP455",
+    "description": "Hull-mounted 455 kHz CHIRP side imaging (small craft, SAR)",
+    "platform": "hull",
+    "channels": [
+      {
+        "frequency_khz": 455,
+        "slant_range_m": 30,
+        "samples_per_side": 900,
+        "horizontal_beam_deg": 0.8,
+        "vertical_beam_deg": 55,
+        "tilt_deg": 30
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1560,
+    "ping_rate_hz": 12.0,
+    "duration_s": 129.9,
+    "start_time": "2026-10-18T04:29:30.483310+00:00",
+    "end_time": "2026-10-18T04:31:40.399977+00:00",
+    "start": {
+      "latitude": 15.4146236,
+      "longitude": 73.7921943
+    },
+    "end": {
+      "latitude": 15.4152213,
+      "longitude": 73.7899175
+    },
+    "course_deg": 285.0,
+    "speed_kn": 3.82,
+    "water_depth_m": [
+      5.69,
+      7.62
+    ],
+    "towfish_depth_m_mean": 0.4,
+    "altitude_m_mean": 6.19,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1542.2,
+    "water_temp_c_mean": 28.75,
+    "recorded_position_error_m_mean": 1.21
+  },
+  "conditions": {
+    "surface_return": true,
+    "sea_state": 4,
+    "dropouts": 4,
+    "tvg_mismatch": 0.10174862657366748,
+    "interference": 44
+  },
+  "dropouts": [
+    {
+      "first_ping": 1334,
+      "pings": 2
+    },
+    {
+      "first_ping": 1062,
+      "pings": 1
+    },
+    {
+      "first_ping": 670,
+      "pings": 7
+    },
+    {
+      "first_ping": 1340,
+      "pings": 6
+    }
+  ],
+  "waterfall_px": [
+    7594,
+    1800
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "GOA-OBJ-003",
+      "kind": "human_body",
+      "class": "human_body",
+      "man_made": true,
+      "notes": "drowning victim (SAR target)",
+      "latitude": 15.4146844,
+      "longitude": 73.7918014,
+      "water_depth_m": 7.61,
+      "size_m": {
+        "length": 1.75,
+        "width": 0.45,
+        "height": 0.28
+      },
+      "azimuth_deg": 75.1,
+      "side": "port",
+      "ground_range_m": 5.94,
+      "pings": [
+        287,
+        295
+      ],
+      "samples": [
+        264,
+        279
+      ],
+      "visible_samples": 72,
+      "bbox_px": [
+        619.0,
+        1396.1,
+        637.0,
+        1441.9
+      ],
+      "time_utc": "2026-10-18T04:29:54.733310+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-017",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 15.4147948,
+      "longitude": 73.7913918,
+      "water_depth_m": 7.25,
+      "size_m": {
+        "length": 1.42,
+        "width": 1.1,
+        "height": 0.29
+      },
+      "azimuth_deg": 25.7,
+      "side": "port",
+      "ground_range_m": 3.97,
+      "pings": [
+        560,
+        566
+      ],
+      "samples": [
+        214,
+        238
+      ],
+      "visible_samples": 141,
+      "bbox_px": [
+        660.0,
+        2725.1,
+        687.0,
+        2761.1
+      ],
+      "time_utc": "2026-10-18T04:30:17.399977+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-020",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 15.414736,
+      "longitude": 73.7913377,
+      "water_depth_m": 7.13,
+      "size_m": {
+        "length": 2.16,
+        "width": 0.7,
+        "height": 0.37
+      },
+      "azimuth_deg": 208.4,
+      "side": "port",
+      "ground_range_m": 11.72,
+      "pings": [
+        582,
+        588
+      ],
+      "samples": [
+        370,
+        428
+      ],
+      "visible_samples": 238,
+      "bbox_px": [
+        470.0,
+        2832.1,
+        531.0,
+        2868.2
+      ],
+      "time_utc": "2026-10-18T04:30:19.233310+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-008",
+      "kind": "tyre_cluster",
+      "class": "debris",
+      "man_made": true,
+      "notes": "13 dumped tyres",
+      "latitude": 15.4151871,
+      "longitude": 73.7909887,
+      "water_depth_m": 7.33,
+      "size_m": {
+        "length": 10.0,
+        "width": 10.0,
+        "height": 0.45
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 27.5,
+      "pings": [
+        850,
+        893
+      ],
+      "samples": [
+        786,
+        884
+      ],
+      "visible_samples": 114,
+      "bbox_px": [
+        1685.0,
+        4136.8,
+        1786.0,
+        4352.9
+      ],
+      "time_utc": "2026-10-18T04:30:43.066643+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-018",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 15.4151313,
+      "longitude": 73.7902913,
+      "water_depth_m": 6.55,
+      "size_m": {
+        "length": 1.43,
+        "width": 1.15,
+        "height": 0.51
+      },
+      "azimuth_deg": 190.4,
+      "side": "starboard",
+      "ground_range_m": 0.66,
+      "pings": [
+        1297,
+        1303
+      ],
+      "samples": [
+        165,
+        170
+      ],
+      "visible_samples": 35,
+      "bbox_px": [
+        1064.0,
+        6312.7,
+        1072.0,
+        6348.8
+      ],
+      "time_utc": "2026-10-18T04:31:18.816643+00:00"
+    },
+    {
+      "object_id": "GOA-OBJ-021",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 15.4152151,
+      "longitude": 73.7903036,
+      "water_depth_m": 6.66,
+      "size_m": {
+        "length": 0.62,
+        "width": 0.94,
+        "height": 0.73
+      },
+      "azimuth_deg": 180.0,
+      "side": "starboard",
+      "ground_range_m": 9.96,
+      "pings": [
+        1305,
+        1309
+      ],
+      "samples": [
+        335,
+        350
+      ],
+      "visible_samples": 64,
+      "bbox_px": [
+        1234.0,
+        6351.7,
+        1252.0,
+        6378.0
+      ],
+      "time_utc": "2026-10-18T04:31:19.399977+00:00"
+    }
+  ]
+}

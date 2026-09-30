@@ -1,0 +1,98 @@
+[
+  {
+    "file": "synthetic_mine_like_objects.xtf",
+    "image": [
+      6000,
+      2000
+    ],
+    "processing_ms": 18210.2,
+    "man_made_objects": 8,
+    "natural_features": 0,
+    "detected": 8,
+    "recall": 1.0,
+    "class_correct_of_detected": 0,
+    "confirmed_detections": 10,
+    "false_positives": 2,
+    "suppressed_candidates": 0,
+    "suppressed_by_reason": {},
+    "geotag_error_m": {
+      "mean": 1.82,
+      "max": 8.51
+    },
+    "missed": [],
+    "false_positive_classes": [
+      "shipwreck 60.6%",
+      "shipwreck 51.5%"
+    ]
+  },
+  {
+    "file": "synthetic_rocky_seabed_negatives.xtf",
+    "image": [
+      5000,
+      2000
+    ],
+    "processing_ms": 11251.8,
+    "man_made_objects": 0,
+    "natural_features": 17,
+    "detected": 0,
+    "recall": null,
+    "class_correct_of_detected": 0,
+    "confirmed_detections": 8,
+    "false_positives": 8,
+    "suppressed_candidates": 3,
+    "suppressed_by_reason": {
+      "below_min_score": 3
+    },
+    "geotag_error_m": null,
+    "missed": [],
+    "false_positive_classes": [
+      "shipwreck 89.9%",
+      "shipwreck 82.8%",
+      "shipwreck 74.3%",
+      "shipwreck 66.2%",
+      "shipwreck 63.0%",
+      "shipwreck 58.5%",
+      "shipwreck 55.8%",
+      "shipwreck 50.7%"
+    ]
+  },
+  {
+    "file": "synthetic_wreck_site.xtf",
+    "image": [
+      5000,
+      2000
+    ],
+    "processing_ms": 11115.9,
+    "man_made_objects": 11,
+    "natural_features": 6,
+    "detected": 3,
+    "recall": 0.273,
+    "class_correct_of_detected": 2,
+    "confirmed_detections": 7,
+    "false_positives": 4,
+    "suppressed_candidates": 2,
+    "suppressed_by_reason": {
+      "below_min_score": 2
+    },
+    "geotag_error_m": {
+      "mean": 2.88,
+      "max": 6.66
+    },
+    "missed": [
+      "GT-04 debris (1.9 m)",
+      "GT-05 debris (1.7 m)",
+      "GT-06 debris (1.7 m)",
+      "GT-07 debris (1.1 m)",
+      "GT-08 debris (2.2 m)",
+      "GT-09 debris (2.3 m)",
+      "GT-10 debris (1.2 m)",
+      "GT-11 debris (1.9 m)"
+    ],
+    "false_positive_classes": [
+      "human_body 78.6%",
+      "shipwreck 67.3%",
+      "debris 51.9%",
+      "shipwreck 50.1%"
+    ]
+  }
+]

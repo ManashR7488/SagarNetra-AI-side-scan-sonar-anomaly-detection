@@ -1,0 +1,258 @@
+{
+  "file": "MUM/MUM-L02.xtf",
+  "area": "MUM",
+  "area_name": "Mumbai High pipeline corridor",
+  "line": "MUM-L02",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF100/500",
+    "description": "Dual-frequency towed side-scan, 100/500 kHz class (route & mine surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 100,
+        "slant_range_m": 100,
+        "samples_per_side": 900,
+        "horizontal_beam_deg": 1.0,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 15
+      },
+      {
+        "frequency_khz": 500,
+        "slant_range_m": 50,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 15
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1276,
+    "ping_rate_hz": 7.31,
+    "duration_s": 174.3,
+    "start_time": "2026-10-12T01:12:40.727309+00:00",
+    "end_time": "2026-10-12T01:15:35.026694+00:00",
+    "start": {
+      "latitude": 19.404904,
+      "longitude": 71.3314933
+    },
+    "end": {
+      "latitude": 19.4022265,
+      "longitude": 71.3286642
+    },
+    "course_deg": 230.0,
+    "speed_kn": 4.61,
+    "water_depth_m": [
+      68.08,
+      71.97
+    ],
+    "towfish_depth_m_mean": 61.31,
+    "altitude_m_mean": 8.33,
+    "layback_m_mean": 241.41,
+    "sound_speed_mps_mean": 1534.8,
+    "water_temp_c_mean": 24.6,
+    "recorded_position_error_m_mean": 9.99
+  },
+  "conditions": {
+    "kp_offset_km": 12.4,
+    "sea_state": 1,
+    "dropouts": 4,
+    "tvg_mismatch": 0.0011817807045314543
+  },
+  "dropouts": [
+    {
+      "first_ping": 372,
+      "pings": 2
+    },
+    {
+      "first_ping": 133,
+      "pings": 3
+    },
+    {
+      "first_ping": 391,
+      "pings": 5
+    },
+    {
+      "first_ping": 516,
+      "pings": 3
+    }
+  ],
+  "waterfall_px": [
+    3850,
+    1800
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "MUM-OBJ-001",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~50% buried",
+      "latitude": 19.4027788,
+      "longitude": 71.3302662,
+      "water_depth_m": 69.55,
+      "size_m": {
+        "length": 545.72,
+        "width": 0.77,
+        "height": 0.67
+      },
+      "azimuth_deg": 54.7,
+      "side": "port",
+      "ground_range_m": 97.7,
+      "pings": [
+        1063,
+        1275
+      ],
+      "samples": [
+        689,
+        899
+      ],
+      "visible_samples": 1568,
+      "bbox_px": [
+        0.0,
+        3206.3,
+        212.0,
+        3849.0
+      ],
+      "time_utc": "2026-10-12T01:15:20.535921+00:00"
+    },
+    {
+      "object_id": "MUM-OBJ-002",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~25% buried",
+      "latitude": 19.4016533,
+      "longitude": 71.3320889,
+      "water_depth_m": 67.81,
+      "size_m": {
+        "length": 1050.92,
+        "width": 0.79,
+        "height": 0.68
+      },
+      "azimuth_deg": 142.4,
+      "side": "port",
+      "ground_range_m": 311.16,
+      "pings": [
+        487,
+        521
+      ],
+      "samples": [
+        75,
+        899
+      ],
+      "visible_samples": 1371,
+      "bbox_px": [
+        0.0,
+        1468.4,
+        826.0,
+        1576.0
+      ],
+      "time_utc": "2026-10-12T01:13:49.626831+00:00"
+    },
+    {
+      "object_id": "MUM-OBJ-002",
+      "kind": "pipeline",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "pipeline, ~25% buried",
+      "latitude": 19.4016533,
+      "longitude": 71.3320889,
+      "water_depth_m": 67.81,
+      "size_m": {
+        "length": 1050.92,
+        "width": 0.79,
+        "height": 0.68
+      },
+      "azimuth_deg": 142.4,
+      "side": "starboard",
+      "ground_range_m": 311.06,
+      "pings": [
+        458,
+        487
+      ],
+      "samples": [
+        75,
+        899
+      ],
+      "visible_samples": 1400,
+      "bbox_px": [
+        974.0,
+        1380.9,
+        1799.0,
+        1473.4
+      ],
+      "time_utc": "2026-10-12T01:13:45.252258+00:00"
+    },
+    {
+      "object_id": "MUM-OBJ-004",
+      "kind": "container",
+      "class": "debris",
+      "man_made": true,
+      "notes": "lost shipping container",
+      "latitude": 19.4032086,
+      "longitude": 71.3302941,
+      "water_depth_m": 70.08,
+      "size_m": {
+        "length": 6.06,
+        "width": 2.44,
+        "height": 2.59
+      },
+      "azimuth_deg": 113.2,
+      "side": "port",
+      "ground_range_m": 59.01,
+      "pings": [
+        642,
+        651
+      ],
+      "samples": [
+        508,
+        564
+      ],
+      "visible_samples": 297,
+      "bbox_px": [
+        334.0,
+        1936.1,
+        393.0,
+        1968.2
+      ],
+      "time_utc": "2026-10-12T01:14:09.038997+00:00"
+    },
+    {
+      "object_id": "MUM-OBJ-013",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 19.4037786,
+      "longitude": 71.3311925,
+      "water_depth_m": 71.22,
+      "size_m": {
+        "length": 2.38,
+        "width": 1.15,
+        "height": 0.77
+      },
+      "azimuth_deg": 136.3,
+      "side": "port",
+      "ground_range_m": 72.83,
+      "pings": [
+        277,
+        280
+      ],
+      "samples": [
+        649,
+        670
+      ],
+      "visible_samples": 51,
+      "bbox_px": [
+        228.0,
+        834.8,
+        252.0,
+        848.8
+      ],
+      "time_utc": "2026-10-12T01:13:18.731410+00:00"
+    }
+  ]
+}

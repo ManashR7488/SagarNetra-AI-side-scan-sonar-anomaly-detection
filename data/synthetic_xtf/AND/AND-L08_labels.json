@@ -1,0 +1,61 @@
+{
+  "file": "AND/AND-L08.xtf",
+  "area": "AND",
+  "area_name": "Andaman - Ross Island approaches",
+  "line": "AND-L08",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-AUV900",
+    "description": "AUV-mounted 900 kHz side-scan, INS navigation",
+    "platform": "auv",
+    "channels": [
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.25,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 12
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-15T01:48:28.650577+00:00",
+    "end_time": "2026-10-15T01:51:09.733910+00:00",
+    "start": {
+      "latitude": 11.6719287,
+      "longitude": 92.7744461
+    },
+    "end": {
+      "latitude": 11.6740485,
+      "longitude": 92.7736356
+    },
+    "course_deg": 340.0,
+    "speed_kn": 3.03,
+    "water_depth_m": [
+      26.71,
+      29.43
+    ],
+    "towfish_depth_m_mean": 21.42,
+    "altitude_m_mean": 6.6,
+    "layback_m_mean": 0.0,
+    "sound_speed_mps_mean": 1541.0,
+    "water_temp_c_mean": 28.75,
+    "recorded_position_error_m_mean": 0.31
+  },
+  "conditions": {
+    "sea_state": 1,
+    "dropouts": 0,
+    "tvg_mismatch": -0.147640729934553
+  },
+  "dropouts": [],
+  "waterfall_px": [
+    6450,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": []
+}

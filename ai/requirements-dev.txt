@@ -1,0 +1,9 @@
+# Local development: runtime + PyTorch backend (Ultralytics), model export and tests.
+-r requirements.txt
+ultralytics==8.4.149
+torch==2.14.0
+torchvision==0.29.0
+onnx==1.23.0
+onnxslim==0.1.96
+pytest==9.1.1
+httpx==0.28.1

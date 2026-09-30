@@ -1,0 +1,207 @@
+{
+  "name": "sonar_detector",
+  "task": "detect",
+  "architecture": "yolo11s",
+  "classes": [
+    "shipwreck",
+    "aircraft_wreck",
+    "mine_like_object",
+    "debris",
+    "human_body",
+    "marine_life"
+  ],
+  "hazard": {
+    "shipwreck": true,
+    "aircraft_wreck": true,
+    "mine_like_object": true,
+    "debris": true,
+    "human_body": true,
+    "marine_life": false
+  },
+  "input": {
+    "imgsz": 1024,
+    "color": "grayscale replicated to 3 channels (BGR)"
+  },
+  "tiling": {
+    "tile": 1024,
+    "overlap": 0.25,
+    "nms_iou": 0.5
+  },
+  "thresholds": {
+    "shipwreck": {
+      "conf": 0.179,
+      "f1": 0.3727
+    },
+    "aircraft_wreck": {
+      "conf": 0.665,
+      "f1": 0.1051
+    },
+    "mine_like_object": {
+      "conf": 0.206,
+      "f1": 0.5347
+    },
+    "debris": {
+      "conf": 0.05,
+      "f1": 0.2159
+    },
+    "human_body": {
+      "conf": 0.299,
+      "f1": 0.415
+    },
+    "marine_life": {
+      "conf": 0.05,
+      "f1": 0.1598
+    }
+  },
+  "default_conf": 0.25,
+  "test_metrics": {
+    "box": [
+      {
+        "class": "shipwreck",
+        "precision": 0.5565,
+        "recall": 0.3041,
+        "mAP50": 0.3227,
+        "mAP50-95": 0.1601
+      },
+      {
+        "class": "aircraft_wreck",
+        "precision": 0.0498,
+        "recall": 0.5714,
+        "mAP50": 0.0751,
+        "mAP50-95": 0.0356
+      },
+      {
+        "class": "mine_like_object",
+        "precision": 0.7278,
+        "recall": 0.2963,
+        "mAP50": 0.3897,
+        "mAP50-95": 0.1999
+      },
+      {
+        "class": "debris",
+        "precision": 0.2381,
+        "recall": 0.0217,
+        "mAP50": 0.0391,
+        "mAP50-95": 0.0103
+      },
+      {
+        "class": "human_body",
+        "precision": 0.7032,
+        "recall": 0.5192,
+        "mAP50": 0.5843,
+        "mAP50-95": 0.2663
+      },
+      {
+        "class": "marine_life",
+        "precision": 0.0,
+        "recall": 0.0,
+        "mAP50": 0.0,
+        "mAP50-95": 0.0
+      },
+      {
+        "class": "ALL",
+        "precision": 0.3792,
+        "recall": 0.2855,
+        "mAP50": 0.2351,
+        "mAP50-95": 0.112
+      }
+    ]
+  },
+  "train_device_speed_ms": {
+    "preprocess": 3.134908390440041,
+    "inference": 27.173497089129903,
+    "loss": 0.0016821918195577606,
+    "postprocess": 1.0241827054564405
+  },
+  "cpu_onnx_latency_ms_per_tile": 279.0,
+  "datasets": {
+    "roboflow": {
+      "train": {
+        "images": 405,
+        "aircraft_wreck": 72,
+        "debris": 123,
+        "marine_life": 168,
+        "shipwreck": 337
+      },
+      "val": {
+        "images": 108,
+        "aircraft_wreck": 17,
+        "debris": 41,
+        "marine_life": 38,
+        "shipwreck": 75
+      },
+      "test": {
+        "images": 57,
+        "aircraft_wreck": 14,
+        "marine_life": 2,
+        "debris": 14,
+        "shipwreck": 35
+      }
+    },
+    "milco_nombo": {
+      "train": {
+        "images": 520,
+        "debris": 143,
+        "mine_like_object": 344,
+        "background": 260
+      },
+      "val": {
+        "images": 44,
+        "mine_like_object": 37,
+        "debris": 56,
+        "background": 22
+      },
+      "test": {
+        "images": 44,
+        "mine_like_object": 54,
+        "debris": 32,
+        "background": 22
+      }
+    },
+    "aquascan": {
+      "val": {
+        "images": 104,
+        "human_body": 111
+      },
+      "train": {
+        "images": 824,
+        "human_body": 851
+      },
+      "test": {
+        "images": 104,
+        "human_body": 104
+      }
+    },
+    "ai4shipwrecks": {
+      "train": {
+        "images": 396,
+        "shipwreck": 720,
+        "background": 133
+      },
+      "val": {
+        "images": 99,
+        "shipwreck": 150,
+        "background": 34
+      },
+      "test": {
+        "images": 379,
+        "shipwreck": 455,
+        "background": 128
+      }
+    },
+    "terrain_neg": {
+      "train": {
+        "images": 150,
+        "background": 150
+      }
+    },
+    "speckle_aug": {
+      "train": {
+        "images": 344
+      }
+    }
+  },
+  "trained_at": "2026-09-29 03:10:16",
+  "epochs": 120,
+  "quick_test": false
+}

@@ -1,0 +1,11 @@
+# SagarNetra AI service: runtime dependencies (what Vercel installs).
+# Inference runs on onnxruntime (no PyTorch). For training / the PyTorch backend / tests locally:
+#   uv pip install -r requirements-dev.txt
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+python-multipart==0.0.32
+python-dotenv==1.2.3
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+onnxruntime==1.30.0
+pyxtf==1.5.0

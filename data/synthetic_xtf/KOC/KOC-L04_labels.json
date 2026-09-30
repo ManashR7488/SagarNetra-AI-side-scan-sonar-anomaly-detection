@@ -1,0 +1,370 @@
+{
+  "file": "KOC/KOC-L04.xtf",
+  "area": "KOC",
+  "area_name": "Kochi fishing grounds",
+  "line": "KOC-L04",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-SS600",
+    "description": "Single-frequency 600 kHz towed side-scan (derelict gear surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 600,
+        "slant_range_m": 50,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 18
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-09T03:35:29.478169+00:00",
+    "end_time": "2026-10-09T03:38:10.561502+00:00",
+    "start": {
+      "latitude": 9.9311309,
+      "longitude": 76.1427445
+    },
+    "end": {
+      "latitude": 9.930365,
+      "longitude": 76.1402259
+    },
+    "course_deg": 255.0,
+    "speed_kn": 3.48,
+    "water_depth_m": [
+      12.82,
+      15.5
+    ],
+    "towfish_depth_m_mean": 8.66,
+    "altitude_m_mean": 5.01,
+    "layback_m_mean": 37.17,
+    "sound_speed_mps_mean": 1541.6,
+    "water_temp_c_mean": 28.63,
+    "recorded_position_error_m_mean": 2.05
+  },
+  "conditions": {
+    "sea_state": 2,
+    "dropouts": 0,
+    "tvg_mismatch": -0.09777386302023705
+  },
+  "dropouts": [],
+  "waterfall_px": [
+    5930,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "KOC-OBJ-001",
+      "kind": "ghost_net",
+      "class": "debris",
+      "man_made": true,
+      "notes": "derelict fishing net",
+      "latitude": 9.9304192,
+      "longitude": 76.1404302,
+      "water_depth_m": 14.63,
+      "size_m": {
+        "length": 7.27,
+        "width": 5.69,
+        "height": 0.3
+      },
+      "azimuth_deg": 314.5,
+      "side": "port",
+      "ground_range_m": 2.21,
+      "pings": [
+        1736,
+        1759
+      ],
+      "samples": [
+        111,
+        115
+      ],
+      "visible_samples": 48,
+      "bbox_px": [
+        915.0,
+        5321.9,
+        921.7,
+        5397.5
+      ],
+      "time_utc": "2026-10-09T03:37:55.061502+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-001",
+      "kind": "ghost_net",
+      "class": "debris",
+      "man_made": true,
+      "notes": "derelict fishing net",
+      "latitude": 9.9304192,
+      "longitude": 76.1404302,
+      "water_depth_m": 14.63,
+      "size_m": {
+        "length": 7.27,
+        "width": 5.69,
+        "height": 0.3
+      },
+      "azimuth_deg": 314.5,
+      "side": "starboard",
+      "ground_range_m": 2.29,
+      "pings": [
+        1732,
+        1773
+      ],
+      "samples": [
+        111,
+        166
+      ],
+      "visible_samples": 1689,
+      "bbox_px": [
+        1126.3,
+        5309.6,
+        1180.5,
+        5440.4
+      ],
+      "time_utc": "2026-10-09T03:37:55.478169+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-003",
+      "kind": "ghost_net",
+      "class": "debris",
+      "man_made": true,
+      "notes": "derelict fishing net",
+      "latitude": 9.9300167,
+      "longitude": 76.1405031,
+      "water_depth_m": 14.6,
+      "size_m": {
+        "length": 8.15,
+        "width": 2.11,
+        "height": 0.3
+      },
+      "azimuth_deg": 292.2,
+      "side": "port",
+      "ground_range_m": 43.22,
+      "pings": [
+        1727,
+        1772
+      ],
+      "samples": [
+        901,
+        1012
+      ],
+      "visible_samples": 1855,
+      "bbox_px": [
+        80.0,
+        5294.3,
+        186.3,
+        5437.3
+      ],
+      "time_utc": "2026-10-09T03:37:55.228169+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-048",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.9303473,
+      "longitude": 76.1417769,
+      "water_depth_m": 12.62,
+      "size_m": {
+        "length": 10.81,
+        "width": 6.81,
+        "height": 2.42
+      },
+      "azimuth_deg": 205.7,
+      "side": "port",
+      "ground_range_m": 45.18,
+      "pings": [
+        790,
+        848
+      ],
+      "samples": [
+        888,
+        1099
+      ],
+      "visible_samples": 9327,
+      "bbox_px": [
+        0.0,
+        2421.3,
+        198.4,
+        2604.2
+      ],
+      "time_utc": "2026-10-09T03:36:37.728169+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-002",
+      "kind": "ghost_net",
+      "class": "debris",
+      "man_made": true,
+      "notes": "derelict fishing net",
+      "latitude": 9.9311532,
+      "longitude": 76.1416787,
+      "water_depth_m": 13.09,
+      "size_m": {
+        "length": 7.78,
+        "width": 4.88,
+        "height": 0.3
+      },
+      "azimuth_deg": 250.7,
+      "side": "starboard",
+      "ground_range_m": 44.06,
+      "pings": [
+        739,
+        782
+      ],
+      "samples": [
+        921,
+        1029
+      ],
+      "visible_samples": 3798,
+      "bbox_px": [
+        1880.4,
+        2264.9,
+        1983.8,
+        2401.8
+      ],
+      "time_utc": "2026-10-09T03:36:32.811502+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-038",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 9.930791,
+      "longitude": 76.1413631,
+      "water_depth_m": 13.19,
+      "size_m": {
+        "length": 2.38,
+        "width": 0.61,
+        "height": 0.21
+      },
+      "azimuth_deg": 351.5,
+      "side": "starboard",
+      "ground_range_m": 14.71,
+      "pings": [
+        1044,
+        1047
+      ],
+      "samples": [
+        316,
+        365
+      ],
+      "visible_samples": 174,
+      "bbox_px": [
+        1317.2,
+        3200.1,
+        1365.7,
+        3214.4
+      ],
+      "time_utc": "2026-10-09T03:36:56.561502+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-047",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.9309995,
+      "longitude": 76.1415403,
+      "water_depth_m": 13.1,
+      "size_m": {
+        "length": 7.24,
+        "width": 4.59,
+        "height": 2.3
+      },
+      "azimuth_deg": 19.6,
+      "side": "starboard",
+      "ground_range_m": 31.86,
+      "pings": [
+        870,
+        907
+      ],
+      "samples": [
+        636,
+        775
+      ],
+      "visible_samples": 3935,
+      "bbox_px": [
+        1615.1,
+        2666.6,
+        1747.4,
+        2785.1
+      ],
+      "time_utc": "2026-10-09T03:36:43.478169+00:00"
+    },
+    {
+      "object_id": "KOC-OBJ-042",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.9310875,
+      "longitude": 76.1423127,
+      "water_depth_m": 12.59,
+      "size_m": {
+        "length": 8.51,
+        "width": 7.59,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 15.61,
+      "pings": [
+        288,
+        344
+      ],
+      "samples": [
+        165,
+        331
+      ],
+      "visible_samples": 1133,
+      "bbox_px": [
+        1176.6,
+        882.1,
+        1334.1,
+        1058.8
+      ],
+      "time_utc": "2026-10-09T03:35:55.811502+00:00",
+      "school_height_above_seabed_m": 4.7
+    },
+    {
+      "object_id": "KOC-OBJ-043",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.9308226,
+      "longitude": 76.1414123,
+      "water_depth_m": 13.15,
+      "size_m": {
+        "length": 11.04,
+        "width": 11.31,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "side": "starboard",
+      "ground_range_m": 16.53,
+      "pings": [
+        962,
+        1033
+      ],
+      "samples": [
+        68,
+        309
+      ],
+      "visible_samples": 2112,
+      "bbox_px": [
+        1086.3,
+        2948.7,
+        1313.6,
+        3171.4
+      ],
+      "time_utc": "2026-10-09T03:36:52.561502+00:00",
+      "school_height_above_seabed_m": 3.4
+    }
+  ]
+}

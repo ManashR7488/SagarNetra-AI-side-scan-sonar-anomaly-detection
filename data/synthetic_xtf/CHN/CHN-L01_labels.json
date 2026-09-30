@@ -1,0 +1,109 @@
+{
+  "file": "CHN/CHN-L01.xtf",
+  "area": "CHN",
+  "area_name": "Chennai Port approaches",
+  "line": "CHN-L01",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-DF400/900",
+    "description": "Dual-frequency towed side-scan, 400/900 kHz CHIRP class",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 400,
+        "slant_range_m": 75,
+        "samples_per_side": 1000,
+        "horizontal_beam_deg": 0.46,
+        "vertical_beam_deg": 50,
+        "tilt_deg": 20
+      },
+      {
+        "frequency_khz": 900,
+        "slant_range_m": 40,
+        "samples_per_side": 800,
+        "horizontal_beam_deg": 0.28,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 20
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1211,
+    "ping_rate_hz": 9.75,
+    "duration_s": 124.1,
+    "start_time": "2026-10-03T01:30:00+00:00",
+    "end_time": "2026-10-03T01:32:04.060150+00:00",
+    "start": {
+      "latitude": 13.1008347,
+      "longitude": 80.3320926
+    },
+    "end": {
+      "latitude": 13.1030219,
+      "longitude": 80.3329609
+    },
+    "course_deg": 20.0,
+    "speed_kn": 4.06,
+    "water_depth_m": [
+      14.89,
+      15.53
+    ],
+    "towfish_depth_m_mean": 4.89,
+    "altitude_m_mean": 10.22,
+    "layback_m_mean": 31.32,
+    "sound_speed_mps_mean": 1540.5,
+    "water_temp_c_mean": 28.25,
+    "recorded_position_error_m_mean": 1.39
+  },
+  "conditions": {
+    "sea_state": 2,
+    "dropouts": 1,
+    "tvg_mismatch": -0.1288832444300999
+  },
+  "dropouts": [
+    {
+      "first_ping": 418,
+      "pings": 6
+    }
+  ],
+  "waterfall_px": [
+    3483,
+    2000
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "CHN-OBJ-008",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 13.1026972,
+      "longitude": 80.3335111,
+      "water_depth_m": 15.48,
+      "size_m": {
+        "length": 2.08,
+        "width": 1.03,
+        "height": 0.28
+      },
+      "azimuth_deg": 117.0,
+      "side": "starboard",
+      "ground_range_m": 69.04,
+      "pings": [
+        1158,
+        1162
+      ],
+      "samples": [
+        917,
+        944
+      ],
+      "visible_samples": 111,
+      "bbox_px": [
+        1916.0,
+        3329.6,
+        1946.0,
+        3345.9
+      ],
+      "time_utc": "2026-10-03T01:31:58.933698+00:00"
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+{
+  "area": "MAN",
+  "name": "Gulf of Mannar rocky reef (natural only)",
+  "origin": {
+    "latitude": 9.2,
+    "longitude": 79.15
+  },
+  "sonar_profile": "SIM-SS600",
+  "survey_lines": [
+    "MAN-L01",
+    "MAN-L02",
+    "MAN-L03",
+    "MAN-L04",
+    "MAN-L05",
+    "MAN-L06",
+    "MAN-L07",
+    "MAN-L08"
+  ],
+  "seabed": {
+    "depth_m": 14,
+    "slope": [
+      0.0,
+      0.004
+    ],
+    "mud": 0.1,
+    "gravel": 0.2,
+    "rock": 0.2,
+    "rock_height": 2.2,
+    "reef": 0.1,
+    "sandwave_amp": 0.5,
+    "sandwave_len": 30,
+    "ripple_amp": 0.07,
+    "ripple_len": 1.4,
+    "trawl_marks": 0,
+    "pockmarks": 0,
+    "tide_amp": 0.5,
+    "temp_c": 29.5,
+    "salinity": 35.0
+  },
+  "synthetic": true,
+  "objects": [
+    {
+      "object_id": "MAN-OBJ-001",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2017331,
+      "longitude": 79.1518676,
+      "size_m": {
+        "length": 7.27,
+        "width": 4.8,
+        "height": 2.47
+      },
+      "azimuth_deg": 193.9,
+      "imaged_by_lines": [
+        "MAN-L06"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-002",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2021462,
+      "longitude": 79.1503116,
+      "size_m": {
+        "length": 6.66,
+        "width": 3.66,
+        "height": 1.16
+      },
+      "azimuth_deg": 245.9,
+      "imaged_by_lines": [
+        "MAN-L03"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-003",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2013496,
+      "longitude": 79.152453,
+      "size_m": {
+        "length": 9.78,
+        "width": 7.35,
+        "height": 1.75
+      },
+      "azimuth_deg": 98.3,
+      "imaged_by_lines": [
+        "MAN-L07"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-004",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2004032,
+      "longitude": 79.1498657,
+      "size_m": {
+        "length": 4.69,
+        "width": 3.49,
+        "height": 2.87
+      },
+      "azimuth_deg": 28.3,
+      "imaged_by_lines": [
+        "MAN-L04"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-005",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2012349,
+      "longitude": 79.1518242,
+      "size_m": {
+        "length": 5.68,
+        "width": 3.97,
+        "height": 1.49
+      },
+      "azimuth_deg": 51.3,
+      "imaged_by_lines": [
+        "MAN-L06"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-006",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2002219,
+      "longitude": 79.1502968,
+      "size_m": {
+        "length": 10.1,
+        "width": 3.97,
+        "height": 3.0
+      },
+      "azimuth_deg": 242.2,
+      "imaged_by_lines": [
+        "MAN-L04",
+        "MAN-L05"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-007",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2025012,
+      "longitude": 79.1498826,
+      "size_m": {
+        "length": 8.89,
+        "width": 7.64,
+        "height": 2.41
+      },
+      "azimuth_deg": 100.1,
+      "imaged_by_lines": [
+        "MAN-L02"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-008",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2007633,
+      "longitude": 79.1506677,
+      "size_m": {
+        "length": 10.1,
+        "width": 7.09,
+        "height": 2.94
+      },
+      "azimuth_deg": 270.8,
+      "imaged_by_lines": [
+        "MAN-L04",
+        "MAN-L05"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-009",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2000514,
+      "longitude": 79.1520396,
+      "size_m": {
+        "length": 7.12,
+        "width": 3.29,
+        "height": 1.71
+      },
+      "azimuth_deg": 339.8,
+      "imaged_by_lines": [
+        "MAN-L07",
+        "MAN-L08"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-010",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2020715,
+      "longitude": 79.1491769,
+      "size_m": {
+        "length": 7.46,
+        "width": 7.85,
+        "height": 1.42
+      },
+      "azimuth_deg": 241.2,
+      "imaged_by_lines": [
+        "MAN-L01",
+        "MAN-L02"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-011",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2011358,
+      "longitude": 79.15263,
+      "size_m": {
+        "length": 2.54,
+        "width": 2.5,
+        "height": 1.69
+      },
+      "azimuth_deg": 121.2,
+      "imaged_by_lines": [
+        "MAN-L07",
+        "MAN-L08"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-012",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.200559,
+      "longitude": 79.1501736,
+      "size_m": {
+        "length": 2.32,
+        "width": 2.14,
+        "height": 0.91
+      },
+      "azimuth_deg": 310.4,
+      "imaged_by_lines": [
+        "MAN-L04",
+        "MAN-L05"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-013",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.1999259,
+      "longitude": 79.1509669,
+      "size_m": {
+        "length": 2.21,
+        "width": 1.77,
+        "height": 0.66
+      },
+      "azimuth_deg": 206.3,
+      "imaged_by_lines": [
+        "MAN-L06"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-014",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2005899,
+      "longitude": 79.1506239,
+      "size_m": {
+        "length": 2.99,
+        "width": 2.77,
+        "height": 0.95
+      },
+      "azimuth_deg": 106.4,
+      "imaged_by_lines": [
+        "MAN-L05"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-015",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2000711,
+      "longitude": 79.1512545,
+      "size_m": {
+        "length": 2.0,
+        "width": 1.51,
+        "height": 1.42
+      },
+      "azimuth_deg": 221.2,
+      "imaged_by_lines": [
+        "MAN-L06",
+        "MAN-L07"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-016",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2006984,
+      "longitude": 79.1492597,
+      "size_m": {
+        "length": 1.35,
+        "width": 0.98,
+        "height": 1.49
+      },
+      "azimuth_deg": 199.8,
+      "imaged_by_lines": [
+        "MAN-L02",
+        "MAN-L03"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-017",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2011305,
+      "longitude": 79.1509786,
+      "size_m": {
+        "length": 2.59,
+        "width": 2.14,
+        "height": 1.95
+      },
+      "azimuth_deg": 69.2,
+      "imaged_by_lines": [
+        "MAN-L05"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-018",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2008226,
+      "longitude": 79.1505428,
+      "size_m": {
+        "length": 2.37,
+        "width": 2.18,
+        "height": 1.17
+      },
+      "azimuth_deg": 175.4,
+      "imaged_by_lines": [
+        "MAN-L04",
+        "MAN-L05"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-019",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2007428,
+      "longitude": 79.1498492,
+      "size_m": {
+        "length": 2.66,
+        "width": 2.65,
+        "height": 0.51
+      },
+      "azimuth_deg": 128.6,
+      "imaged_by_lines": [
+        "MAN-L03",
+        "MAN-L04"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-020",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2008426,
+      "longitude": 79.1517804,
+      "size_m": {
+        "length": 1.62,
+        "width": 1.37,
+        "height": 0.62
+      },
+      "azimuth_deg": 343.4,
+      "imaged_by_lines": [
+        "MAN-L06",
+        "MAN-L07"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-021",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.200594,
+      "longitude": 79.1514966,
+      "size_m": {
+        "length": 2.89,
+        "width": 2.87,
+        "height": 1.45
+      },
+      "azimuth_deg": 27.7,
+      "imaged_by_lines": [
+        "MAN-L06",
+        "MAN-L07"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-022",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2017828,
+      "longitude": 79.1494416,
+      "size_m": {
+        "length": 1.22,
+        "width": 0.8,
+        "height": 1.63
+      },
+      "azimuth_deg": 239.9,
+      "imaged_by_lines": [
+        "MAN-L02"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-023",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2006846,
+      "longitude": 79.152411,
+      "size_m": {
+        "length": 0.89,
+        "width": 0.69,
+        "height": 0.65
+      },
+      "azimuth_deg": 124.7,
+      "imaged_by_lines": [
+        "MAN-L07",
+        "MAN-L08"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-024",
+      "kind": "boulder",
+      "class": null,
+      "man_made": false,
+      "notes": "natural boulder",
+      "latitude": 9.2008669,
+      "longitude": 79.1517732,
+      "size_m": {
+        "length": 2.16,
+        "width": 1.8,
+        "height": 1.71
+      },
+      "azimuth_deg": 194.8,
+      "imaged_by_lines": [
+        "MAN-L06",
+        "MAN-L07"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-025",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.2028038,
+      "longitude": 79.1499019,
+      "size_m": {
+        "length": 20.53,
+        "width": 11.57,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "MAN-L02"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-026",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.2014391,
+      "longitude": 79.1499774,
+      "size_m": {
+        "length": 24.57,
+        "width": 9.9,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "MAN-L03",
+        "MAN-L04"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-027",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.2009694,
+      "longitude": 79.1491431,
+      "size_m": {
+        "length": 20.35,
+        "width": 7.63,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "MAN-L02",
+        "MAN-L03"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-028",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.1998848,
+      "longitude": 79.1507946,
+      "size_m": {
+        "length": 14.75,
+        "width": 8.86,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "MAN-L06"
+      ]
+    },
+    {
+      "object_id": "MAN-OBJ-029",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 9.2013403,
+      "longitude": 79.1508228,
+      "size_m": {
+        "length": 23.18,
+        "width": 4.74,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "MAN-L04",
+        "MAN-L05"
+      ]
+    }
+  ]
+}

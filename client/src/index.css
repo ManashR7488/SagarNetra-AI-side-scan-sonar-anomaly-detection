@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Leaflet Custom Light Theme Popups */
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 2px !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+}
+
+.leaflet-container {
+  font-family: inherit !important;
+}
+
+/* ---- landing page ---- */
+@keyframes scan-line {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+.scan-line { animation: scan-line 5s linear infinite; }
+
+/* Sonar diagram: ping wavefronts pulse outwards. */
+@keyframes sd-pulse { 0% { opacity: 0; } 15% { opacity: 0.95; } 75% { opacity: 0.1; } 100% { opacity: 0; } }
+.sd-pulse { animation: sd-pulse 1.35s ease-out infinite; }
+
+/* Scroll-in reveal for the story chapters. */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Hero story stepper: the active step fills as the scene plays. */
+@keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fade-in 0.5s ease both; }
+.story-step__bar { width: calc(var(--phase-progress, 0) * 100%); }
+
+/* ---- hero: underwater survey scene (three.js) and its projected detection tags ---- */
+.ocean-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ocean-tags { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.ocean-tag { position: absolute; left: 0; top: 0; opacity: 0; will-change: transform, opacity; --tint: #67e8f9; }
+.ocean-tag__box { position: absolute; inset: 0; }
+.ocean-tag__box i { position: absolute; width: 14px; height: 14px; border: 0 solid var(--tint); filter: drop-shadow(0 0 3px var(--tint)); }
+.ocean-tag__box i:nth-child(1) { left: 0; top: 0; border-width: 2px 0 0 2px; border-top-left-radius: 3px; }
+.ocean-tag__box i:nth-child(2) { right: 0; top: 0; border-width: 2px 2px 0 0; border-top-right-radius: 3px; }
+.ocean-tag__box i:nth-child(3) { left: 0; bottom: 0; border-width: 0 0 2px 2px; border-bottom-left-radius: 3px; }
+.ocean-tag__box i:nth-child(4) { right: 0; bottom: 0; border-width: 0 2px 2px 0; border-bottom-right-radius: 3px; }
+.ocean-tag__label {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 6px);
+  white-space: nowrap;
+  padding: 4px 8px 4px 7px;
+  border-radius: 6px;
+  font: 600 11px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #e6f6ff;
+  background: rgba(2, 16, 26, 0.8);
+  border: 1px solid rgba(148, 197, 214, 0.22);
+  border-left: 3px solid var(--tint);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transform: translate(var(--label-dx, 0px), var(--label-dy, 0px));
+}
+.ocean-tag__row { display: flex; align-items: center; gap: 6px; }
+.ocean-tag__dot { width: 7px; height: 7px; border-radius: 9999px; background: var(--tint); box-shadow: 0 0 8px var(--tint); }
+.ocean-tag__id { color: #7dd3fc; }
+.ocean-tag__conf { color: var(--tint); font-weight: 700; }
+.ocean-tag__geo {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  color: #9fc3d3;
+  font-size: 10px;
+  font-weight: 500;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+}
+.ocean-tag.is-geo .ocean-tag__geo,
+.ocean-tag.is-rejected .ocean-tag__geo { max-height: 2.6em; opacity: 1; margin-top: 2px; }
+.ocean-tag.is-filtered .ocean-tag__box i { filter: none; opacity: 0.8; }
+.ocean-tag.is-rejected .ocean-tag__name { text-decoration: line-through; text-decoration-color: rgba(230, 246, 255, 0.55); }
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-line, .fade-in, .sd-pulse { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

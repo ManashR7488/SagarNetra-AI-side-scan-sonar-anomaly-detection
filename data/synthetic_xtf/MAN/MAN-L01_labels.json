@@ -1,0 +1,114 @@
+{
+  "file": "MAN/MAN-L01.xtf",
+  "area": "MAN",
+  "area_name": "Gulf of Mannar rocky reef (natural only)",
+  "line": "MAN-L01",
+  "synthetic": true,
+  "sonar": {
+    "name": "SIM-SS600",
+    "description": "Single-frequency 600 kHz towed side-scan (derelict gear surveys)",
+    "platform": "towed",
+    "channels": [
+      {
+        "frequency_khz": 600,
+        "slant_range_m": 50,
+        "samples_per_side": 1100,
+        "horizontal_beam_deg": 0.3,
+        "vertical_beam_deg": 45,
+        "tilt_deg": 18
+      }
+    ]
+  },
+  "survey": {
+    "pings": 1934,
+    "ping_rate_hz": 12.0,
+    "duration_s": 161.1,
+    "start_time": "2026-10-21T02:30:00+00:00",
+    "end_time": "2026-10-21T02:32:41.083333+00:00",
+    "start": {
+      "latitude": 9.2009054,
+      "longitude": 79.148115
+    },
+    "end": {
+      "latitude": 9.2031023,
+      "longitude": 79.149449
+    },
+    "course_deg": 30.0,
+    "speed_kn": 3.46,
+    "water_depth_m": [
+      14.66,
+      16.03
+    ],
+    "towfish_depth_m_mean": 8.06,
+    "altitude_m_mean": 7.59,
+    "layback_m_mean": 38.38,
+    "sound_speed_mps_mean": 1543.9,
+    "water_temp_c_mean": 29.24,
+    "recorded_position_error_m_mean": 1.91
+  },
+  "conditions": {
+    "sea_state": 4,
+    "dropouts": 4,
+    "tvg_mismatch": -0.13546693231552395,
+    "surface_return": true
+  },
+  "dropouts": [
+    {
+      "first_ping": 1008,
+      "pings": 4
+    },
+    {
+      "first_ping": 281,
+      "pings": 5
+    },
+    {
+      "first_ping": 738,
+      "pings": 7
+    },
+    {
+      "first_ping": 165,
+      "pings": 5
+    }
+  ],
+  "waterfall_px": [
+    5850,
+    2048
+  ],
+  "georeferenced_by_ai_reader": true,
+  "objects": [
+    {
+      "object_id": "MAN-OBJ-010",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 9.2020715,
+      "longitude": 79.1491769,
+      "water_depth_m": 16.11,
+      "size_m": {
+        "length": 7.46,
+        "width": 7.85,
+        "height": 1.42
+      },
+      "azimuth_deg": 241.2,
+      "side": "starboard",
+      "ground_range_m": 25.23,
+      "pings": [
+        1171,
+        1228
+      ],
+      "samples": [
+        501,
+        665
+      ],
+      "visible_samples": 7536,
+      "bbox_px": [
+        1489.4,
+        3541.1,
+        1645.0,
+        3718.5
+      ],
+      "time_utc": "2026-10-21T02:31:39.916667+00:00"
+    }
+  ]
+}

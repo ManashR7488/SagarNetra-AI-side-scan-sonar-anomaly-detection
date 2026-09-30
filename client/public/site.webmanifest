@@ -1,0 +1,12 @@
+{
+  "name": "SagarNetra: AI side-scan sonar anomaly detection",
+  "short_name": "SagarNetra",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#04182F",
+  "background_color": "#04182F",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -1,0 +1,453 @@
+{
+  "area": "AND",
+  "name": "Andaman - Ross Island approaches",
+  "origin": {
+    "latitude": 11.675,
+    "longitude": 92.775
+  },
+  "sonar_profile": "SIM-AUV900",
+  "survey_lines": [
+    "AND-L01",
+    "AND-L02",
+    "AND-L03",
+    "AND-L04",
+    "AND-L05",
+    "AND-L06",
+    "AND-L07",
+    "AND-L08"
+  ],
+  "seabed": {
+    "depth_m": 28,
+    "slope": [
+      0.01,
+      0.0
+    ],
+    "mud": 0.05,
+    "gravel": 0.2,
+    "rock": 0.08,
+    "rock_height": 2.0,
+    "reef": 0.25,
+    "sandwave_amp": 0.0,
+    "sandwave_len": 40.0,
+    "ripple_amp": 0.05,
+    "ripple_len": 1.4,
+    "trawl_marks": 0,
+    "pockmarks": 0,
+    "tide_amp": 0.8,
+    "temp_c": 29.5,
+    "salinity": 33.0
+  },
+  "synthetic": true,
+  "objects": [
+    {
+      "object_id": "AND-OBJ-001",
+      "kind": "aircraft",
+      "class": "aircraft_wreck",
+      "man_made": true,
+      "notes": "WWII-era aircraft wreck",
+      "latitude": 11.674345,
+      "longitude": 92.7763536,
+      "size_m": {
+        "length": 15.72,
+        "width": 20.25,
+        "height": 2.3
+      },
+      "azimuth_deg": 127.2,
+      "imaged_by_lines": [
+        "AND-L02",
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-002",
+      "kind": "shipwreck",
+      "class": "shipwreck",
+      "man_made": true,
+      "notes": "intact hull",
+      "latitude": 11.6734281,
+      "longitude": 92.7762263,
+      "size_m": {
+        "length": 40.0,
+        "width": 7.09,
+        "height": 4.68
+      },
+      "azimuth_deg": 310.1,
+      "imaged_by_lines": [
+        "AND-L03",
+        "AND-L04"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-003",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6730037,
+      "longitude": 92.7763223,
+      "size_m": {
+        "length": 1.0,
+        "width": 0.96,
+        "height": 0.47
+      },
+      "azimuth_deg": 269.3,
+      "imaged_by_lines": [
+        "AND-L04"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-004",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6732101,
+      "longitude": 92.7761202,
+      "size_m": {
+        "length": 1.81,
+        "width": 0.8,
+        "height": 0.87
+      },
+      "azimuth_deg": 316.0,
+      "imaged_by_lines": [
+        "AND-L03",
+        "AND-L04"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-005",
+      "kind": "wreck_debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6737536,
+      "longitude": 92.7761267,
+      "size_m": {
+        "length": 1.97,
+        "width": 1.02,
+        "height": 0.48
+      },
+      "azimuth_deg": 147.6,
+      "imaged_by_lines": [
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-006",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 11.6748887,
+      "longitude": 92.7759795,
+      "size_m": {
+        "length": 1.61,
+        "width": 0.42,
+        "height": 0.42
+      },
+      "azimuth_deg": 233.7,
+      "imaged_by_lines": [
+        "AND-L02",
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-007",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 11.6731608,
+      "longitude": 92.774595,
+      "size_m": {
+        "length": 1.78,
+        "width": 0.48,
+        "height": 0.48
+      },
+      "azimuth_deg": 213.4,
+      "imaged_by_lines": [
+        "AND-L06",
+        "AND-L07"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-008",
+      "kind": "ordnance",
+      "class": "mine_like_object",
+      "man_made": true,
+      "notes": "unexploded ordnance (bomb / shell)",
+      "latitude": 11.6743261,
+      "longitude": 92.7740886,
+      "size_m": {
+        "length": 1.38,
+        "width": 0.37,
+        "height": 0.37
+      },
+      "azimuth_deg": 177.1,
+      "imaged_by_lines": [
+        "AND-L07"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-009",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6747221,
+      "longitude": 92.775548,
+      "size_m": {
+        "length": 0.75,
+        "width": 0.77,
+        "height": 0.24
+      },
+      "azimuth_deg": 260.2,
+      "imaged_by_lines": [
+        "AND-L03",
+        "AND-L04"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-010",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6739025,
+      "longitude": 92.7762441,
+      "size_m": {
+        "length": 1.6,
+        "width": 1.03,
+        "height": 0.78
+      },
+      "azimuth_deg": 227.0,
+      "imaged_by_lines": [
+        "AND-L02",
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-011",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.6744164,
+      "longitude": 92.7765903,
+      "size_m": {
+        "length": 1.65,
+        "width": 0.81,
+        "height": 0.82
+      },
+      "azimuth_deg": 86.8,
+      "imaged_by_lines": [
+        "AND-L01",
+        "AND-L02"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-012",
+      "kind": "debris",
+      "class": "debris",
+      "man_made": true,
+      "notes": "man-made debris",
+      "latitude": 11.674907,
+      "longitude": 92.7757073,
+      "size_m": {
+        "length": 1.4,
+        "width": 0.64,
+        "height": 0.45
+      },
+      "azimuth_deg": 24.5,
+      "imaged_by_lines": [
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-013",
+      "kind": "concrete_blocks",
+      "class": "debris",
+      "man_made": true,
+      "notes": "artificial reef concrete modules",
+      "latitude": 11.6732769,
+      "longitude": 92.7751226,
+      "size_m": {
+        "length": 15.0,
+        "width": 15.0,
+        "height": 2.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "AND-L05",
+        "AND-L06"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-014",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 11.6740312,
+      "longitude": 92.7765727,
+      "size_m": {
+        "length": 18.48,
+        "width": 4.59,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "AND-L02"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-015",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 11.6732318,
+      "longitude": 92.7759755,
+      "size_m": {
+        "length": 12.1,
+        "width": 10.57,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "AND-L03",
+        "AND-L04"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-016",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 11.6749176,
+      "longitude": 92.7755139,
+      "size_m": {
+        "length": 13.08,
+        "width": 10.25,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-017",
+      "kind": "fish_school",
+      "class": "marine_life",
+      "man_made": false,
+      "notes": "fish school in the water column",
+      "latitude": 11.6737721,
+      "longitude": 92.7761919,
+      "size_m": {
+        "length": 16.99,
+        "width": 7.06,
+        "height": 0.0
+      },
+      "azimuth_deg": 0.0,
+      "imaged_by_lines": [
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-018",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6745923,
+      "longitude": 92.7766788,
+      "size_m": {
+        "length": 4.71,
+        "width": 5.81,
+        "height": 2.45
+      },
+      "azimuth_deg": 92.9,
+      "imaged_by_lines": [
+        "AND-L01",
+        "AND-L02"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-019",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6741901,
+      "longitude": 92.7761917,
+      "size_m": {
+        "length": 7.89,
+        "width": 4.49,
+        "height": 1.04
+      },
+      "azimuth_deg": 352.4,
+      "imaged_by_lines": [
+        "AND-L02",
+        "AND-L03"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-020",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6749389,
+      "longitude": 92.7763335,
+      "size_m": {
+        "length": 4.79,
+        "width": 6.22,
+        "height": 2.15
+      },
+      "azimuth_deg": 80.9,
+      "imaged_by_lines": [
+        "AND-L01",
+        "AND-L02"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-021",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6745735,
+      "longitude": 92.7747026,
+      "size_m": {
+        "length": 7.52,
+        "width": 4.09,
+        "height": 1.28
+      },
+      "azimuth_deg": 233.3,
+      "imaged_by_lines": [
+        "AND-L05"
+      ]
+    },
+    {
+      "object_id": "AND-OBJ-022",
+      "kind": "rock_outcrop",
+      "class": null,
+      "man_made": false,
+      "notes": "natural rock outcrop (false-positive bait)",
+      "latitude": 11.6741708,
+      "longitude": 92.7762032,
+      "size_m": {
+        "length": 9.25,
+        "width": 6.58,
+        "height": 1.88
+      },
+      "azimuth_deg": 232.4,
+      "imaged_by_lines": [
+        "AND-L02",
+        "AND-L03"
+      ]
+    }
+  ]
+}

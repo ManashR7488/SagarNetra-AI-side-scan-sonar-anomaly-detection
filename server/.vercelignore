@@ -1,0 +1,5 @@
+# Local-only files: never deployed
+.env
+.env.test
+uploads
+tests

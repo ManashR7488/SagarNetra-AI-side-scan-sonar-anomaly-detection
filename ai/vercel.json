@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": [
+    "bom1"
+  ],
+  "functions": {
+    "app/main.py": {
+      "maxDuration": 300,
+      "excludeFiles": "{.venv/**,tests/**,tools/**,notebooks/**,test.py,**/__pycache__/**,models/**/*.pt,models/**/*.png,models/**/*.jpg,models/**/*.csv,models/**/*.yaml,models/**/test_eval/**,models/AI4Shipwrecks/**}"
+    }
+  }
+}
