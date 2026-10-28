@@ -1,0 +1,3 @@
+frontend : https://sagarnetra.vercel.app/
+backend : https://sagarnetra-api.vercel.app/
+ai : https://sagarnetra-api-ai.vercel.app/

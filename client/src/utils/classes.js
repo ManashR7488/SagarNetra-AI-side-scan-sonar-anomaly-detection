@@ -33,4 +33,10 @@ export const SUPPRESSION_LABELS = {
   sonar_data_dropout: 'Sonar data dropout',
   too_small: 'Too small',
   below_min_score: 'Below min score',
+  water_column: 'In the water column',
+  rock_cluster: 'Rock / rock cluster',
+  sand_ripple: 'Sand ripples',
+  natural_shadow: 'Natural acoustic shadow',
+  seabed_texture: 'Seabed texture',
+  operator_rejected: 'Rejected by operator',
 };

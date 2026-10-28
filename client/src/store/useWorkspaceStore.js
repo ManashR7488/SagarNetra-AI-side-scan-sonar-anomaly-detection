@@ -9,7 +9,10 @@ const BATCH_CONCURRENCY = 2;
 
 /** Image to show for a stored scan: the original, or the analysed waterfall for XTF logs. */
 export const scanPreviewUrl = (scan) =>
-  scan?.source?.format === 'xtf' ? scan?.images?.filtered?.url : scan?.source?.file?.url ?? scan?.images?.filtered?.url;
+  // XTF logs and scans whose cleaning changed the image geometry: detections are in the analysed image's pixels
+  scan?.source?.format === 'xtf' || scan?.processing?.cleaning?.frame?.geometry_changed
+    ? scan?.images?.filtered?.url ?? scan?.source?.file?.url
+    : scan?.source?.file?.url ?? scan?.images?.filtered?.url;
 
 const savedItem = (scan) => ({
   key: scan.id,
@@ -80,6 +83,12 @@ export const useWorkspaceStore = create((set, get) => ({
   },
 
   _update: (key, patch) => set((s) => ({ items: s.items.map((i) => (i.key === key ? { ...i, ...patch } : i)) })),
+
+  /** A scan saved elsewhere (e.g. published from the Noise Filtration tab): put it first and select it. */
+  addSavedScan: (scan) => {
+    const item = { ...savedItem(scan), hasDetails: Array.isArray(scan.detections) };
+    set((s) => ({ items: [item, ...s.items.filter((i) => i.key !== item.key)], selectedKey: item.key }));
+  },
 
   addFiles: (fileList) => {
     const files = Array.from(fileList ?? []);

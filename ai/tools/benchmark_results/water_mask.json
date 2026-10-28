@@ -1,0 +1,31 @@
+{
+ "name": "water_mask",
+ "settings": {
+  "mask_water_column": true
+ },
+ "synthetic": {
+  "files": 21,
+  "targets": 88,
+  "tp": 23,
+  "fp": 42,
+  "recall": 0.2614,
+  "precision": 0.3538,
+  "f1": 0.3007,
+  "mean_conf_tp": 71.5,
+  "fp_rock": 9,
+  "fp_seabed": 33,
+  "geo_err_median_m": 2.5,
+  "geo_err_p90_m": 13.47
+ },
+ "ai4shipwrecks": {
+  "files": 46,
+  "targets": 159,
+  "tp": 36,
+  "fp": 23,
+  "recall": 0.2264,
+  "precision": 0.6102,
+  "f1": 0.3303,
+  "mean_conf_tp": 77.5
+ },
+ "seconds": 463.2
+}

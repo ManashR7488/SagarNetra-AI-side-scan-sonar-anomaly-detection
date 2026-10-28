@@ -1,0 +1,672 @@
+{
+ "generated": "2026-10-04",
+ "summary": "Measured on 21 synthetic XTF lines (88 man-made targets) and 46 real AI4Shipwrecks strips (159 wreck parts): a step is used for detection only when it raises F1 without costing recall.",
+ "datasets": {
+  "synthetic_xtf": {
+   "files": 21,
+   "targets": 88
+  },
+  "ai4shipwrecks": {
+   "files": 46,
+   "targets": 159
+  }
+ },
+ "baseline": {
+  "config": "none",
+  "synthetic": {
+   "files": 21,
+   "targets": 88,
+   "tp": 23,
+   "fp": 43,
+   "recall": 0.2614,
+   "precision": 0.3485,
+   "f1": 0.2987,
+   "mean_conf_tp": 71.5,
+   "fp_rock": 9,
+   "fp_seabed": 34,
+   "geo_err_median_m": 2.5,
+   "geo_err_p90_m": 13.47
+  },
+  "ai4shipwrecks": {
+   "files": 46,
+   "targets": 159,
+   "tp": 36,
+   "fp": 23,
+   "recall": 0.2264,
+   "precision": 0.6102,
+   "f1": 0.3303,
+   "mean_conf_tp": 77.6
+  }
+ },
+ "raw": {
+  "synthetic": {
+   "files": 21,
+   "targets": 88,
+   "tp": 25,
+   "fp": 54,
+   "recall": 0.2841,
+   "precision": 0.3165,
+   "f1": 0.2994,
+   "mean_conf_tp": 70.1,
+   "fp_rock": 9,
+   "fp_seabed": 45,
+   "geo_err_median_m": 4.36,
+   "geo_err_p90_m": 15.79
+  },
+  "ai4shipwrecks": {
+   "files": 46,
+   "targets": 159,
+   "tp": 36,
+   "fp": 23,
+   "recall": 0.2264,
+   "precision": 0.6102,
+   "f1": 0.3303,
+   "mean_conf_tp": 77.6
+  }
+ },
+ "results": {
+  "raw": {
+   "settings": {},
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 25,
+    "fp": 54,
+    "recall": 0.2841,
+    "precision": 0.3165,
+    "f1": 0.2994,
+    "mean_conf_tp": 70.1,
+    "fp_rock": 9,
+    "fp_seabed": 45,
+    "geo_err_median_m": 4.36,
+    "geo_err_p90_m": 15.79
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 36,
+    "fp": 23,
+    "recall": 0.2264,
+    "precision": 0.6102,
+    "f1": 0.3303,
+    "mean_conf_tp": 77.6
+   },
+   "delta": null,
+   "helps": null,
+   "seconds": 741.8
+  },
+  "none": {
+   "settings": {},
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 23,
+    "fp": 43,
+    "recall": 0.2614,
+    "precision": 0.3485,
+    "f1": 0.2987,
+    "mean_conf_tp": 71.5,
+    "fp_rock": 9,
+    "fp_seabed": 34,
+    "geo_err_median_m": 2.5,
+    "geo_err_p90_m": 13.47
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 36,
+    "fp": 23,
+    "recall": 0.2264,
+    "precision": 0.6102,
+    "f1": 0.3303,
+    "mean_conf_tp": 77.6
+   },
+   "delta": null,
+   "helps": null,
+   "seconds": 485.5
+  },
+  "dropouts": {
+   "settings": {
+    "repair_dropouts": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 22,
+    "fp": 37,
+    "recall": 0.25,
+    "precision": 0.3729,
+    "f1": 0.2993,
+    "mean_conf_tp": 73.8,
+    "fp_rock": 9,
+    "fp_seabed": 28,
+    "geo_err_median_m": 2.35,
+    "geo_err_p90_m": 13.91
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 36,
+    "fp": 23,
+    "recall": 0.2264,
+    "precision": 0.6102,
+    "f1": 0.3303,
+    "mean_conf_tp": 77.6
+   },
+   "delta": {
+    "synthetic": {
+     "f1": 0.0006,
+     "recall": -0.0114,
+     "precision": 0.0244,
+     "fp": -6
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0,
+     "recall": 0.0,
+     "precision": 0.0,
+     "fp": 0
+    }
+   },
+   "helps": false,
+   "seconds": 478.6
+  },
+  "motion": {
+   "settings": {
+    "repair_dropouts": true,
+    "motion": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 24,
+    "fp": 43,
+    "recall": 0.2727,
+    "precision": 0.3582,
+    "f1": 0.3097,
+    "mean_conf_tp": 71.3,
+    "fp_rock": 9,
+    "fp_seabed": 34,
+    "geo_err_median_m": 2.5,
+    "geo_err_p90_m": 12.36
+   },
+   "ai4shipwrecks": null,
+   "delta": {
+    "synthetic": {
+     "f1": 0.011,
+     "recall": 0.0113,
+     "precision": 0.0097,
+     "fp": 0
+    }
+   },
+   "helps": true,
+   "seconds": 433.7
+  },
+  "destripe": {
+   "settings": {
+    "destripe": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 23,
+    "fp": 40,
+    "recall": 0.2614,
+    "precision": 0.3651,
+    "f1": 0.3046,
+    "mean_conf_tp": 71.4,
+    "fp_rock": 9,
+    "fp_seabed": 31,
+    "geo_err_median_m": 2.23,
+    "geo_err_p90_m": 13.47
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 39,
+    "fp": 24,
+    "recall": 0.2453,
+    "precision": 0.619,
+    "f1": 0.3514,
+    "mean_conf_tp": 76.0
+   },
+   "delta": {
+    "synthetic": {
+     "f1": 0.0059,
+     "recall": 0.0,
+     "precision": 0.0166,
+     "fp": -3
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0211,
+     "recall": 0.0189,
+     "precision": 0.0088,
+     "fp": 1
+    }
+   },
+   "helps": true,
+   "seconds": 511.8
+  },
+  "ping_gain": {
+   "settings": {
+    "gain_along": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 21,
+    "fp": 42,
+    "recall": 0.2386,
+    "precision": 0.3333,
+    "f1": 0.2781,
+    "mean_conf_tp": 72.4,
+    "fp_rock": 9,
+    "fp_seabed": 33,
+    "geo_err_median_m": 2.22,
+    "geo_err_p90_m": 14.01
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 41,
+    "fp": 21,
+    "recall": 0.2579,
+    "precision": 0.6613,
+    "f1": 0.371,
+    "mean_conf_tp": 76.9
+   },
+   "delta": {
+    "synthetic": {
+     "f1": -0.0206,
+     "recall": -0.0228,
+     "precision": -0.0152,
+     "fp": -1
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0407,
+     "recall": 0.0315,
+     "precision": 0.0511,
+     "fp": -2
+    }
+   },
+   "helps": false,
+   "seconds": 1820.4
+  },
+  "range_gain": {
+   "settings": {
+    "gain_across": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 24,
+    "fp": 45,
+    "recall": 0.2727,
+    "precision": 0.3478,
+    "f1": 0.3057,
+    "mean_conf_tp": 70.6,
+    "fp_rock": 7,
+    "fp_seabed": 38,
+    "geo_err_median_m": 2.17,
+    "geo_err_p90_m": 8.63
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 42,
+    "fp": 21,
+    "recall": 0.2642,
+    "precision": 0.6667,
+    "f1": 0.3784,
+    "mean_conf_tp": 72.9
+   },
+   "delta": {
+    "synthetic": {
+     "f1": 0.007,
+     "recall": 0.0113,
+     "precision": -0.0007,
+     "fp": 2
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0481,
+     "recall": 0.0378,
+     "precision": 0.0565,
+     "fp": -2
+    }
+   },
+   "helps": true,
+   "seconds": 1392.8
+  },
+  "water_mask": {
+   "settings": {
+    "mask_water_column": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 23,
+    "fp": 42,
+    "recall": 0.2614,
+    "precision": 0.3538,
+    "f1": 0.3007,
+    "mean_conf_tp": 71.5,
+    "fp_rock": 9,
+    "fp_seabed": 33,
+    "geo_err_median_m": 2.5,
+    "geo_err_p90_m": 13.47
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 36,
+    "fp": 23,
+    "recall": 0.2264,
+    "precision": 0.6102,
+    "f1": 0.3303,
+    "mean_conf_tp": 77.5
+   },
+   "delta": {
+    "synthetic": {
+     "f1": 0.002,
+     "recall": 0.0,
+     "precision": 0.0053,
+     "fp": -1
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0,
+     "recall": 0.0,
+     "precision": 0.0,
+     "fp": 0
+    }
+   },
+   "helps": false,
+   "seconds": 463.2
+  },
+  "ground": {
+   "settings": {
+    "slant_correct": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 23,
+    "fp": 72,
+    "recall": 0.2614,
+    "precision": 0.2421,
+    "f1": 0.2514,
+    "mean_conf_tp": 72.7,
+    "fp_rock": 5,
+    "fp_seabed": 67,
+    "geo_err_median_m": 3.18,
+    "geo_err_p90_m": 13.35
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 163,
+    "tp": 34,
+    "fp": 20,
+    "recall": 0.2086,
+    "precision": 0.6296,
+    "f1": 0.3134,
+    "mean_conf_tp": 75.2
+   },
+   "delta": {
+    "synthetic": {
+     "f1": -0.0473,
+     "recall": 0.0,
+     "precision": -0.1064,
+     "fp": 29
+    },
+    "ai4shipwrecks": {
+     "f1": -0.0169,
+     "recall": -0.0178,
+     "precision": 0.0194,
+     "fp": -3
+    }
+   },
+   "helps": false,
+   "seconds": 725.2
+  },
+  "lee30": {
+   "settings": {
+    "despeckle": "lee",
+    "despeckle_strength": 30
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 19,
+    "fp": 40,
+    "recall": 0.2159,
+    "precision": 0.322,
+    "f1": 0.2585,
+    "mean_conf_tp": 70.4,
+    "fp_rock": 8,
+    "fp_seabed": 32,
+    "geo_err_median_m": 2.76,
+    "geo_err_p90_m": 10.45
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 35,
+    "fp": 14,
+    "recall": 0.2201,
+    "precision": 0.7143,
+    "f1": 0.3365,
+    "mean_conf_tp": 73.9
+   },
+   "delta": {
+    "synthetic": {
+     "f1": -0.0402,
+     "recall": -0.0455,
+     "precision": -0.0265,
+     "fp": -3
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0062,
+     "recall": -0.0063,
+     "precision": 0.1041,
+     "fp": -9
+    }
+   },
+   "helps": false,
+   "seconds": 1815.7
+  },
+  "res010": {
+   "settings": {
+    "normalize_resolution": true,
+    "target_m_per_px": 0.1
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 19,
+    "fp": 44,
+    "recall": 0.2159,
+    "precision": 0.3016,
+    "f1": 0.2517,
+    "mean_conf_tp": 74.5,
+    "fp_rock": 9,
+    "fp_seabed": 35,
+    "geo_err_median_m": 3.88,
+    "geo_err_p90_m": 11.67
+   },
+   "ai4shipwrecks": null,
+   "delta": {
+    "synthetic": {
+     "f1": -0.047,
+     "recall": -0.0455,
+     "precision": -0.0469,
+     "fp": 1
+    }
+   },
+   "helps": false,
+   "seconds": 158.7
+  },
+  "profile": {
+   "settings": {
+    "repair_dropouts": true,
+    "motion": true,
+    "destripe": true,
+    "gain_across": true
+   },
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 23,
+    "fp": 44,
+    "recall": 0.2614,
+    "precision": 0.3433,
+    "f1": 0.2968,
+    "mean_conf_tp": 71.9,
+    "fp_rock": 8,
+    "fp_seabed": 36,
+    "geo_err_median_m": 2.12,
+    "geo_err_p90_m": 12.85
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 43,
+    "fp": 22,
+    "recall": 0.2704,
+    "precision": 0.6615,
+    "f1": 0.3839,
+    "mean_conf_tp": 72.3
+   },
+   "delta": {
+    "synthetic": {
+     "f1": -0.0019,
+     "recall": 0.0,
+     "precision": -0.0052,
+     "fp": 1
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0536,
+     "recall": 0.044,
+     "precision": 0.0513,
+     "fp": -1
+    }
+   },
+   "helps": true,
+   "seconds": 719.8
+  },
+  "auto": {
+   "settings": {},
+   "synthetic": {
+    "files": 21,
+    "targets": 88,
+    "tp": 26,
+    "fp": 44,
+    "recall": 0.2955,
+    "precision": 0.3714,
+    "f1": 0.3291,
+    "mean_conf_tp": 71.6,
+    "fp_rock": 9,
+    "fp_seabed": 35,
+    "geo_err_median_m": 2.98,
+    "geo_err_p90_m": 8.59
+   },
+   "ai4shipwrecks": {
+    "files": 46,
+    "targets": 159,
+    "tp": 43,
+    "fp": 20,
+    "recall": 0.2704,
+    "precision": 0.6825,
+    "f1": 0.3874,
+    "mean_conf_tp": 69.4
+   },
+   "delta": {
+    "synthetic": {
+     "f1": 0.0304,
+     "recall": 0.0341,
+     "precision": 0.0229,
+     "fp": 1
+    },
+    "ai4shipwrecks": {
+     "f1": 0.0571,
+     "recall": 0.044,
+     "precision": 0.0723,
+     "fp": -3
+    }
+   },
+   "helps": true,
+   "seconds": 822.2
+  }
+ },
+ "evidence": {
+  "dropouts": {
+   "helps": false,
+   "config": "dropouts",
+   "mean_df1": 0.0003,
+   "summary": "benchmark (no gain vs no cleaning): synthetic: F1 +0.001, recall -0.011, false alarms -6; AI4Shipwrecks: F1 +0.000, recall +0.000, false alarms +0; geotag error 2.5 -> 2.35 m"
+  },
+  "motion": {
+   "helps": true,
+   "config": "motion",
+   "mean_df1": 0.011,
+   "summary": "benchmark (helps vs no cleaning): synthetic: F1 +0.011, recall +0.011, false alarms +0; geotag error 2.5 -> 2.5 m"
+  },
+  "stripes": {
+   "helps": true,
+   "config": "destripe",
+   "mean_df1": 0.0135,
+   "summary": "benchmark (helps vs no cleaning): synthetic: F1 +0.006, recall +0.000, false alarms -3; AI4Shipwrecks: F1 +0.021, recall +0.019, false alarms +1; geotag error 2.5 -> 2.23 m"
+  },
+  "ping_gain": {
+   "helps": false,
+   "config": "ping_gain",
+   "mean_df1": 0.01,
+   "summary": "benchmark (no gain vs no cleaning): synthetic: F1 -0.021, recall -0.023, false alarms -1; AI4Shipwrecks: F1 +0.041, recall +0.032, false alarms -2; geotag error 2.5 -> 2.22 m"
+  },
+  "range_gain": {
+   "helps": true,
+   "config": "range_gain",
+   "mean_df1": 0.0275,
+   "summary": "benchmark (helps vs no cleaning): synthetic: F1 +0.007, recall +0.011, false alarms +2; AI4Shipwrecks: F1 +0.048, recall +0.038, false alarms -2; geotag error 2.5 -> 2.17 m"
+  },
+  "water_column": {
+   "helps": false,
+   "config": "water_mask",
+   "mean_df1": 0.001,
+   "summary": "benchmark (no gain vs no cleaning): synthetic: F1 +0.002, recall +0.000, false alarms -1; AI4Shipwrecks: F1 +0.000, recall +0.000, false alarms +0; geotag error 2.5 -> 2.5 m"
+  },
+  "ground_range": {
+   "helps": false,
+   "config": "ground",
+   "mean_df1": -0.0321,
+   "summary": "benchmark (no gain vs no cleaning): synthetic: F1 -0.047, recall +0.000, false alarms +29; AI4Shipwrecks: F1 -0.017, recall -0.018, false alarms -3; geotag error 2.5 -> 3.18 m"
+  },
+  "speckle": {
+   "helps": false,
+   "config": "lee30",
+   "mean_df1": -0.017,
+   "summary": "benchmark (no gain vs no cleaning): synthetic: F1 -0.040, recall -0.045, false alarms -3; AI4Shipwrecks: F1 +0.006, recall -0.006, false alarms -9; geotag error 2.5 -> 2.76 m"
+  },
+  "resolution": {
+   "helps": false,
+   "config": "res010",
+   "mean_df1": -0.047,
+   "summary": "benchmark (no gain vs no cleaning): synthetic: F1 -0.047, recall -0.045, false alarms +1; geotag error 2.5 -> 3.88 m"
+  },
+  "combination": {
+   "helps": true,
+   "config": "profile",
+   "mean_df1": 0.0259,
+   "summary": "the proven steps together (used): synthetic: F1 -0.002, recall +0.000, false alarms +1; AI4Shipwrecks: F1 +0.054, recall +0.044, false alarms -1"
+  },
+  "auto": {
+   "helps": true,
+   "config": "auto",
+   "mean_df1": 0.0437,
+   "summary": "Auto as it runs (each AI-input step only where its noise is measured): synthetic: F1 +0.030, recall +0.034, false alarms +1; AI4Shipwrecks: F1 +0.057, recall +0.044, false alarms -3"
+  }
+ },
+ "ai": {
+  "repair_dropouts": true,
+  "motion": true,
+  "destripe": true,
+  "gain_across": true
+ }
+}

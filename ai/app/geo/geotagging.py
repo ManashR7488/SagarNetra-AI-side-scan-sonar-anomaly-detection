@@ -63,6 +63,7 @@ class Track:
     source: str = "unknown"
     assumptions: list[str] = field(default_factory=list)
     times: np.ndarray | None = None  # UTC epoch seconds of each fix
+    water_depth: np.ndarray | None = None  # seabed depth below the surface at each fix (m), when known
 
     def time_at(self, y: float) -> str | None:
         if self.times is None:
@@ -160,6 +161,8 @@ _ALIASES = {
     "ping": ("ping", "ping_number", "pingnumber"),
     "altitude": ("altitude", "altitude_m", "alt", "sensorprimaryaltitude"),
     "slant_range": ("slant_range", "slant_range_m", "range", "range_m", "slantrange"),
+    "water_depth": ("water_depth", "water_depth_m", "seabed_depth", "bathymetry"),
+    "sensor_depth": ("towfish_depth", "sensor_depth", "sensor_depth_m", "sensordepth", "vehicle_depth"),
 }
 
 
@@ -205,6 +208,11 @@ def from_nav_records(height: int, width: int, records: list[dict], swath_width_m
         heading = np.append(b, b[-1])
         assumptions.append("heading derived from track (course over ground)")
     altitude = np.array([r["altitude"] for r in recs])[order] if all("altitude" in r for r in recs) else None
+    water_depth = None
+    if all("water_depth" in r for r in recs):
+        water_depth = np.array([r["water_depth"] for r in recs])[order]
+    elif altitude is not None and all("sensor_depth" in r for r in recs):
+        water_depth = np.array([r["sensor_depth"] for r in recs])[order] + altitude
     if across_m_per_px is None:
         ranges = [r["slant_range"] for r in recs if "slant_range" in r]
         if ranges:
@@ -219,7 +227,8 @@ def from_nav_records(height: int, width: int, records: list[dict], swath_width_m
         assumptions.append("nadir assumed at the image centre column")
     return Track(rows=rows.astype(float), lat=lat, lon=lon, heading=heading.astype(float),
                  across_m_per_px=float(across_m_per_px), nadir_col=float(nadir_col), altitude=altitude,
-                 slant_range=slant_range and altitude is not None, source=source, assumptions=assumptions)
+                 slant_range=slant_range and altitude is not None, source=source, assumptions=assumptions,
+                 water_depth=water_depth)
 
 
 def parse_metadata(data: bytes, filename: str, height: int, width: int, **overrides) -> Track:

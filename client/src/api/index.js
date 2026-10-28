@@ -76,6 +76,8 @@ export const scansApi = {
     return api.post('/scans', toFormData(body), { onUploadProgress: body.fileRef ? undefined : onUploadProgress, signal }).then(unwrap);
   },
   reanalyze: (id, options) => api.post(`/scans/${id}/reanalyze`, options).then(unwrap),
+  /** Send a draft reviewed in the Noise Filtration tab to AI Detection (applies the review threshold). */
+  publish: (id, body) => api.post(`/scans/${id}/publish`, body).then(unwrap),
   remove: (id) => api.delete(`/scans/${id}`),
 };
 
@@ -87,9 +89,21 @@ export const detectionsApi = {
   review: (id, body) => api.patch(`/detections/${id}/review`, body).then(unwrap),
 };
 
-export const filterApi = {
-  /** Noise-filtration preview: { file, denoise, denoiseStrength, clahe, claheStrength, repairDropouts, shadowGamma } */
-  preview: async (fields, { signal } = {}) => api.post('/filter', toFormData(await withLargeFile(fields, { signal })), { signal }).then(unwrap),
+export const noiseApi = {
+  /**
+   * Stage 1: clean the signal step by step and report the noise.
+   * fields = { file, profile: 'ai'|'analyst', auto, params (object), swathWidthM, previewSide }
+   * output 'jpeg' returns one step image at full resolution (Blob).
+   */
+  clean: async (fields, { signal, output = 'json', step } = {}) => {
+    const body = await withLargeFile({ ...fields, params: fields.params ? JSON.stringify(fields.params) : undefined }, { signal });
+    const res = await api.post('/filter/clean', toFormData(body), {
+      params: cleanParams({ output, step }), signal, responseType: output === 'jpeg' ? 'blob' : 'json',
+    });
+    return output === 'jpeg' ? res.data : unwrap(res);
+  },
+  /** Stage 3: one disturbance at increasing levels, detection raw / auto-cleaned / fully cleaned. */
+  stress: async (fields, { signal } = {}) => api.post('/filter/stress', toFormData(await withLargeFile(fields, { signal })), { signal }).then(unwrap),
 };
 
 /** Absolute URL of a backend download (reports, CSV exports). */

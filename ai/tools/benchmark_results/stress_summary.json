@@ -1,0 +1,480 @@
+{
+ "strips": [
+  "Artificial_Reef_06",
+  "Barge_No_1_04",
+  "Barge_No_1_14",
+  "Corsair_03",
+  "Corsican_05",
+  "Haltiner_Barge_02",
+  "Haltiner_Barge_06",
+  "James_Davidson_02",
+  "Lucinda_van_Valkenburg_05",
+  "Lucinda_van_Valkenburg_12",
+  "Lucinda_van_Valkenburg_15",
+  "Lucinda_van_Valkenburg_18",
+  "Monohansett_04",
+  "Monrovia_02",
+  "Monrovia_05",
+  "Monrovia_08",
+  "Shamrock_03",
+  "Viator_04",
+  "Viator_08",
+  "Viator_11",
+  "WH_Gilbert_04",
+  "WP_Thew_04",
+  "WP_Thew_10",
+  "WP_Thew_17"
+ ],
+ "max_side": 1024,
+ "levels": 4,
+ "results": {
+  "speckle": [
+   {
+    "level": 0,
+    "label": "undisturbed",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 7,
+     "retention": null
+    },
+    "auto": {
+     "wreck_recall": 0.457,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": null
+    },
+    "full": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": null
+    }
+   },
+   {
+    "level": 1,
+    "label": "8 looks",
+    "raw": {
+     "wreck_recall": 0.386,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": 0.879
+    },
+    "auto": {
+     "wreck_recall": 0.443,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": 0.886
+    },
+    "full": {
+     "wreck_recall": 0.386,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.963
+    }
+   },
+   {
+    "level": 2,
+    "label": "3 looks",
+    "raw": {
+     "wreck_recall": 0.343,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.758
+    },
+    "auto": {
+     "wreck_recall": 0.443,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.857
+    },
+    "full": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.926
+    }
+   },
+   {
+    "level": 3,
+    "label": "1.5 looks",
+    "raw": {
+     "wreck_recall": 0.343,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.697
+    },
+    "auto": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.743
+    },
+    "full": {
+     "wreck_recall": 0.343,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.889
+    }
+   },
+   {
+    "level": 4,
+    "label": "single look",
+    "raw": {
+     "wreck_recall": 0.329,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.636
+    },
+    "auto": {
+     "wreck_recall": 0.3,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.6
+    },
+    "full": {
+     "wreck_recall": 0.314,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.815
+    }
+   }
+  ],
+  "dropouts": [
+   {
+    "level": 0,
+    "label": "undisturbed",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 7,
+     "retention": null
+    },
+    "auto": {
+     "wreck_recall": 0.457,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": null
+    },
+    "full": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": null
+    }
+   },
+   {
+    "level": 1,
+    "label": "1 % pings lost",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 6,
+     "retention": 0.939
+    },
+    "auto": {
+     "wreck_recall": 0.471,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": 1.0
+    },
+    "full": {
+     "wreck_recall": 0.386,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.963
+    }
+   },
+   {
+    "level": 2,
+    "label": "3 % lost",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 7,
+     "retention": 0.939
+    },
+    "auto": {
+     "wreck_recall": 0.443,
+     "wreck_parts": 70,
+     "false_alarms": 6,
+     "retention": 0.943
+    },
+    "full": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.963
+    }
+   },
+   {
+    "level": 3,
+    "label": "6 % lost",
+    "raw": {
+     "wreck_recall": 0.3,
+     "wreck_parts": 70,
+     "false_alarms": 6,
+     "retention": 0.697
+    },
+    "auto": {
+     "wreck_recall": 0.443,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.857
+    },
+    "full": {
+     "wreck_recall": 0.386,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.963
+    }
+   },
+   {
+    "level": 4,
+    "label": "10 % lost",
+    "raw": {
+     "wreck_recall": 0.357,
+     "wreck_parts": 70,
+     "false_alarms": 4,
+     "retention": 0.545
+    },
+    "auto": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": 0.829
+    },
+    "full": {
+     "wreck_recall": 0.329,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.852
+    }
+   }
+  ],
+  "resolution": [
+   {
+    "level": 0,
+    "label": "undisturbed",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 7,
+     "retention": null
+    },
+    "auto": {
+     "wreck_recall": 0.457,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": null
+    },
+    "full": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": null
+    }
+   },
+   {
+    "level": 1,
+    "label": "1.5x coarser",
+    "raw": {
+     "wreck_recall": 0.357,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.697
+    },
+    "auto": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.743
+    },
+    "full": {
+     "wreck_recall": 0.343,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.889
+    }
+   },
+   {
+    "level": 2,
+    "label": "2x coarser",
+    "raw": {
+     "wreck_recall": 0.314,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.636
+    },
+    "auto": {
+     "wreck_recall": 0.314,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.657
+    },
+    "full": {
+     "wreck_recall": 0.314,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.815
+    }
+   },
+   {
+    "level": 3,
+    "label": "3x coarser",
+    "raw": {
+     "wreck_recall": 0.286,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.576
+    },
+    "auto": {
+     "wreck_recall": 0.314,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.629
+    },
+    "full": {
+     "wreck_recall": 0.271,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.741
+    }
+   },
+   {
+    "level": 4,
+    "label": "4x coarser",
+    "raw": {
+     "wreck_recall": 0.257,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.545
+    },
+    "auto": {
+     "wreck_recall": 0.214,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.457
+    },
+    "full": {
+     "wreck_recall": 0.243,
+     "wreck_parts": 70,
+     "false_alarms": 4,
+     "retention": 0.63
+    }
+   }
+  ],
+  "gain": [
+   {
+    "level": 0,
+    "label": "undisturbed",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 7,
+     "retention": null
+    },
+    "auto": {
+     "wreck_recall": 0.457,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": null
+    },
+    "full": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": null
+    }
+   },
+   {
+    "level": 1,
+    "label": "mild",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 6,
+     "retention": 0.909
+    },
+    "auto": {
+     "wreck_recall": 0.429,
+     "wreck_parts": 70,
+     "false_alarms": 4,
+     "retention": 0.914
+    },
+    "full": {
+     "wreck_recall": 0.386,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.963
+    }
+   },
+   {
+    "level": 2,
+    "label": "moderate",
+    "raw": {
+     "wreck_recall": 0.4,
+     "wreck_parts": 70,
+     "false_alarms": 4,
+     "retention": 0.848
+    },
+    "auto": {
+     "wreck_recall": 0.443,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": 0.914
+    },
+    "full": {
+     "wreck_recall": 0.371,
+     "wreck_parts": 70,
+     "false_alarms": 1,
+     "retention": 0.926
+    }
+   },
+   {
+    "level": 3,
+    "label": "strong",
+    "raw": {
+     "wreck_recall": 0.357,
+     "wreck_parts": 70,
+     "false_alarms": 4,
+     "retention": 0.758
+    },
+    "auto": {
+     "wreck_recall": 0.343,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.714
+    },
+    "full": {
+     "wreck_recall": 0.329,
+     "wreck_parts": 70,
+     "false_alarms": 2,
+     "retention": 0.815
+    }
+   },
+   {
+    "level": 4,
+    "label": "severe",
+    "raw": {
+     "wreck_recall": 0.343,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.667
+    },
+    "auto": {
+     "wreck_recall": 0.314,
+     "wreck_parts": 70,
+     "false_alarms": 5,
+     "retention": 0.629
+    },
+    "full": {
+     "wreck_recall": 0.314,
+     "wreck_parts": 70,
+     "false_alarms": 3,
+     "retention": 0.778
+    }
+   }
+  ]
+ }
+}

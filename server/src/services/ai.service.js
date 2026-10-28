@@ -5,8 +5,14 @@ import { ApiError } from '../utils/ApiError.js';
 const ANALYZE_FIELDS = {
   denoise: 'denoise', denoiseStrength: 'denoise_strength', clahe: 'clahe', claheStrength: 'clahe_strength',
   repairDropouts: 'repair_dropouts', shadowGamma: 'shadow_gamma', tiling: 'tiling', fpFilter: 'fp_filter',
-  minScore: 'min_score',
+  minScore: 'min_score', fpMethod: 'fp_method',
 };
+/** Noise-filtering stage 1 (POST /v1/clean) */
+const CLEAN_FIELDS = {
+  profile: 'profile', auto: 'auto', swathWidthM: 'swath_width_m', acrossMPerPx: 'across_m_per_px', previewSide: 'preview_side',
+};
+/** Noise-filtering stage 3 (POST /v1/stress-test) */
+const STRESS_FIELDS = { disturbance: 'disturbance', levels: 'levels', roi: 'roi', maxSide: 'max_side' };
 const GEOREF_FIELDS = {
   latitude: 'latitude', longitude: 'longitude', headingDeg: 'heading_deg', swathWidthM: 'swath_width_m',
   acrossMPerPx: 'across_m_per_px', alongMPerPx: 'along_m_per_px', nadirColumn: 'nadir_column', anchor: 'anchor',
@@ -82,9 +88,11 @@ export const aiService = {
     if (metadata) appendInput(form, metadata, 'metadata');
     appendFields(form, options, ANALYZE_FIELDS);
     appendFields(form, options.georef, GEOREF_FIELDS);
+    if (options.cleaning) form.append('cleaning', JSON.stringify(options.cleaning));
     form.append('models', (options.models ?? ['detector', 'segmenter']).join(','));
     form.append('include_suppressed', 'true');
     form.append('return_images', 'true');
+    form.append('return_seabed', 'true');
     return call('/v1/analyze', { method: 'POST', body: form });
   },
 
@@ -94,6 +102,28 @@ export const aiService = {
     appendInput(form, source, 'file');
     appendFields(form, options, ANALYZE_FIELDS);
     return call(`/v1/filter?output=${output}`, { method: 'POST', body: form, as: output === 'jpeg' ? 'buffer' : 'json' });
+  },
+
+  /**
+   * Noise-filtering stage 1: step-by-step cleaning previews + noise report (not stored).
+   * fields: { profile, auto, params (object), swathWidthM, acrossMPerPx, previewSide }; output 'json' | 'jpeg' (one step)
+   */
+  clean(source, fields = {}, { output = 'json', step } = {}) {
+    const form = new FormData();
+    appendInput(form, source, 'file');
+    appendFields(form, fields, CLEAN_FIELDS);
+    if (fields.params) form.append('params', JSON.stringify(fields.params));
+    const qs = new URLSearchParams({ output, ...(step ? { step } : {}) });
+    return call(`/v1/clean?${qs}`, { method: 'POST', body: form, as: output === 'jpeg' ? 'buffer' : 'json' });
+  },
+
+  /** Noise-filtering stage 3: one disturbance at increasing levels, detection raw / auto-cleaned / fully cleaned. */
+  stressTest(source, fields = {}) {
+    const form = new FormData();
+    appendInput(form, source, 'file');
+    appendFields(form, fields, STRESS_FIELDS);
+    form.append('models', (fields.models ?? ['detector', 'segmenter']).join(','));
+    return call('/v1/stress-test', { method: 'POST', body: form });
   },
 
   /** kind: 'annotated' | 'filtered' */

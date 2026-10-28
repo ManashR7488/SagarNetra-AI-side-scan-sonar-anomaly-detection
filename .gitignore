@@ -58,5 +58,15 @@ data/synthetic_xtf/**/*.xtf
 # Duplicate training checkpoints (best.pt / best.onnx are the ones the service loads)
 ai/models/**/last.pt
 
+# Candidate cache of the false-alarm classifier training (rebuilt by ai/tools/train_fp_classifier.py)
+ai/tools/fp_training/
+# benchmark previews written with --no-profile (the per-configuration results next to them are kept)
+ai/tools/benchmark_results/_*.json
+
+# materials
 
 docs/*.md
+
+docs/**/*.txt
+
+materials

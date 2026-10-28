@@ -21,10 +21,12 @@ export const detectionQuery = z.object({
   to: z.coerce.date().optional(),
   sortBy: z.enum(['confidence', 'createdAt', 'className', 'code']).optional(),
   order: z.enum(['asc', 'desc']).optional(),
+  includeDrafts: bool.optional(),
 }).refine((v) => !(v.bbox && v.near), { message: 'use either bbox or near, not both', path: ['bbox'] });
 
 export const reviewBody = z.object({
   status: z.enum(REVIEW_STATUSES),
   notes: z.string().trim().max(2000).optional(),
   reviewedBy: z.string().trim().max(100).optional(),
+  origin: z.enum(['ai_detection', 'noise_filtration']).optional(),
 }).strict();

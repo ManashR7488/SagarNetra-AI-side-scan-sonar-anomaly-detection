@@ -44,11 +44,11 @@ export const missionService = {
   async refreshStats(missionId) {
     const id = new mongoose.Types.ObjectId(String(missionId));
     const [scanAgg] = await Scan.aggregate([
-      { $match: { mission: id } },
+      { $match: { mission: id, draft: { $ne: true } } },        // drafts are still under review
       { $group: { _id: null, scans: { $sum: 1 }, lastScanAt: { $max: '$createdAt' } } },
     ]);
     const [detAgg] = await Detection.aggregate([
-      { $match: { mission: id } },
+      { $match: { mission: id, draft: { $ne: true } } },
       {
         $group: {
           _id: null,

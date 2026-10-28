@@ -1,0 +1,31 @@
+{
+ "name": "destripe",
+ "settings": {
+  "destripe": true
+ },
+ "synthetic": {
+  "files": 21,
+  "targets": 88,
+  "tp": 23,
+  "fp": 40,
+  "recall": 0.2614,
+  "precision": 0.3651,
+  "f1": 0.3046,
+  "mean_conf_tp": 71.4,
+  "fp_rock": 9,
+  "fp_seabed": 31,
+  "geo_err_median_m": 2.23,
+  "geo_err_p90_m": 13.47
+ },
+ "ai4shipwrecks": {
+  "files": 46,
+  "targets": 159,
+  "tp": 39,
+  "fp": 24,
+  "recall": 0.2453,
+  "precision": 0.619,
+  "f1": 0.3514,
+  "mean_conf_tp": 76.0
+ },
+ "seconds": 511.8
+}

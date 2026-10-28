@@ -8,7 +8,8 @@ import {
   ArrowLeft, 
   Anchor,
   PanelLeftClose,
-  PanelLeftOpen
+  PanelLeftOpen,
+  Box
 } from "lucide-react";
 import { cn } from "../utils/cn";
 import Logo, { LogoMark } from "../components/brand/Logo";
@@ -22,11 +23,13 @@ import AiDetectionTab from "./tabs/AiDetectionTab";
 import NoiseFiltrationTab from "./tabs/NoiseFiltrationTab";
 import GeoTagTab from "./tabs/GeoTagTab";
 import DashboardTab from "./tabs/DashboardTab";
+import Seabed3DTab from "./tabs/Seabed3DTab";
 
 const tabs = [
   { id: "ai-detection", label: "AI Detection", icon: Search, path: "ai-detection" },
   { id: "noise-filtration", label: "Noise Filtration", icon: Filter, path: "noise-filtration" },
   { id: "geo-tag", label: "Geo Tag", icon: MapPin, path: "geo-tag" },
+  { id: "seabed-3d", label: "3D Seabed", icon: Box, path: "seabed-3d" },
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard, path: "dashboard" },
 ];
 
@@ -157,6 +160,7 @@ export default function ApplicationPage() {
           <Route path="ai-detection" element={<AiDetectionTab />} />
           <Route path="noise-filtration" element={<NoiseFiltrationTab />} />
           <Route path="geo-tag" element={<GeoTagTab />} />
+          <Route path="seabed-3d" element={<Seabed3DTab />} />
           <Route path="dashboard" element={<DashboardTab />} />
         </Routes>
       </main>

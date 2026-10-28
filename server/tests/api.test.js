@@ -14,6 +14,7 @@ const { createApp } = await import('../src/app.js');
 const { connectDB, disconnectDB } = await import('../src/config/db.js');
 const { config } = await import('../src/config/env.js');
 const { Detection, Mission, Scan } = await import('../src/models/index.js');
+const { scanService } = await import('../src/services/scan.service.js');
 
 const SAMPLE = path.resolve(import.meta.dirname, '../../client/src/images_sonar/EB_Allen_06.png');
 const api = request(createApp());
@@ -116,6 +117,21 @@ describe('missions', () => {
       assert.deepEqual(det.location, { type: 'Point', coordinates: [80.381, 13.081] });
       assert.equal(det.review.status, 'unreviewed');
       assert.equal(det.dimensions.areaFrom, 'mask');
+      assert.equal(det.dimensions.heightM, 3.4);
+      assert.equal(det.dimensions.heightMethod, 'shadow_length');
+
+      // 3D seabed: metadata in the scan, heightfield + texture stored as files
+      assert.equal(call.body.return_seabed, 'true');
+      const sb = scan.seabed;
+      assert.equal(sb.available, true);
+      assert.equal(sb.kind, 'measured');
+      assert.deepEqual(sb.grid, { nx: 3, nz: 2, cellXM: 50, cellZM: 100, widthM: 100, lengthM: 100 });
+      assert.equal(sb.elevation.file.resourceType, 'raw');
+      assert.equal(sb.targets.find((t) => t.detectionCode === 'DET-001').heightM, 3.4);
+      const bin = await api.get(new URL(sb.elevation.file.url).pathname).expect(200);
+      assert.equal(bin.body.length, 12);
+      assert.equal(bin.body.readUInt16LE(10), 4000);
+      await api.get(new URL(sb.texture.url).pathname).expect(200).expect('content-type', /image\/jpeg/);
 
       // stored file is served
       const rel = new URL(scan.images.annotated.url).pathname;
@@ -227,6 +243,15 @@ describe('missions', () => {
       assert.equal(await Scan.countDocuments(), before);
     });
 
+    test('re-analysis with a missing stored original -> 409 with a clear message', async () => {
+      const res = await uploadScan({ missionId }).expect(201);
+      const scan = await Scan.findById(res.body.data.id);
+      fs.rmSync(path.join(config.storage.localDir, scan.source.file.publicId));
+      const again = await api.post(`/api/scans/${scan.id}/reanalyze`).send({}).expect(409);
+      assert.match(again.body.message ?? again.body.error?.message ?? '', /missing/);
+      await api.delete(`/api/scans/${scan.id}`).expect(204);
+    });
+
     test('delete scan removes detections and files, refreshes stats', async () => {
       const scan = await Scan.findById(scanId);
       const annotatedPath = path.join(config.storage.localDir, scan.images.annotated.publicId);
@@ -242,6 +267,143 @@ describe('missions', () => {
       assert.equal(await Scan.countDocuments({ mission: missionId }), 0);
       assert.equal(await Detection.countDocuments({ mission: missionId }), 0);
     });
+  });
+});
+
+describe('noise-filtration module', () => {
+  let missionId;
+  let draftId;
+
+  before(async () => {
+    missionId = (await api.post('/api/missions').send({ name: 'Noise module mission' }).expect(201)).body.data.id;
+  });
+
+  test('stage 1: clean preview is proxied with its settings, nothing stored', async () => {
+    const before = await Scan.countDocuments();
+    const res = await api.post('/api/filter/clean').attach('file', SAMPLE)
+      .field('profile', 'ai').field('auto', 'true').field('params', JSON.stringify({ despeckle: 'lee' })).field('swathWidthM', '150')
+      .expect(200);
+    assert.equal(res.body.data.profile, 'ai');
+    assert.equal(res.body.data.params.despeckle, 'lee');
+    assert.equal(res.body.data.steps.length, 2);
+    const call = mockAi.state.calls.findLast((c) => c.path === '/v1/clean');
+    assert.equal(call.body.profile, 'ai');
+    assert.equal(call.body.swath_width_m, '150');
+    assert.deepEqual(JSON.parse(call.body.params), { despeckle: 'lee' });
+    const img = await api.post('/api/filter/clean?output=jpeg&step=gain').attach('file', SAMPLE).expect(200);
+    assert.match(img.headers['content-type'], /image\/jpeg/);
+    assert.equal(mockAi.state.calls.findLast((c) => c.path === '/v1/clean').query.step, 'gain');
+    assert.equal(await Scan.countDocuments(), before);
+    await api.post('/api/filter/clean').attach('file', SAMPLE).field('profile', 'pretty').expect(400);
+    await api.post('/api/filter/clean').attach('file', SAMPLE).field('params', '{oops').expect(400);
+    await api.post('/api/filter/clean?step=nope').attach('file', SAMPLE).expect(400);
+  });
+
+  test('stage 2: a draft scan is analysed with the cleaning settings and hidden until published', async () => {
+    const res = await api.post('/api/scans').attach('file', SAMPLE)
+      .field('missionId', missionId).field('draft', 'true').field('fpMethod', 'classifier').field('minScore', '50')
+      .field('cleaning', JSON.stringify({ gain_across: true, repair_dropouts: true }))
+      .expect(201);
+    const scan = res.body.data;
+    draftId = scan.id;
+    assert.equal(scan.draft, true);
+    assert.equal(scan.review.origin, 'noise_filtration');
+    assert.deepEqual(scan.options.cleaning, { gain_across: true, repair_dropouts: true });
+    assert.equal(scan.processing.cleaning.report.quality_after, 90);
+    const call = mockAi.state.calls.findLast((c) => c.path === '/v1/analyze');
+    assert.deepEqual(JSON.parse(call.body.cleaning), { gain_across: true, repair_dropouts: true });
+    assert.equal(call.body.fp_method, 'classifier');
+
+    // the new evidence is stored with every detection
+    const d1 = scan.detections.find((d) => d.code === 'DET-001');
+    assert.equal(d1.draft, true);
+    assert.equal(d1.natural.method, 'classifier');
+    assert.deepEqual(d1.natural.reasons, ['long straight edges']);
+    assert.equal(d1.shadow.found, true);
+    assert.equal(d1.shadow.polygon.length, 3);
+    assert.deepEqual(d1.quality.flags, ['motion_flagged']);
+    assert.equal(d1.quality.score, 70);
+    const d3 = scan.detections.find((d) => d.code === 'DET-003');
+    assert.equal(d3.natural.label, 'rock');
+
+    // hidden from lists, map, statistics and the mission counters
+    assert.equal((await api.get(`/api/scans?missionId=${missionId}`)).body.meta.total, 0);
+    assert.equal((await api.get(`/api/scans?missionId=${missionId}&includeDrafts=true`)).body.meta.total, 1);
+    assert.equal((await api.get(`/api/detections?missionId=${missionId}`)).body.meta.total, 0);
+    assert.equal((await api.get(`/api/detections?scanId=${draftId}`)).body.meta.total, 3);
+    assert.equal((await api.get(`/api/detections/stats?missionId=${missionId}`)).body.data.totals.detections, 0);
+    assert.equal((await api.get(`/api/missions/${missionId}`)).body.data.stats.scans, 0);
+  });
+
+  test('stage 2: re-running with new settings keeps it a draft', async () => {
+    const res = await api.post(`/api/scans/${draftId}/reanalyze`).send({ cleaning: { gain_across: false, despeckle: 'lee' } }).expect(200);
+    assert.equal(res.body.data.draft, true);
+    assert.equal(res.body.data.options.cleaning.despeckle, 'lee');
+    assert.ok(res.body.data.detections.every((d) => d.draft));
+  });
+
+  test('publish applies the review threshold and the operator decisions, keeps the AI verdict', async () => {
+    const dets = (await api.get(`/api/detections?scanId=${draftId}`)).body.data;
+    const byCode = Object.fromEntries(dets.map((d) => [d.code, d]));
+    await api.patch(`/api/detections/${byCode['DET-001'].id}/review`).send({ status: 'false_positive', origin: 'noise_filtration' }).expect(200);
+    await api.patch(`/api/detections/${byCode['DET-003'].id}/review`).send({ status: 'verified' }).expect(200);
+
+    const res = await api.post(`/api/scans/${draftId}/publish`).send({ minScore: 75 }).expect(200);
+    const scan = res.body.data;
+    assert.equal(scan.draft, false);
+    assert.equal(scan.review.minScore, 75);
+    assert.ok(scan.review.publishedAt);
+    assert.equal(scan.options.minScore, 75);
+    const d = Object.fromEntries(scan.detections.map((x) => [x.code, x]));
+    // DET-001: AI confirmed it (92.5), the operator rejected it
+    assert.equal(d['DET-001'].status, 'suppressed');
+    assert.ok(d['DET-001'].suppressionReasons.includes('operator_rejected'));
+    assert.equal(d['DET-001'].review.aiStatus, 'confirmed');
+    assert.equal(d['DET-001'].review.origin, 'noise_filtration');
+    // DET-002: 71.2 is below the new threshold
+    assert.equal(d['DET-002'].status, 'suppressed');
+    assert.ok(d['DET-002'].suppressionReasons.includes('below_min_score'));
+    // DET-003: the AI suppressed it (natural feature), the operator verified it
+    assert.equal(d['DET-003'].status, 'confirmed');
+    assert.deepEqual(d['DET-003'].suppressionReasons, []);
+    assert.equal(d['DET-003'].review.aiStatus, 'suppressed');
+    assert.equal(scan.summary.confirmed, 1);
+    assert.equal(scan.summary.suppressed, 2);
+    assert.ok(scan.detections.every((x) => x.draft === false));
+
+    // now visible everywhere
+    assert.equal((await api.get(`/api/scans?missionId=${missionId}`)).body.meta.total, 1);
+    assert.equal((await api.get(`/api/detections?missionId=${missionId}`)).body.meta.total, 3);
+    assert.equal((await api.get(`/api/missions/${missionId}`)).body.data.stats.confirmed, 1);
+    const csv = await api.get(`/api/scans/${draftId}/report.csv`).expect(200);
+    assert.match(csv.text, /natural_label/);
+    assert.match(csv.text, /data_quality_flags/);
+    assert.match(csv.text, /ai_status/);
+    await api.post(`/api/scans/${draftId}/publish`).send({ minScore: 101 }).expect(400);
+    await api.post(`/api/scans/${new mongoose.Types.ObjectId()}/publish`).send({}).expect(404);
+  });
+
+  test('stale drafts are removed with their files', async () => {
+    const res = await api.post('/api/scans').attach('file', SAMPLE).field('missionId', missionId).field('draft', 'true').expect(201);
+    const id = res.body.data.id;
+    // createdAt is immutable for Mongoose: backdate it through the driver
+    await Scan.collection.updateOne({ _id: new mongoose.Types.ObjectId(id) }, { $set: { createdAt: new Date(Date.now() - 2 * 24 * 3600 * 1000) } });
+    assert.ok(await scanService.removeStaleDrafts() >= 1);
+    assert.equal(await Scan.countDocuments({ _id: id }), 0);
+    assert.equal(await Detection.countDocuments({ scan: id }), 0);
+  });
+
+  test('stage 3: stress test is proxied with its settings', async () => {
+    const res = await api.post('/api/filter/stress').attach('file', SAMPLE)
+      .field('disturbance', 'speckle').field('levels', '2').field('roi', '0,0,1024,1024').expect(200);
+    assert.equal(res.body.data.series.length, 2);
+    assert.equal(res.body.data.series[0].results.auto.retention, 1);
+    const call = mockAi.state.calls.findLast((c) => c.path === '/v1/stress-test');
+    assert.equal(call.body.disturbance, 'speckle');
+    assert.equal(call.body.roi, '0,0,1024,1024');
+    assert.equal(call.body.models, 'detector,segmenter');
+    await api.post('/api/filter/stress').attach('file', SAMPLE).field('disturbance', 'earthquake').expect(400);
+    await api.post('/api/filter/stress').attach('file', SAMPLE).field('disturbance', 'gain').field('roi', '1,2').expect(400);
   });
 });
 

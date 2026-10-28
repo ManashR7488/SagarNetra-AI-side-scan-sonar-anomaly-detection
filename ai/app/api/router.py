@@ -2,7 +2,7 @@ import hmac
 
 from fastapi import APIRouter, Depends, Header, HTTPException
 
-from app.api.routes import analysis, filtering, reports, system
+from app.api.routes import analysis, cleaning, filtering, reports, system
 from app.core.config import settings
 
 
@@ -14,5 +14,5 @@ def require_api_key(x_api_key: str | None = Header(None)):
 
 api_router = APIRouter()
 api_router.include_router(system.router)  # /, /health and /v1/models stay open
-for module in (analysis, filtering, reports):
+for module in (analysis, cleaning, filtering, reports):
     api_router.include_router(module.router, dependencies=[Depends(require_api_key)])

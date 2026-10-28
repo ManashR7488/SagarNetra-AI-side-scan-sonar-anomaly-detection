@@ -1,0 +1,31 @@
+{
+ "name": "dropouts",
+ "settings": {
+  "repair_dropouts": true
+ },
+ "synthetic": {
+  "files": 21,
+  "targets": 88,
+  "tp": 22,
+  "fp": 37,
+  "recall": 0.25,
+  "precision": 0.3729,
+  "f1": 0.2993,
+  "mean_conf_tp": 73.8,
+  "fp_rock": 9,
+  "fp_seabed": 28,
+  "geo_err_median_m": 2.35,
+  "geo_err_p90_m": 13.91
+ },
+ "ai4shipwrecks": {
+  "files": 46,
+  "targets": 159,
+  "tp": 36,
+  "fp": 23,
+  "recall": 0.2264,
+  "precision": 0.6102,
+  "f1": 0.3303,
+  "mean_conf_tp": 77.6
+ },
+ "seconds": 478.6
+}

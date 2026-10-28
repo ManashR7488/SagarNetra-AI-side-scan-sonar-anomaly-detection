@@ -44,7 +44,8 @@ async function uploadToLocal(buffer, { folder, name, resourceType }) {
   await fs.writeFile(abs, buffer);
   return {
     provider: 'local',
-    url: `${config.publicUrl}/uploads/${rel}`,
+    // versioned like Cloudinary URLs: a re-analysis rewrites the same file, browsers must not reuse the old one
+    url: `${config.publicUrl}/uploads/${rel}?v=${Date.now().toString(36)}`,
     publicId: rel,
     resourceType,
     format: extOf(name),

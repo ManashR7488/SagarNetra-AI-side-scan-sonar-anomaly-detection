@@ -19,3 +19,13 @@ export function downloadJson(data, filename) {
   a.remove();
   URL.revokeObjectURL(url);
 }
+
+/** Download a data: URL (e.g. a canvas snapshot) under a file name. */
+export function downloadDataUrl(dataUrl, filename) {
+  const a = document.createElement('a');
+  a.href = dataUrl;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}

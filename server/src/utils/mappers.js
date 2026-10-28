@@ -55,16 +55,64 @@ export function scanFieldsFromAi(result) {
     'processing.tiles': p.tiles,
     'processing.timings': p.timings,
     'processing.filters': p.filters,
+    'processing.cleaning': p.cleaning ?? undefined,
+    'processing.falseAlarmFilter': p.false_alarm_filter ?? undefined,
   };
 }
 
-export function detectionFromAi(d, { scanId, missionId }) {
+const NATURAL = new Set(['rock', 'sand_ripple', 'natural_shadow', 'seabed_texture']);
+
+function naturalFromAi(n) {
+  if (!n) return undefined;
+  return {
+    method: n.method,
+    pManMade: n.p_man_made ?? undefined,
+    label: NATURAL.has(n.label) ? n.label : undefined,
+    subtypeProbabilities: n.subtype_probabilities ?? undefined,
+    reasons: n.reasons ?? [],
+  };
+}
+
+function shadowFromAi(sh) {
+  if (!sh) return undefined;
+  return {
+    found: sh.found,
+    polygon: sh.polygon?.length ? sh.polygon : undefined,
+    lengthPx: sh.length_px,
+    lengthRatio: sh.length_ratio,
+    areaRatio: sh.area_ratio,
+    solidity: sh.solidity,
+    sharpness: sh.sharpness,
+    darkness: sh.darkness,
+    pieces: sh.pieces,
+  };
+}
+
+function qualityFromAi(q) {
+  if (!q) return undefined;
+  return {
+    repairedPings: q.repaired_pings,
+    timeGap: q.time_gap,
+    motionFlagged: q.motion_flagged,
+    interference: q.interference,
+    unrepairedDropout: q.unrepaired_dropout,
+    inWaterColumn: q.in_water_column,
+    nearNadir: q.near_nadir,
+    resolutionM: q.resolution_m ?? undefined,
+    flags: q.flags ?? [],
+    score: q.score,
+  };
+}
+
+export function detectionFromAi(d, { scanId, missionId, draft = false }) {
   const loc = d.location;
   const ev = d.evidence ?? {};
   const dim = d.dimensions;
+  const ht = d.height;
   return {
     scan: scanId,
     mission: missionId,
+    draft,
     code: d.id,
     className: d.class_name,
     category: d.category,
@@ -82,7 +130,14 @@ export function detectionFromAi(d, { scanId, missionId }) {
       contrast: ev.contrast,
       acousticEvidence: ev.acoustic_evidence,
       modelAgreement: ev.model_agreement,
+      isolation: ev.isolation,
+      periodicity: ev.periodicity,
+      orientationCoherence: ev.orientation_coherence,
+      blobDensity: ev.blob_density,
     },
+    natural: naturalFromAi(d.natural),
+    shadow: shadowFromAi(d.shadow),
+    quality: qualityFromAi(d.quality),
     bbox: d.bbox,
     bboxPct: d.bbox_pct,
     centroidPx: d.centroid_px,
@@ -98,8 +153,73 @@ export function detectionFromAi(d, { scanId, missionId }) {
         timestamp: date(loc.timestamp),
       }
       : undefined,
-    dimensions: dim
-      ? { acrossTrackM: dim.across_track_m, alongTrackM: dim.along_track_m, areaM2: dim.area_m2, areaFrom: dim.area_from }
+    dimensions: dim || ht?.height_m != null
+      ? {
+        acrossTrackM: dim?.across_track_m,
+        alongTrackM: dim?.along_track_m,
+        areaM2: dim?.area_m2,
+        areaFrom: dim?.area_from,
+        heightM: ht?.height_m ?? undefined,
+        heightMethod: ht?.height_m != null ? ht.method : undefined,
+        shadowLengthM: ht?.shadow_length_m ?? undefined,
+        leastDepthM: ht?.least_depth_m ?? undefined,
+      }
       : undefined,
+  };
+}
+
+/** Seabed metadata (the heightfield and texture themselves are stored as files by the scan service). */
+export function seabedFromAi(sb) {
+  if (!sb?.available) return { available: false, reason: sb?.reason ?? 'Not produced by the AI service' };
+  const g = sb.grid ?? {};
+  const e = sb.elevation ?? {};
+  return {
+    available: true,
+    kind: sb.kind,
+    grid: { nx: g.nx, nz: g.nz, cellXM: g.cell_x_m, cellZM: g.cell_z_m, widthM: g.width_m, lengthM: g.length_m },
+    elevation: { scale: e.scale, offset: e.offset, minM: e.min_m, maxM: e.max_m },
+    depth: sb.depth ? { minM: sb.depth.min_m, maxM: sb.depth.max_m } : undefined,
+    relief: sb.relief ? { rmsM: sb.relief.rms_m, maxAbsM: sb.relief.max_abs_m } : undefined,
+    altitude: sb.altitude
+      ? {
+        minM: sb.altitude.min_m,
+        maxM: sb.altitude.max_m,
+        assumed: sb.altitude.assumed,
+        source: sb.altitude.source,
+        checkM: sb.altitude.check_m ?? undefined,
+      }
+      : undefined,
+    slantRangeCorrected: sb.slant_range_corrected,
+    geometry: sb.geometry
+      ? {
+        sources: sb.geometry.sources,
+        nadirColumn: sb.geometry.nadir_column,
+        swathM: sb.geometry.swath_m,
+        bottomTrack: sb.geometry.bottom_track ?? undefined,
+      }
+      : undefined,
+    coverage: sb.coverage
+      ? {
+        coveredFraction: sb.coverage.covered_fraction,
+        dropoutFraction: sb.coverage.dropout_fraction,
+        outsideSwathFraction: sb.coverage.outside_swath_fraction,
+        nadirZoneM: sb.coverage.nadir_zone_m,
+      }
+      : undefined,
+    track: sb.track,
+    targets: (sb.targets ?? []).map((t) => ({
+      detectionCode: t.detection_id,
+      className: t.class_name,
+      status: t.status,
+      s: t.s,
+      u: t.u,
+      sizeM: t.size_m ?? null,
+      heightM: t.height_m,
+      heightMethod: t.height_method,
+      seabedDepthM: t.seabed_depth_m ?? null,
+      leastDepthM: t.least_depth_m ?? null,
+    })),
+    methods: sb.methods,
+    assumptions: sb.assumptions ?? [],
   };
 }

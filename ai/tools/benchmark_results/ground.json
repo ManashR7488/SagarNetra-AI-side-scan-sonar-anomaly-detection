@@ -1,0 +1,31 @@
+{
+ "name": "ground",
+ "settings": {
+  "slant_correct": true
+ },
+ "synthetic": {
+  "files": 21,
+  "targets": 88,
+  "tp": 23,
+  "fp": 72,
+  "recall": 0.2614,
+  "precision": 0.2421,
+  "f1": 0.2514,
+  "mean_conf_tp": 72.7,
+  "fp_rock": 5,
+  "fp_seabed": 67,
+  "geo_err_median_m": 3.18,
+  "geo_err_p90_m": 13.35
+ },
+ "ai4shipwrecks": {
+  "files": 46,
+  "targets": 163,
+  "tp": 34,
+  "fp": 20,
+  "recall": 0.2086,
+  "precision": 0.6296,
+  "f1": 0.3134,
+  "mean_conf_tp": 75.2
+ },
+ "seconds": 725.2
+}

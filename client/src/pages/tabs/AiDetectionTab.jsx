@@ -16,7 +16,9 @@ import {
   RefreshCw,
   SlidersHorizontal,
   XCircle,
+  Box,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { cn } from "../../utils/cn";
 import { SAMPLE_PRESETS, SAMPLE_SCANS } from "../../data/sonarData";
 import SonarMap from "../../components/SonarMap";
@@ -27,6 +29,7 @@ import { useMissionStore } from "../../store/useMissionStore";
 import { useSystemStore } from "../../store/useSystemStore";
 import { useWorkspaceStore } from "../../store/useWorkspaceStore";
 import { classColor, classLabel, SEVERITY_META, SUPPRESSION_LABELS } from "../../utils/classes";
+import { NATURAL_META, QUALITY_FLAG_LABELS, STEP_META } from "../../utils/noise";
 import { downloadFromUrl } from "../../utils/download";
 import { detectionLatLng, fmtBytes, fmtLat, fmtLon, fmtMs, fmtNum, fmtPoint } from "../../utils/format";
 
@@ -279,6 +282,20 @@ export default function AiDetectionTab() {
             <span>{batch.running ? `Analysing ${batch.done}/${batch.total}` : `Predict All (${pendingCount})`}</span>
           </button>
 
+          {scan?.id && selected?.status === "done" ? (
+            <Link
+              to={`/app/seabed-3d?scan=${scan.id}`}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border border-slate-300 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-800 shadow-2xs"
+              title={scan.seabed?.available ? "Open the reconstructed seabed in 3D" : "Build and open the 3D seabed model"}
+            >
+              <Box className="w-3.5 h-3.5 text-blue-600" />View in 3D
+            </Link>
+          ) : (
+            <span className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-400 cursor-not-allowed" title="Analyse a scan first">
+              <Box className="w-3.5 h-3.5" />View in 3D
+            </span>
+          )}
+
           <div className="flex items-center rounded-md border border-slate-300 overflow-hidden shadow-2xs">
             <span className="flex items-center gap-1.5 px-2.5 py-1.5 bg-slate-100 text-slate-800 text-xs font-semibold">
               <Download className="w-3.5 h-3.5 text-emerald-600" />Report
@@ -526,7 +543,20 @@ export default function AiDetectionTab() {
             <InfoRow label="Format / size">{scan?.source ? `${scan.source.format?.toUpperCase()} · ${fmtBytes(scan.source.sizeBytes)}` : selected?.file ? fmtBytes(selected.file.size) : "—"}</InfoRow>
             <InfoRow label="Image">{scan?.source?.width ? `${scan.source.width} × ${scan.source.height} px` : "—"}</InfoRow>
             <InfoRow label="Inference">{scan?.processing ? `${fmtMs(scan.processing.timings?.total_ms)} · ${scan.processing.tiled ? `${scan.processing.tiles} tiles` : "whole image"}` : "—"}</InfoRow>
-            <InfoRow label="End-to-end">{fmtMs(scan?.processing?.durationMs)}</InfoRow>
+            {scan?.processing?.cleaning ? (
+              <InfoRow label="Cleaning" title={scan.processing.cleaning.steps?.filter((st) => st.applied && st.id !== "raw").map((st) => STEP_META[st.id]?.label ?? st.id).join(" → ")}>
+                {(() => {
+                  const used = scan.processing.cleaning.steps?.filter((st) => st.applied && st.id !== "raw") ?? [];
+                  const q = scan.processing.cleaning.report;
+                  return `${used.length ? used.map((st) => STEP_META[st.id]?.short ?? st.id).join("·") : "none needed"}${q?.quality_before !== undefined ? ` · Q ${q.quality_before}→${q.quality_after}` : ""}`;
+                })()}
+              </InfoRow>
+            ) : (
+              <InfoRow label="End-to-end">{fmtMs(scan?.processing?.durationMs)}</InfoRow>
+            )}
+            {scan?.review?.origin === "noise_filtration" && (
+              <InfoRow label="Reviewed">Noise Filtration · threshold {scan.review.minScore ?? 50}%</InfoRow>
+            )}
           </div>
         </div>
 
@@ -569,7 +599,7 @@ export default function AiDetectionTab() {
                     <th className="text-right px-2 py-1">Conf</th>
                     <th className="text-left px-2 py-1">Status</th>
                     <th className="text-left px-2 py-1">Position</th>
-                    <th className="text-right px-2 py-1" title="Shadow / edge linearity / contrast evidence">Evidence S·L·C</th>
+                    <th className="text-left px-2 py-1" title="False-alarm filter verdict, operator review and data quality">Evidence</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -588,8 +618,23 @@ export default function AiDetectionTab() {
                         )}
                       </td>
                       <td className="px-2 py-1">{d.location ? fmtPoint(d.location, 4) : "—"}</td>
-                      <td className="px-2 py-1 text-right text-slate-500">
-                        {[d.evidence?.shadow, d.evidence?.linearity, d.evidence?.contrast].map((v) => fmtNum(v, 2)).join(" · ")}
+                      <td className="px-2 py-1 text-slate-500" title={[
+                        d.natural?.reasons?.join("; "),
+                        d.quality?.flags?.length ? `data quality: ${d.quality.flags.map((f) => QUALITY_FLAG_LABELS[f] ?? f).join(", ")}` : null,
+                        `shadow ${fmtNum(d.evidence?.shadow, 2)} · edges ${fmtNum(d.evidence?.linearity, 2)} · contrast ${fmtNum(d.evidence?.contrast, 2)}`,
+                      ].filter(Boolean).join("\n")}>
+                        <span className="flex items-center gap-1">
+                          {d.review?.status === "verified" && <span className="text-emerald-600" title="Verified by the operator">✓</span>}
+                          {d.review?.status === "false_positive" && <span className="text-red-600" title="Rejected by the operator">✗</span>}
+                          {d.natural?.label && d.status !== "confirmed" ? (
+                            <span className={cn("px-1 rounded border text-[9px]", NATURAL_META[d.natural.label]?.badge)}>{NATURAL_META[d.natural.label]?.short}</span>
+                          ) : d.natural?.pManMade !== undefined && d.natural?.pManMade !== null ? (
+                            <span className="text-[10px]">P {Math.round(d.natural.pManMade * 100)}%</span>
+                          ) : (
+                            <span className="text-[10px]">{[d.evidence?.shadow, d.evidence?.linearity, d.evidence?.contrast].map((v) => fmtNum(v, 2)).join("·")}</span>
+                          )}
+                          {d.quality?.flags?.length > 0 && <span className="text-amber-600 text-[10px]" title="data-quality flags">⚑{d.quality.flags.length}</span>}
+                        </span>
                       </td>
                     </tr>
                   ))}

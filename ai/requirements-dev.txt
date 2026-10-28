@@ -7,3 +7,5 @@ onnx==1.23.0
 onnxslim==0.1.96
 pytest==9.1.1
 httpx==0.28.1
+# training the false-alarm classifier (tools/train_fp_classifier.py); not needed at run time
+scikit-learn==1.9.1

@@ -1,0 +1,1312 @@
+{
+ "summary": {
+  "xtf": {
+   "files": 14,
+   "targets": 72,
+   "height_measured": 46,
+   "height_coverage": 0.639,
+   "height_abs_error_m": {
+    "median": 0.065,
+    "p90": 0.545
+   },
+   "height_rel_error": {
+    "median": -0.067,
+    "median_abs": 0.138
+   },
+   "bottom_track_altitude_error_m_median": 0.025,
+   "bottom_track_found": "14/14",
+   "depth_abs_error_m_median": 0.017,
+   "by_kind": {
+    "aircraft": {
+     "n": 1,
+     "median_est_m": 1.94,
+     "median_true_m": 2.3
+    },
+    "boat_wreck": {
+     "n": 2,
+     "median_est_m": 1.42,
+     "median_true_m": 1.85
+    },
+    "boulder": {
+     "n": 4,
+     "median_est_m": 0.93,
+     "median_true_m": 1.28
+    },
+    "container": {
+     "n": 1,
+     "median_est_m": 2.3,
+     "median_true_m": 2.59
+    },
+    "crab_pot": {
+     "n": 17,
+     "median_est_m": 0.43,
+     "median_true_m": 0.45
+    },
+    "debris": {
+     "n": 3,
+     "median_est_m": 0.77,
+     "median_true_m": 0.82
+    },
+    "human_body": {
+     "n": 1,
+     "median_est_m": 0.23,
+     "median_true_m": 0.28
+    },
+    "ordnance": {
+     "n": 1,
+     "median_est_m": 0.47,
+     "median_true_m": 0.42
+    },
+    "pipeline": {
+     "n": 1,
+     "median_est_m": 1.39,
+     "median_true_m": 0.67
+    },
+    "rock_outcrop": {
+     "n": 8,
+     "median_est_m": 1.31,
+     "median_true_m": 2.01
+    },
+    "shipwreck": {
+     "n": 1,
+     "median_est_m": 3.11,
+     "median_true_m": 3.79
+    },
+    "wreck_debris": {
+     "n": 6,
+     "median_est_m": 0.47,
+     "median_true_m": 0.46
+    }
+   }
+  },
+  "image_only": {
+   "files": 14,
+   "targets": 72,
+   "height_measured": 46,
+   "height_coverage": 0.639,
+   "height_abs_error_m": {
+    "median": 0.06,
+    "p90": 0.565
+   },
+   "height_rel_error": {
+    "median": -0.067,
+    "median_abs": 0.138
+   },
+   "bottom_track_altitude_error_m_median": 0.025,
+   "bottom_track_found": "14/14",
+   "depth_abs_error_m_median": null,
+   "by_kind": {
+    "aircraft": {
+     "n": 1,
+     "median_est_m": 1.91,
+     "median_true_m": 2.3
+    },
+    "boat_wreck": {
+     "n": 2,
+     "median_est_m": 1.42,
+     "median_true_m": 1.85
+    },
+    "boulder": {
+     "n": 4,
+     "median_est_m": 0.93,
+     "median_true_m": 1.28
+    },
+    "container": {
+     "n": 1,
+     "median_est_m": 2.28,
+     "median_true_m": 2.59
+    },
+    "crab_pot": {
+     "n": 17,
+     "median_est_m": 0.43,
+     "median_true_m": 0.45
+    },
+    "debris": {
+     "n": 3,
+     "median_est_m": 0.77,
+     "median_true_m": 0.82
+    },
+    "human_body": {
+     "n": 1,
+     "median_est_m": 0.24,
+     "median_true_m": 0.28
+    },
+    "ordnance": {
+     "n": 1,
+     "median_est_m": 0.48,
+     "median_true_m": 0.42
+    },
+    "pipeline": {
+     "n": 1,
+     "median_est_m": 1.37,
+     "median_true_m": 0.67
+    },
+    "rock_outcrop": {
+     "n": 8,
+     "median_est_m": 1.3,
+     "median_true_m": 2.01
+    },
+    "shipwreck": {
+     "n": 1,
+     "median_est_m": 3.1,
+     "median_true_m": 3.79
+    },
+    "wreck_debris": {
+     "n": 6,
+     "median_est_m": 0.47,
+     "median_true_m": 0.46
+    }
+   }
+  }
+ },
+ "files": {
+  "xtf": [
+   {
+    "file": "AND/AND-L01.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.025,
+    "relief_rms_m": 0.137,
+    "depth_abs_err_m": 0.015,
+    "targets": [
+     {
+      "kind": "debris",
+      "true_m": 0.82,
+      "est_m": 0.77,
+      "range_m": 34.49
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.45,
+      "est_m": 1.9,
+      "range_m": 18.8
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.15,
+      "est_m": null,
+      "range_m": 41.23
+     }
+    ]
+   },
+   {
+    "file": "AND/AND-L02.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.022,
+    "relief_rms_m": 0.193,
+    "depth_abs_err_m": 0.016,
+    "targets": [
+     {
+      "kind": "aircraft",
+      "true_m": 2.3,
+      "est_m": 1.94,
+      "range_m": 11.11
+     },
+     {
+      "kind": "ordnance",
+      "true_m": 0.42,
+      "est_m": 0.47,
+      "range_m": 27.57
+     },
+     {
+      "kind": "debris",
+      "true_m": 0.78,
+      "est_m": null,
+      "range_m": 39.36
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.04,
+      "est_m": 0.58,
+      "range_m": 33.67
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.88,
+      "est_m": 0.3,
+      "range_m": 33.24
+     },
+     {
+      "kind": "debris",
+      "true_m": 0.82,
+      "est_m": 0.78,
+      "range_m": 15.81
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.45,
+      "est_m": 0.22,
+      "range_m": 31.73
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.15,
+      "est_m": 2.15,
+      "range_m": 10.43
+     }
+    ]
+   },
+   {
+    "file": "CHN/CHN-L01.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.054,
+    "relief_rms_m": 0.096,
+    "depth_abs_err_m": 0.017,
+    "targets": [
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.28,
+      "est_m": 0.27,
+      "range_m": 69.04
+     }
+    ]
+   },
+   {
+    "file": "CHN/CHN-L02.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.021,
+    "relief_rms_m": 0.105,
+    "depth_abs_err_m": 0.017,
+    "targets": [
+     {
+      "kind": "shipwreck",
+      "true_m": 3.79,
+      "est_m": 3.11,
+      "range_m": 15.13
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.64,
+      "est_m": 0.6,
+      "range_m": 15.65
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.39,
+      "est_m": 0.43,
+      "range_m": 37.14
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.55,
+      "est_m": 0.52,
+      "range_m": 8.08
+     },
+     {
+      "kind": "tyre_cluster",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 40.08
+     },
+     {
+      "kind": "human_body",
+      "true_m": 0.28,
+      "est_m": 0.23,
+      "range_m": 14.77
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.07,
+      "est_m": 0.79,
+      "range_m": 43.7
+     },
+     {
+      "kind": "boulder",
+      "true_m": 0.53,
+      "est_m": null,
+      "range_m": 0.96
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.2,
+      "est_m": null,
+      "range_m": 6.85
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.28,
+      "est_m": 0.32,
+      "range_m": 19.99
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.52,
+      "est_m": 0.57,
+      "range_m": 12.13
+     }
+    ]
+   },
+   {
+    "file": "GOA/GOA-L01.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.019,
+    "relief_rms_m": 0.053,
+    "depth_abs_err_m": 0.016,
+    "targets": [
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 14.69
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 28.1
+     }
+    ]
+   },
+   {
+    "file": "GOA/GOA-L02.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.024,
+    "relief_rms_m": 0.083,
+    "depth_abs_err_m": 0.016,
+    "targets": [
+     {
+      "kind": "human_body",
+      "true_m": 0.28,
+      "est_m": null,
+      "range_m": 23.79
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 4.2
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.59,
+      "range_m": 5.46
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.55,
+      "range_m": 8.43
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.57,
+      "range_m": 8.7
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.52,
+      "range_m": 11.45
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.46,
+      "range_m": 11.2
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.43,
+      "range_m": 13.72
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 19.79
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 8.29
+     }
+    ]
+   },
+   {
+    "file": "KOC/KOC-L01.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.023,
+    "relief_rms_m": 0.096,
+    "depth_abs_err_m": 0.017,
+    "targets": [
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 22.69
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.4,
+      "range_m": 9.03
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.53,
+      "range_m": 3.02
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 15.59
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 29.57
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.41,
+      "range_m": 41.57
+     },
+     {
+      "kind": "boat_wreck",
+      "true_m": 1.85,
+      "est_m": 1.37,
+      "range_m": 36.96
+     }
+    ]
+   },
+   {
+    "file": "KOC/KOC-L02.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.023,
+    "relief_rms_m": 0.105,
+    "depth_abs_err_m": 0.016,
+    "targets": [
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 4.27
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.43,
+      "range_m": 38.63
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.41,
+      "range_m": 43.64
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 47.86
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 42.79
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 46.99
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 32.93
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.46,
+      "range_m": 20.9
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.51,
+      "range_m": 6.7
+     },
+     {
+      "kind": "boat_wreck",
+      "true_m": 1.85,
+      "est_m": 1.47,
+      "range_m": 25.65
+     }
+    ]
+   },
+   {
+    "file": "MAN/MAN-L01.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.085,
+    "relief_rms_m": 0.156,
+    "depth_abs_err_m": 0.016,
+    "targets": [
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.42,
+      "est_m": 1.49,
+      "range_m": 25.23
+     }
+    ]
+   },
+   {
+    "file": "MAN/MAN-L02.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.02,
+    "relief_rms_m": 0.164,
+    "depth_abs_err_m": 0.016,
+    "targets": [
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.41,
+      "est_m": 2.03,
+      "range_m": 7.47
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.49,
+      "est_m": 1.06,
+      "range_m": 42.12
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.63,
+      "est_m": 1.09,
+      "range_m": 3.84
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.42,
+      "est_m": 1.14,
+      "range_m": 37.14
+     }
+    ]
+   },
+   {
+    "file": "MUM/MUM-L01.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.033,
+    "relief_rms_m": 0.162,
+    "depth_abs_err_m": 0.018,
+    "targets": [
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 439.97
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 440.45
+     }
+    ]
+   },
+   {
+    "file": "MUM/MUM-L02.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.053,
+    "relief_rms_m": 0.145,
+    "depth_abs_err_m": 0.018,
+    "targets": [
+     {
+      "kind": "pipeline",
+      "true_m": 0.67,
+      "est_m": 1.39,
+      "range_m": 97.7
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 311.16
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 311.06
+     },
+     {
+      "kind": "container",
+      "true_m": 2.59,
+      "est_m": 2.3,
+      "range_m": 59.01
+     },
+     {
+      "kind": "debris",
+      "true_m": 0.77,
+      "est_m": 0.46,
+      "range_m": 72.83
+     }
+    ]
+   },
+   {
+    "file": "VIZ/VIZ-L01.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.053,
+    "relief_rms_m": 0.113,
+    "depth_abs_err_m": 0.019,
+    "targets": [
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 436.41
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 436.13
+     },
+     {
+      "kind": "boulder",
+      "true_m": 0.53,
+      "est_m": null,
+      "range_m": 74.65
+     }
+    ]
+   },
+   {
+    "file": "VIZ/VIZ-L02.xtf",
+    "kind": "measured",
+    "altitude_source": "logged+image",
+    "bottom_track_altitude_err_m": 0.027,
+    "relief_rms_m": 0.09,
+    "depth_abs_err_m": 0.02,
+    "targets": [
+     {
+      "kind": "manta_mine",
+      "true_m": 0.41,
+      "est_m": null,
+      "range_m": 84.03
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 309.42
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 309.55
+     },
+     {
+      "kind": "boulder",
+      "true_m": 0.53,
+      "est_m": 0.11,
+      "range_m": 45.85
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.75,
+      "est_m": null,
+      "range_m": 5.65
+     }
+    ]
+   }
+  ],
+  "image_only": [
+   {
+    "file": "AND/AND-L01.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.025,
+    "relief_rms_m": 0.137,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "debris",
+      "true_m": 0.82,
+      "est_m": 0.77,
+      "range_m": 34.49
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.45,
+      "est_m": 1.89,
+      "range_m": 18.8
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.15,
+      "est_m": null,
+      "range_m": 41.23
+     }
+    ]
+   },
+   {
+    "file": "AND/AND-L02.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.022,
+    "relief_rms_m": 0.193,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "aircraft",
+      "true_m": 2.3,
+      "est_m": 1.91,
+      "range_m": 11.11
+     },
+     {
+      "kind": "ordnance",
+      "true_m": 0.42,
+      "est_m": 0.48,
+      "range_m": 27.57
+     },
+     {
+      "kind": "debris",
+      "true_m": 0.78,
+      "est_m": null,
+      "range_m": 39.36
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.04,
+      "est_m": 0.58,
+      "range_m": 33.67
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.88,
+      "est_m": 0.3,
+      "range_m": 33.24
+     },
+     {
+      "kind": "debris",
+      "true_m": 0.82,
+      "est_m": 0.77,
+      "range_m": 15.81
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.45,
+      "est_m": 0.22,
+      "range_m": 31.73
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.15,
+      "est_m": 2.12,
+      "range_m": 10.43
+     }
+    ]
+   },
+   {
+    "file": "CHN/CHN-L01.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.054,
+    "relief_rms_m": 0.096,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.28,
+      "est_m": 0.27,
+      "range_m": 69.04
+     }
+    ]
+   },
+   {
+    "file": "CHN/CHN-L02.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.021,
+    "relief_rms_m": 0.105,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "shipwreck",
+      "true_m": 3.79,
+      "est_m": 3.1,
+      "range_m": 15.13
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.64,
+      "est_m": 0.6,
+      "range_m": 15.65
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.39,
+      "est_m": 0.43,
+      "range_m": 37.14
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.55,
+      "est_m": 0.52,
+      "range_m": 8.08
+     },
+     {
+      "kind": "tyre_cluster",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 40.08
+     },
+     {
+      "kind": "human_body",
+      "true_m": 0.28,
+      "est_m": 0.24,
+      "range_m": 14.77
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.07,
+      "est_m": 0.79,
+      "range_m": 43.7
+     },
+     {
+      "kind": "boulder",
+      "true_m": 0.53,
+      "est_m": null,
+      "range_m": 0.96
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.2,
+      "est_m": null,
+      "range_m": 6.85
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.28,
+      "est_m": 0.32,
+      "range_m": 19.99
+     },
+     {
+      "kind": "wreck_debris",
+      "true_m": 0.52,
+      "est_m": 0.57,
+      "range_m": 12.13
+     }
+    ]
+   },
+   {
+    "file": "GOA/GOA-L01.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.019,
+    "relief_rms_m": 0.053,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 14.69
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 28.1
+     }
+    ]
+   },
+   {
+    "file": "GOA/GOA-L02.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.024,
+    "relief_rms_m": 0.083,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "human_body",
+      "true_m": 0.28,
+      "est_m": null,
+      "range_m": 23.79
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 4.2
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.58,
+      "range_m": 5.46
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.54,
+      "range_m": 8.43
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.56,
+      "range_m": 8.7
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.51,
+      "range_m": 11.45
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.46,
+      "range_m": 11.2
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 13.72
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 19.79
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 8.29
+     }
+    ]
+   },
+   {
+    "file": "KOC/KOC-L01.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.023,
+    "relief_rms_m": 0.096,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 22.69
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.4,
+      "range_m": 9.03
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.53,
+      "range_m": 3.02
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 15.59
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 29.57
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.41,
+      "range_m": 41.57
+     },
+     {
+      "kind": "boat_wreck",
+      "true_m": 1.85,
+      "est_m": 1.36,
+      "range_m": 36.96
+     }
+    ]
+   },
+   {
+    "file": "KOC/KOC-L02.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.023,
+    "relief_rms_m": 0.106,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 4.27
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.43,
+      "range_m": 38.63
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.41,
+      "range_m": 43.64
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 47.86
+     },
+     {
+      "kind": "tyre",
+      "true_m": 0.22,
+      "est_m": null,
+      "range_m": 42.79
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": null,
+      "range_m": 46.99
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.42,
+      "range_m": 32.93
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.45,
+      "range_m": 20.9
+     },
+     {
+      "kind": "crab_pot",
+      "true_m": 0.45,
+      "est_m": 0.51,
+      "range_m": 6.7
+     },
+     {
+      "kind": "boat_wreck",
+      "true_m": 1.85,
+      "est_m": 1.47,
+      "range_m": 25.65
+     }
+    ]
+   },
+   {
+    "file": "MAN/MAN-L01.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.085,
+    "relief_rms_m": 0.158,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.42,
+      "est_m": 1.47,
+      "range_m": 25.23
+     }
+    ]
+   },
+   {
+    "file": "MAN/MAN-L02.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.02,
+    "relief_rms_m": 0.164,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "rock_outcrop",
+      "true_m": 2.41,
+      "est_m": 2.02,
+      "range_m": 7.47
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.49,
+      "est_m": 1.06,
+      "range_m": 42.12
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.63,
+      "est_m": 1.06,
+      "range_m": 3.84
+     },
+     {
+      "kind": "rock_outcrop",
+      "true_m": 1.42,
+      "est_m": 1.13,
+      "range_m": 37.14
+     }
+    ]
+   },
+   {
+    "file": "MUM/MUM-L01.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.033,
+    "relief_rms_m": 0.163,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 439.97
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 440.45
+     }
+    ]
+   },
+   {
+    "file": "MUM/MUM-L02.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.053,
+    "relief_rms_m": 0.144,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "pipeline",
+      "true_m": 0.67,
+      "est_m": 1.37,
+      "range_m": 97.7
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 311.16
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.68,
+      "est_m": null,
+      "range_m": 311.06
+     },
+     {
+      "kind": "container",
+      "true_m": 2.59,
+      "est_m": 2.28,
+      "range_m": 59.01
+     },
+     {
+      "kind": "debris",
+      "true_m": 0.77,
+      "est_m": 0.46,
+      "range_m": 72.83
+     }
+    ]
+   },
+   {
+    "file": "VIZ/VIZ-L01.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.053,
+    "relief_rms_m": 0.114,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 436.41
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 436.13
+     },
+     {
+      "kind": "boulder",
+      "true_m": 0.53,
+      "est_m": null,
+      "range_m": 74.65
+     }
+    ]
+   },
+   {
+    "file": "VIZ/VIZ-L02.xtf",
+    "kind": "relative",
+    "altitude_source": "image",
+    "bottom_track_altitude_err_m": 0.027,
+    "relief_rms_m": 0.09,
+    "depth_abs_err_m": null,
+    "targets": [
+     {
+      "kind": "manta_mine",
+      "true_m": 0.41,
+      "est_m": null,
+      "range_m": 84.03
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 309.42
+     },
+     {
+      "kind": "pipeline",
+      "true_m": 0.47,
+      "est_m": null,
+      "range_m": 309.55
+     },
+     {
+      "kind": "boulder",
+      "true_m": 0.53,
+      "est_m": 0.11,
+      "range_m": 45.85
+     },
+     {
+      "kind": "boulder",
+      "true_m": 1.75,
+      "est_m": null,
+      "range_m": 5.65
+     }
+    ]
+   }
+  ]
+ }
+}

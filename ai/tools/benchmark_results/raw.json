@@ -1,0 +1,29 @@
+{
+ "name": "raw",
+ "settings": {},
+ "synthetic": {
+  "files": 21,
+  "targets": 88,
+  "tp": 25,
+  "fp": 54,
+  "recall": 0.2841,
+  "precision": 0.3165,
+  "f1": 0.2994,
+  "mean_conf_tp": 70.1,
+  "fp_rock": 9,
+  "fp_seabed": 45,
+  "geo_err_median_m": 4.36,
+  "geo_err_p90_m": 15.79
+ },
+ "ai4shipwrecks": {
+  "files": 46,
+  "targets": 159,
+  "tp": 36,
+  "fp": 23,
+  "recall": 0.2264,
+  "precision": 0.6102,
+  "f1": 0.3303,
+  "mean_conf_tp": 77.6
+ },
+ "seconds": 741.8
+}

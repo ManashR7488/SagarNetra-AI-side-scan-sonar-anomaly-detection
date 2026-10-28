@@ -12,7 +12,7 @@ from app.geo.geotagging import Track
 from app.ml.inference import RawDetection, fuse, run_model, should_tile, tile_origins
 from app.ml.registry import registry
 from app.processing.filters import FilterParams, apply_filters
-from app.processing.scoring import CATEGORY, SEVERITY, ScoreParams, score_detection
+from app.processing.scoring import CATEGORY, SEVERITY, ScoreParams, fp_filter_info, score_detection
 
 SEVERITY_RANK = {"none": 0, "medium": 1, "high": 2, "critical": 3}
 
@@ -53,8 +53,9 @@ def _dimensions(d: RawDetection, track: Track | None) -> dict | None:
 
 
 def analyze(gray: np.ndarray, track: Track | None, options: AnalyzeOptions, source: dict,
-            georef_error: str | None = None) -> tuple[dict, np.ndarray]:
-    """Returns (result JSON, filtered image used for inference)."""
+            georef_error: str | None = None, quality=None) -> tuple[dict, np.ndarray]:
+    """Returns (result JSON, filtered image used for inference). `quality`: data-quality maps of an image cleaned by
+    the noise-filtering stage 1 (app.cleaning); every detection then gets the data quality at its location."""
     t0 = time.perf_counter()
     timings = {}
     h, w = gray.shape
@@ -62,6 +63,8 @@ def analyze(gray: np.ndarray, track: Track | None, options: AnalyzeOptions, sour
     filtered, freport = apply_filters(gray, options.filters)
     timings["filtering_ms"] = round((time.perf_counter() - t0) * 1000, 1)
     dropout_rows = set(freport.dropout_rows)
+    if quality is not None:      # interpolated (repaired) pings, lost pings and time gaps carry no real seabed
+        dropout_rows |= quality.rows_set("repaired") | quality.rows_set("unrepaired") | quality.rows_set("gap")
 
     detector = registry.get("detector") if "detector" in options.models else None
     segmenter = registry.get("segmenter") if "segmenter" in options.models else None
@@ -91,8 +94,9 @@ def analyze(gray: np.ndarray, track: Track | None, options: AnalyzeOptions, sour
         if d.confidence < threshold * options.candidate_floor:
             continue
         hazard = bool(model.card.get("hazard", {}).get(d.class_name, True))
+        q = quality.at_box(d.box) if quality is not None else None
         s = score_detection(filtered, d.class_name, d.confidence, threshold, d.box, hazard, d.agreement,
-                            dropout_rows, options.score)
+                            dropout_rows, options.score, q, d.source)
         if s["status"] == "suppressed" and not options.include_suppressed:
             continue
         x1, y1, x2, y2 = [float(v) for v in d.box]
@@ -112,6 +116,7 @@ def analyze(gray: np.ndarray, track: Track | None, options: AnalyzeOptions, sour
             "polygons": [_simplify(p) for p in d.polygons],
             "location": track.pixel_to_geo(cx, cy) if track else None,
             "dimensions": _dimensions(d, track),
+            **({"quality": q} if q is not None else {}),
         })
     detections.sort(key=lambda d: (d["status"] != "confirmed", -d["confidence"]))
     for i, d in enumerate(detections, 1):
@@ -157,6 +162,7 @@ def analyze(gray: np.ndarray, track: Track | None, options: AnalyzeOptions, sour
             "tiles": tiles,
             "min_score": options.score.min_score,
             "fp_filter": options.score.fp_filter,
+            "false_alarm_filter": fp_filter_info(options.score),
             "filters": {"params": freport.params, "dropout_rows_detected": len(freport.dropout_rows),
                         "dropout_rows_repaired": freport.repaired_rows,
                         "quality_before": freport.before, "quality_after": freport.after},

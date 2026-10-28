@@ -10,10 +10,19 @@ Every candidate gets a 0-100 score:
        * contrast - the object must stand out from the local seabed; weak blobs are usually speckle
   3. Agreement bonus when the independent segmentation model finds the same object.
 
+With a trained false-alarm classifier (models/fp_classifier, app/processing/fp_classifier.py) the score instead
+blends the classifier's probability that the candidate is man-made (model confidence + a wider set of explainable
+evidence: shadow shape, isolation from the surrounding texture, ripple periodicity, rock clustering, data quality)
+with the rule score above; rejected candidates are labelled rock cluster / sand ripples / natural shadow / seabed
+texture with the reasons.
+
 Candidates are then suppressed (kept in the report, marked with a reason) when they are natural
-features (marine life), low-contrast speckle, inside a sonar data dropout, too small, or below the
-minimum score.
+features (marine life), low-contrast speckle, inside a sonar data dropout, in the water column, too small,
+or below the minimum score.
 """
+
+SUPPRESSION_REASONS = ("natural_feature", "low_contrast_speckle", "sonar_data_dropout", "too_small", "below_min_score",
+                       "water_column", "rock_cluster", "sand_ripple", "natural_shadow", "seabed_texture")
 
 from dataclasses import dataclass
 
@@ -43,6 +52,7 @@ class ScoreParams:
     fp_filter: bool = True
     min_score: float = 50.0
     nadir_col: float | None = None
+    fp_method: str = "auto"          # auto (classifier when trained, else rules) | rules | classifier
 
 
 def calibrated_score(conf: float, threshold: float) -> float:
@@ -122,23 +132,79 @@ def linearity_evidence(gray: np.ndarray, box) -> float:
     return float(np.clip(total / (2.0 * sum(crop.shape)), 0.0, 1.0))
 
 
+def rule_score(base: float, shadow: float, linear: float, contrast: float, agreement: bool) -> float:
+    """The hand-set rules: calibrated model confidence + acoustic evidence + agreement bonus, 0-100."""
+    combined = 0.4 * shadow + 0.3 * linear + 0.3 * contrast
+    return float(np.clip(base + (combined - 0.35) * 30.0 + (10.0 if agreement else 0.0), 0.0, 100.0))
+
+
+def _rule_reasons(shadow: float, linear: float, contrast: float, agreement: bool, kept: bool) -> list[str]:
+    if kept:
+        out = [p for ok, p in ((shadow > 0.35, "dark acoustic shadow behind it"), (linear > 0.3, "long straight edges"),
+                               (contrast > 0.4, "stands out clearly from the seabed"),
+                               (agreement, "detector and segmenter agree")) if ok]
+    else:
+        out = [p for ok, p in ((shadow < 0.15, "no dark acoustic shadow behind it"), (linear < 0.1, "no straight edges"),
+                               (contrast < 0.15, "barely stands out from the seabed")) if ok]
+    return out[:3]
+
+
+def fp_filter_info(params: ScoreParams) -> dict:
+    """Which false-alarm filter scored the candidates (for the report), with the classifier's validation."""
+    from app.processing.fp_classifier import get_classifier
+
+    if not params.fp_filter:
+        return {"method": "off"}
+    clf = get_classifier() if params.fp_method != "rules" else None
+    return {"method": "classifier", **clf.summary()} if clf is not None else {"method": "rules"}
+
+
 def score_detection(gray: np.ndarray, class_name: str, conf: float, threshold: float, box, hazard: bool,
-                    agreement: bool, dropout_rows: set[int], params: ScoreParams) -> dict:
+                    agreement: bool, dropout_rows: set[int], params: ScoreParams, quality: dict | None = None,
+                    source: str = "detector") -> dict:
+    from app.processing.features import FEATURES, candidate_features
+    from app.processing.fp_classifier import SUBTYPE_REASON, get_classifier, rule_subtype
+
     h, w = gray.shape
     base = calibrated_score(conf, threshold)
     x1, y1, x2, y2 = _clip_box(box, h, w)
     evidence = {"calibrated_threshold": round(threshold, 3), "model_confidence": round(conf, 4)}
     reasons: list[str] = []
     score = base
+    natural = shadow_outline = None
     if params.fp_filter:
         nadir = params.nadir_col if params.nadir_col is not None else w / 2
-        shadow = shadow_evidence(gray, box, nadir)
-        linear = linearity_evidence(gray, box)
-        contrast = contrast_evidence(gray, box)
-        combined = 0.4 * shadow + 0.3 * linear + 0.3 * contrast
-        score = base + (combined - 0.35) * 30.0 + (10.0 if agreement else 0.0)
+        vec, extras = candidate_features(gray, box, nadir, class_name, conf, threshold, agreement, source, quality)
+        vals = dict(zip(FEATURES, vec))
+        ev = extras["evidence"]
+        shadow_outline = extras["shadow"]
+        shadow, linear, contrast = ev["shadow"], ev["linearity"], ev["contrast"]
+        clf = get_classifier() if params.fp_method != "rules" else None
+        if params.fp_method == "classifier" and clf is None:
+            raise RuntimeError("fp_method=classifier but no trained classifier is installed (models/fp_classifier)")
+        rules = rule_score(base, shadow, linear, contrast, agreement)
+        if clf is not None:
+            pred = clf.predict(vec, rules)
+            p = pred["p_man_made"]
+            score = clf.score(p)
+            nat = p < clf.threshold
+            natural = {"method": "classifier", "p_man_made": round(p, 3),
+                       "p_classifier": round(pred["p_classifier"], 3), "rule_score": round(rules, 1),
+                       "label": pred.get("subtype") if nat else None,
+                       "subtype_probabilities": pred.get("subtype_probs"),
+                       "reasons": clf.reasons(pred["contributions"], towards_natural=nat)}
+            combined = p
+        else:
+            combined = 0.4 * shadow + 0.3 * linear + 0.3 * contrast
+            score = rules
+            kept = score >= params.min_score
+            natural = {"method": "rules", "p_man_made": None, "label": None if kept else rule_subtype(vals),
+                       "subtype_probabilities": None,
+                       "reasons": _rule_reasons(shadow, linear, contrast, agreement, kept)}
         evidence.update(shadow=round(shadow, 3), linearity=round(linear, 3), contrast=round(contrast, 3),
-                        acoustic_evidence=round(combined, 3), model_agreement=agreement)
+                        acoustic_evidence=round(float(combined), 3), model_agreement=agreement,
+                        isolation=ev["isolation"], periodicity=ev["periodicity"],
+                        orientation_coherence=ev["orientation_coherence"], blob_density=ev["blob_density"])
         if not hazard:
             reasons.append("natural_feature")
         if contrast < 0.08:
@@ -148,12 +214,21 @@ def score_detection(gray: np.ndarray, class_name: str, conf: float, threshold: f
             reasons.append("sonar_data_dropout")
         if x2 - x1 < 4 or y2 - y1 < 4:
             reasons.append("too_small")
+        if quality is not None and quality.get("in_water_column"):
+            reasons.append("water_column")     # fish, bubbles, surface echo: above the seabed
     score = float(np.clip(score, 0.0, 100.0))
     if score < params.min_score:
         reasons.append("below_min_score")
-    return {
+        if natural is not None and natural.get("label"):
+            reasons.append(SUBTYPE_REASON[natural["label"]])
+    out = {
         "confidence": round(score, 1),
         "status": "suppressed" if reasons else "confirmed",
         "suppression_reasons": reasons,
         "evidence": evidence,
     }
+    if natural is not None:
+        out["natural"] = natural
+    if shadow_outline is not None:
+        out["shadow"] = shadow_outline
+    return out

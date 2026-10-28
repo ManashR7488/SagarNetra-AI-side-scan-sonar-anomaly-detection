@@ -1,0 +1,32 @@
+{
+ "name": "lee30",
+ "settings": {
+  "despeckle": "lee",
+  "despeckle_strength": 30
+ },
+ "synthetic": {
+  "files": 21,
+  "targets": 88,
+  "tp": 19,
+  "fp": 40,
+  "recall": 0.2159,
+  "precision": 0.322,
+  "f1": 0.2585,
+  "mean_conf_tp": 70.4,
+  "fp_rock": 8,
+  "fp_seabed": 32,
+  "geo_err_median_m": 2.76,
+  "geo_err_p90_m": 10.45
+ },
+ "ai4shipwrecks": {
+  "files": 46,
+  "targets": 159,
+  "tp": 35,
+  "fp": 14,
+  "recall": 0.2201,
+  "precision": 0.7143,
+  "f1": 0.3365,
+  "mean_conf_tp": 73.9
+ },
+ "seconds": 1815.7
+}

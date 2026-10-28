@@ -62,10 +62,10 @@ def load_sonar(upload: UploadFile | None, url: str | None = None, filename: str 
     data = read_upload(upload, "Sonar file") if _has_file(upload) else fetch_url(url, "Sonar file")
     if ext == ".xtf":
         try:
-            gray, track, info = load_xtf(data)
+            gray, track, info, geometry, log = load_xtf(data, with_geometry=True, with_log=True)
         except XTFError as e:
             raise HTTPException(422, str(e))
-        return SonarInput(gray, track, {"filename": name, **info})
+        return SonarInput(gray, track, {"filename": name, **info}, geometry, log)
     try:
         gray = decode_gray(data)
     except ImageDecodeError as e:

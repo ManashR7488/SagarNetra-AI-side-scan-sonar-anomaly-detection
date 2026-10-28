@@ -4,11 +4,16 @@ import { created, ok } from '../utils/response.js';
 
 /** POST /api/scans: upload + analyse + store. Responds when the analysis is finished. */
 export async function createScan(req, res) {
-  const { missionId, name, options } = req.valid.body;
+  const { missionId, name, options, draft } = req.valid.body;
   const scan = await scanService.create({
-    file: req.sonarFile, fileRef: req.sonarRef, metadata: req.metadataFile, missionId, name, options,
+    file: req.sonarFile, fileRef: req.sonarRef, metadata: req.metadataFile, missionId, name, options, draft,
   });
   created(res, scan);
+}
+
+/** POST /api/scans/:id/publish: a draft reviewed in the Noise Filtration tab goes to AI Detection. */
+export async function publishScan(req, res) {
+  ok(res, await scanService.publish(req.valid.params.id, req.valid.body));
 }
 
 export async function reanalyzeScan(req, res) {

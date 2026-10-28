@@ -4,7 +4,22 @@ export const SEVERITIES = ['none', 'medium', 'high', 'critical'];
 export const SEVERITY_RANK = Object.fromEntries(SEVERITIES.map((s, i) => [s, i]));
 export const DETECTION_STATUSES = ['confirmed', 'suppressed'];
 export const SOURCE_MODELS = ['detector', 'segmenter', 'detector+segmenter'];
-export const SUPPRESSION_REASONS = ['natural_feature', 'low_contrast_speckle', 'sonar_data_dropout', 'too_small', 'below_min_score'];
+export const SUPPRESSION_REASONS = [
+  'natural_feature', 'low_contrast_speckle', 'sonar_data_dropout', 'too_small', 'below_min_score',
+  // noise-filtering module: water column and the natural look-alikes named by the false-alarm classifier
+  'water_column', 'rock_cluster', 'sand_ripple', 'natural_shadow', 'seabed_texture',
+  'operator_rejected',                          // rejected by the operator during review
+];
+/** Reasons that depend on the score threshold (they change when the operator moves the threshold). */
+export const SCORE_REASONS = ['below_min_score', 'rock_cluster', 'sand_ripple', 'natural_shadow', 'seabed_texture'];
+export const NATURAL_REASON = { rock: 'rock_cluster', sand_ripple: 'sand_ripple', natural_shadow: 'natural_shadow', seabed_texture: 'seabed_texture' };
+export const NATURAL_LABELS = ['rock', 'sand_ripple', 'natural_shadow', 'seabed_texture'];
+export const FP_METHODS = ['auto', 'rules', 'classifier'];
+export const CLEAN_PROFILES = ['ai', 'analyst'];
+export const STRESS_DISTURBANCES = ['speckle', 'dropouts', 'resolution', 'gain'];
+
+/** Drafts: scans analysed in the Noise Filtration tab and not (yet) sent to AI Detection. Removed after this long. */
+export const DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
 
 // Operator workflow after the AI has spoken.
 export const REVIEW_STATUSES = ['unreviewed', 'verified', 'false_positive', 'cleanup_scheduled', 'cleared'];

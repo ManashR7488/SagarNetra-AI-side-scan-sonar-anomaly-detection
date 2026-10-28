@@ -13,6 +13,7 @@ export function buildFilter(q = {}) {
   const f = {};
   if (q.missionId) f.mission = oid(q.missionId);
   if (q.scanId) f.scan = oid(q.scanId);
+  else if (!q.includeDrafts) f.draft = { $ne: true };        // drafts: only when asking for that scan
   if (q.className?.length) f.className = { $in: q.className };
   if (q.severity?.length) f.severity = { $in: q.severity };
   if (q.status) f.status = q.status;
@@ -63,13 +64,24 @@ const CSV_COLUMNS = [
   { header: 'across_track_extent_m', value: (d) => d.dimensions?.acrossTrackM },
   { header: 'along_track_extent_m', value: (d) => d.dimensions?.alongTrackM },
   { header: 'area_m2', value: (d) => d.dimensions?.areaM2 },
+  { header: 'height_m', value: (d) => d.dimensions?.heightM },
+  { header: 'height_method', value: (d) => d.dimensions?.heightMethod },
+  { header: 'least_depth_m', value: (d) => d.dimensions?.leastDepthM },
   { header: 'source_model', value: (d) => d.sourceModel },
   { header: 'model_confidence', value: (d) => d.evidence?.modelConfidence },
   { header: 'shadow', value: (d) => d.evidence?.shadow },
   { header: 'linearity', value: (d) => d.evidence?.linearity },
   { header: 'contrast', value: (d) => d.evidence?.contrast },
   { header: 'suppression_reasons', value: (d) => d.suppressionReasons },
+  { header: 'natural_label', value: (d) => d.natural?.label },
+  { header: 'p_man_made', value: (d) => d.natural?.pManMade },
+  { header: 'evidence_reasons', value: (d) => d.natural?.reasons?.join('; ') },
+  { header: 'shadow_found', value: (d) => d.shadow?.found },
+  { header: 'shadow_length_ratio', value: (d) => d.shadow?.lengthRatio },
+  { header: 'data_quality_score', value: (d) => d.quality?.score },
+  { header: 'data_quality_flags', value: (d) => d.quality?.flags },
   { header: 'review_status', value: (d) => d.review?.status },
+  { header: 'ai_status', value: (d) => d.review?.aiStatus },
   { header: 'review_notes', value: (d) => d.review?.notes },
   { header: 'detected_at', value: (d) => d.createdAt },
 ];
@@ -94,12 +106,13 @@ export const detectionService = {
     return d;
   },
 
-  async updateReview(id, { status, notes, reviewedBy }) {
+  async updateReview(id, { status, notes, reviewedBy, origin }) {
     const update = {
       'review.status': status,
       'review.reviewedAt': new Date(),
       ...(notes !== undefined && { 'review.notes': notes }),
       ...(reviewedBy !== undefined && { 'review.reviewedBy': reviewedBy }),
+      ...(origin !== undefined && { 'review.origin': origin }),
     };
     const d = await Detection.findByIdAndUpdate(id, update, { returnDocument: 'after', runValidators: true });
     if (!d) throw ApiError.notFound('Detection');

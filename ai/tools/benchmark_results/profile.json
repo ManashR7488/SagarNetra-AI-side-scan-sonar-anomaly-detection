@@ -1,0 +1,34 @@
+{
+ "name": "profile",
+ "settings": {
+  "repair_dropouts": true,
+  "motion": true,
+  "destripe": true,
+  "gain_across": true
+ },
+ "synthetic": {
+  "files": 21,
+  "targets": 88,
+  "tp": 23,
+  "fp": 44,
+  "recall": 0.2614,
+  "precision": 0.3433,
+  "f1": 0.2968,
+  "mean_conf_tp": 71.9,
+  "fp_rock": 8,
+  "fp_seabed": 36,
+  "geo_err_median_m": 2.12,
+  "geo_err_p90_m": 12.85
+ },
+ "ai4shipwrecks": {
+  "files": 46,
+  "targets": 159,
+  "tp": 43,
+  "fp": 22,
+  "recall": 0.2704,
+  "precision": 0.6615,
+  "f1": 0.3839,
+  "mean_conf_tp": 72.3
+ },
+ "seconds": 719.8
+}

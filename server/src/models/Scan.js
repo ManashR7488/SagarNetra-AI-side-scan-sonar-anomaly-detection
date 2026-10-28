@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { DENOISE_METHODS, SCAN_STATUSES, SEVERITIES } from '../utils/constants.js';
+import { DENOISE_METHODS, FP_METHODS, SCAN_STATUSES, SEVERITIES } from '../utils/constants.js';
 import { lineStringSchema, pointSchema, storedFileSchema, toJSONOptions } from './shared.js';
 
 const { Schema } = mongoose;
@@ -12,6 +12,13 @@ const scanSchema = new Schema(
     status: { type: String, enum: SCAN_STATUSES, default: 'processing', index: true },
     error: { message: String, code: String, status: Number },
     warnings: [String],
+    // Noise Filtration tab: analysed for review, not yet sent to AI Detection (hidden from lists, map and stats)
+    draft: { type: Boolean, default: false, index: true },
+    review: {
+      origin: { type: String, enum: ['noise_filtration'] },
+      minScore: Number,                                // threshold chosen while reviewing
+      publishedAt: Date,
+    },
 
     source: {
       filename: { type: String, required: true },
@@ -41,7 +48,9 @@ const scanSchema = new Schema(
       repairDropouts: Boolean,
       shadowGamma: Number,
       fpFilter: Boolean,
+      fpMethod: { type: String, enum: FP_METHODS },
       minScore: Number,
+      cleaning: Schema.Types.Mixed,                    // noise-filtering stage-1 settings (see ai/app/cleaning)
       georef: {                                        // simple georeference supplied by the operator
         latitude: Number,
         longitude: Number,
@@ -90,6 +99,8 @@ const scanSchema = new Schema(
       tiles: Number,
       timings: Schema.Types.Mixed,                     // AI-side timings (ms)
       filters: Schema.Types.Mixed,                     // filter params + speckle metrics before/after
+      cleaning: Schema.Types.Mixed,                    // stage-1 cleaning: settings, frame, noise report
+      falseAlarmFilter: Schema.Types.Mixed,            // rules | classifier (+ version and cross-validated metrics)
       startedAt: Date,
       completedAt: Date,
       durationMs: Number,                              // end-to-end, including uploads
@@ -98,6 +109,39 @@ const scanSchema = new Schema(
     images: {
       annotated: storedFileSchema,
       filtered: storedFileSchema,
+    },
+
+    // 3D seabed model of the survey strip (heightfield + ground-range sonar texture), see ai/app/seabed.
+    seabed: {
+      available: { type: Boolean, default: false },
+      reason: String,
+      kind: { type: String, enum: ['measured', 'relative'] },  // measured = absolute depths from navigation
+      grid: {                                          // rows = along-track s, columns = ground range u (port < 0)
+        nx: Number,
+        nz: Number,
+        cellXM: Number,
+        cellZM: Number,
+        widthM: Number,
+        lengthM: Number,
+      },
+      elevation: {                                     // uint16 little-endian; metres = value * scale + offset
+        file: storedFileSchema,
+        scale: Number,
+        offset: Number,
+        minM: Number,
+        maxM: Number,
+      },
+      texture: storedFileSchema,
+      depth: { minM: Number, maxM: Number },
+      relief: { rmsM: Number, maxAbsM: Number },
+      altitude: { minM: Number, maxM: Number, assumed: Boolean, source: String, checkM: Number },
+      slantRangeCorrected: Boolean,
+      geometry: Schema.Types.Mixed,                    // { sources, nadirColumn, swathM, bottomTrack }
+      coverage: { coveredFraction: Number, dropoutFraction: Number, outsideSwathFraction: Number, nadirZoneM: Number },
+      track: Schema.Types.Mixed,                       // { s, lat, lon, heading, altitude, depth } samples
+      targets: Schema.Types.Mixed,                     // [{ detectionCode, className, status, s, u, heightM, leastDepthM, ... }]
+      methods: Schema.Types.Mixed,
+      assumptions: [String],
     },
   },
   { timestamps: true, toJSON: toJSONOptions(), toObject: { virtuals: true } },

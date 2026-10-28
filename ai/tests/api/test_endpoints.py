@@ -1,5 +1,8 @@
 import csv
 import io
+import json
+
+import pytest
 
 from tests.conftest import SMALL_IMAGE, WRECK_STRIP, make_xtf
 
@@ -31,6 +34,13 @@ def test_analyze_wreck_strip_with_georeference(client):
     assert top["dimensions"]["along_track_m"] > 0
     assert set(top["bbox_pct"]) == {"x", "y", "width", "height"}
     assert j["images"]["annotated"].startswith("data:image/jpeg;base64,")
+    sb = j["seabed"]                                                    # 3D seabed model
+    assert sb["available"] and sb["kind"] == "relative" and sb["texture"].startswith("data:image/jpeg")
+    assert sb["grid"]["width_m"] == pytest.approx(150, rel=0.05) and len(sb["targets"]) == len(j["detections"])
+    assert all("height" in d for d in j["detections"])
+    # the real AI4Shipwrecks strip has a water column: nadir and altitude come from the image
+    assert j["processing"]["bottom_track"]["confidence"] > 0.8 and sb["slant_range_corrected"]
+    assert sb["altitude"]["source"] == "image" and abs(j["georeference"]["nadir_column"] - 864) < 30
 
     aid = j["analysis_id"]
     rows = list(csv.DictReader(io.StringIO(client.get(f"/v1/analyses/{aid}/report.csv").text)))
@@ -75,6 +85,10 @@ def test_analyze_xtf_log(client):
     j = r.json()
     assert j["source"]["format"] == "xtf" and j["georeference"]["source"] == "xtf_ping_headers"
     assert j["georeference"]["start_time"].startswith("2026-09-29T10:00")
+    assert j["seabed"]["available"] and j["seabed"]["slant_range_corrected"] and not j["seabed"]["altitude"]["assumed"]
+    r = client.post("/v1/analyze", files={"file": ("survey.xtf", make_xtf())},
+                    data={"return_images": "false", "return_seabed": "false"})
+    assert "seabed" not in r.json()
 
 
 def test_filter_endpoint(client):
@@ -135,3 +149,83 @@ def test_api_key_protects_inference(client, monkeypatch):
     assert client.post("/v1/filter", files=_upload(SMALL_IMAGE), headers={"X-API-Key": "wrong"}).status_code == 401
     assert client.post("/v1/filter", files=_upload(SMALL_IMAGE), headers={"X-API-Key": "s3cret"}).status_code == 200
     assert client.get("/health").status_code == 200  # monitoring stays open
+
+
+# ---------------------------------------------------------------- noise-filtering module
+
+def test_clean_endpoint_steps_report_and_decisions(client):
+    r = client.post("/v1/clean", files=_upload(WRECK_STRIP), data={"profile": "analyst"})
+    assert r.status_code == 200, r.text
+    j = r.json()
+    ids = [s["id"] for s in j["steps"]]
+    assert ids[0] == "raw" and {"dropouts", "gain", "seabed", "speckle"} <= set(ids)
+    assert j["steps"][0]["image"].startswith("data:image/jpeg;base64,")
+    assert all("image" in s for s in j["steps"] if s["applied"])
+    assert j["final_step"] in ids and j["decisions"] and all(d["why"] for d in j["decisions"])
+    rep = j["report"]
+    assert rep["before"]["enl"] < rep["after"]["enl"]                       # despeckled
+    assert rep["after"]["across_imbalance"] < rep["before"]["across_imbalance"]
+    assert 0 <= rep["quality_before"] < rep["quality_after"] <= 100
+    assert j["frame"]["ground_corrected"] and j["frame"]["geometry_changed"]
+    assert len(r.content) < 4_500_000                                       # fits a serverless response
+    if j["benchmark"]:                                                      # the evidence behind the AI profile
+        steps = {s["step"]: s for s in j["benchmark"]["steps"]}
+        assert "speckle" in steps and "f1" in steps["speckle"]["delta"]["synthetic"]
+
+
+def test_clean_endpoint_manual_settings_and_full_resolution(client):
+    params = json.dumps({"repair_dropouts": False, "motion": False, "despeckle": "median", "despeckle_strength": 40})
+    r = client.post("/v1/clean", files=_upload(SMALL_IMAGE), data={"auto": "false", "params": params, "profile": "ai"})
+    assert r.status_code == 200, r.text
+    j = r.json()
+    assert j["params"]["despeckle"] == "median" and not j["decisions"]
+    assert [s["id"] for s in j["steps"] if s["applied"]] == ["raw", "speckle"]
+    img = client.post("/v1/clean?output=jpeg&step=speckle", files=_upload(SMALL_IMAGE), data={"auto": "false", "params": params})
+    assert img.headers["content-type"] == "image/jpeg" and img.headers["x-image-size"] == "640x640"
+    assert client.post("/v1/clean?output=jpeg&step=motion", files=_upload(SMALL_IMAGE), data={"auto": "false", "params": params}).status_code == 404
+    assert client.post("/v1/clean", files=_upload(SMALL_IMAGE), data={"params": '{"despeckel": "lee"}'}).status_code == 422
+    assert client.post("/v1/clean", files=_upload(SMALL_IMAGE), data={"profile": "pretty"}).status_code == 422
+
+
+def test_clean_xtf_reports_motion(client):
+    r = client.post("/v1/clean", files={"file": ("survey.xtf", make_xtf())}, data={"profile": "analyst"})
+    assert r.status_code == 200, r.text
+    j = r.json()
+    assert j["source"]["format"] == "xtf" and j["diagnosis"]["xtf_navigation"]
+    motion = next(s for s in j["steps"] if s["id"] == "motion")
+    assert motion["applied"] and motion["info"]["track_length_m"] > 30
+    assert j["frame"]["motion_compensated"] and "series" in j["report"]["motion"]
+
+
+def test_analyze_with_cleaning(client):
+    cleaning = json.dumps({"motion": True, "slant_correct": True, "repair_dropouts": True})
+    r = client.post("/v1/analyze", files={"file": ("survey.xtf", make_xtf())},
+                    data={"cleaning": cleaning, "return_images": "false", "fp_method": "rules"})
+    assert r.status_code == 200, r.text
+    j = r.json()
+    c = j["processing"]["cleaning"]
+    assert c["params"]["slant_correct"] and c["frame"]["ground_corrected"]
+    assert "series" not in c["report"]["before"]                           # kept compact for storage
+    assert j["source"]["original_width"] == 1024 and j["georeference"]["available"]
+    assert not j["georeference"]["slant_range_corrected"]                   # already ground range
+    for d in j["detections"]:
+        assert "quality" in d and "score" in d["quality"]
+        assert d["natural"]["method"] == "rules" and "shadow" in d
+    bad = client.post("/v1/analyze", files=_upload(SMALL_IMAGE), data={"cleaning": '{"nope": 1}', "return_images": "false"})
+    assert bad.status_code == 400
+
+
+def test_stress_test_endpoint(client):
+    r = client.post("/v1/stress-test", files=_upload(SMALL_IMAGE),
+                    data={"disturbance": "speckle", "levels": 2, "max_side": 256, "models": "detector"})
+    assert r.status_code == 200, r.text
+    j = r.json()
+    assert j["region"]["width"] <= 256 and len(j["series"]) == 2
+    s = j["series"][0]
+    assert set(s["results"]) == {"raw", "auto", "full"} and s["thumbs"]["disturbed"].startswith("data:image/jpeg")
+    assert j["severity_scale"][0] == "8 looks"
+    # every pipeline is measured against its own undisturbed detections
+    own = j["baseline"]["pipelines"]
+    assert set(own) == {"raw", "auto", "full"} and own["raw"]["detections"] == j["baseline"]["detections"]
+    assert client.post("/v1/stress-test", files=_upload(SMALL_IMAGE), data={"disturbance": "quake"}).status_code == 422
+    assert client.post("/v1/stress-test", files=_upload(SMALL_IMAGE), data={"disturbance": "gain", "roi": "1,2"}).status_code == 422

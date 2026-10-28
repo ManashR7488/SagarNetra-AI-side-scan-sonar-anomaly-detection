@@ -1,0 +1,732 @@
+{
+ "version": "1",
+ "trained": "2026-10-04",
+ "features": [
+  "model_conf",
+  "calibrated",
+  "agreement",
+  "from_segmenter",
+  "class_shipwreck",
+  "class_aircraft_wreck",
+  "class_mine_like_object",
+  "class_debris",
+  "class_human_body",
+  "class_marine_life",
+  "log_width",
+  "log_height",
+  "aspect",
+  "range_pos",
+  "at_edge",
+  "contrast",
+  "linearity",
+  "shadow_evidence",
+  "texture_ratio",
+  "brightness_ratio",
+  "dark_box",
+  "shadow_found",
+  "shadow_length_ratio",
+  "shadow_area_ratio",
+  "shadow_solidity",
+  "shadow_sharpness",
+  "shadow_darkness",
+  "shadow_pieces",
+  "isolation",
+  "periodicity",
+  "orientation_coherence",
+  "blob_density",
+  "blob_similarity",
+  "in_water_column",
+  "near_nadir",
+  "repaired_pings",
+  "motion_flagged",
+  "interference"
+ ],
+ "mean": [
+  0.3676047103086929,
+  0.5529051058907923,
+  0.611659192825112,
+  0.8188340807174888,
+  0.7928251121076233,
+  0.08878923766816144,
+  0.04304932735426009,
+  0.05201793721973094,
+  0.023318385650224215,
+  0.0,
+  5.054453485213645,
+  5.3912342693753015,
+  0.8083110381998418,
+  0.5077206496484243,
+  0.33721973094170404,
+  0.43605771675695637,
+  0.6949872400864391,
+  0.14203337323864054,
+  0.186051857460403,
+  -0.020337377184092623,
+  0.12825112107623318,
+  0.9228699551569507,
+  0.5470484304932737,
+  0.2426107623318386,
+  0.63361793721973,
+  0.31664484304932755,
+  0.6590358744394615,
+  2.729252423664964,
+  0.26237274986389325,
+  5.0846713690262435,
+  0.4726263485776053,
+  1.5632442705643594,
+  0.7598086782635061,
+  0.045739910313901344,
+  0.09147982062780269,
+  0.0017623318385650223,
+  0.002327354260089685,
+  0.15695067264573992
+ ],
+ "std": [
+  0.22754968398610803,
+  0.17680621845625225,
+  0.4873727779201926,
+  0.3851555906033776,
+  0.4052819434901586,
+  0.2844392886759332,
+  0.20296818166551475,
+  0.22206321493470382,
+  0.15091268515566186,
+  1.0,
+  1.0872003709049747,
+  1.5264165584868252,
+  0.6830462609489829,
+  0.2778489277471215,
+  0.4727605990406916,
+  0.32993805872160825,
+  0.36189255745820326,
+  0.29382377027900836,
+  0.5175963145376271,
+  0.422577882990659,
+  0.33436921362309396,
+  0.2667976780737761,
+  0.75391260414908,
+  0.49094052416746276,
+  0.27281925428358733,
+  0.18782595072269861,
+  0.25093756135654893,
+  1.7616815565480024,
+  0.5597446386519339,
+  0.8877372363958677,
+  0.223809487810781,
+  0.7127459440267081,
+  0.25700700824375494,
+  0.20892048946519423,
+  0.28829024098242767,
+  0.011255771531476718,
+  0.02479298171514234,
+  0.3637542563349447
+ ],
+ "binary": {
+  "coef": [
+   0.0688442457165251,
+   0.205167440551901,
+   0.10782156824740871,
+   0.0828192887607413,
+   0.07355668802160227,
+   -0.260636868229347,
+   0.2049540817865562,
+   0.02930162041040874,
+   -0.025059532991472802,
+   0.0,
+   0.047397897063310636,
+   0.02573428950879158,
+   -0.13176836921602889,
+   0.023096098087679706,
+   -0.2707121957373494,
+   0.10617510995152174,
+   -0.12595841621185358,
+   -0.05380342700888182,
+   0.0745283473489603,
+   -0.10820004303773205,
+   -0.1059489660886752,
+   0.06667472295027072,
+   0.10257176005981823,
+   0.0801209936839012,
+   -0.011644682699524936,
+   0.1646195944047326,
+   0.17691143183924346,
+   -0.034624159890514525,
+   -0.10149292862898913,
+   -0.1516330333805234,
+   -0.0659803276478514,
+   -0.1458024278464271,
+   0.0085275362966928,
+   -0.04027941159989674,
+   0.051745990213006125,
+   -0.04205311219400948,
+   -0.055598032966411186,
+   0.01294556013273736
+  ],
+  "intercept": -0.14395594468751666
+ },
+ "blend": {
+  "classifier_weight": 0.5,
+  "rule_score": "app/processing/scoring.py rule_score (0-100)"
+ },
+ "subtype": {
+  "classes": [
+   "rock",
+   "sand_ripple",
+   "natural_shadow",
+   "seabed_texture"
+  ],
+  "coef": [
+   [
+    0.5871023547955279,
+    0.1351966068283142,
+    0.1428031280651152,
+    0.09962442200962449,
+    -0.289640020988386,
+    0.17907125858399545,
+    0.1973137565880742,
+    0.23221064150155044,
+    -0.16673804959095925,
+    0.0,
+    -0.6008888773274452,
+    -0.08551459089800541,
+    -0.4140759154779216,
+    0.33195972158224174,
+    -0.6398482303190168,
+    -0.4357275366941044,
+    -0.3211261379115021,
+    -0.40325237672474007,
+    1.1066998186715802,
+    0.26361782215371166,
+    -0.09931915528121017,
+    -0.19590864449127424,
+    0.41514603590479804,
+    1.0061027294229523,
+    -0.12688232926329432,
+    0.13179244635274603,
+    0.26667579916379985,
+    0.7628412012688052,
+    -0.14438549471761478,
+    -0.24460825692870292,
+    -0.08811981570713791,
+    -0.29336205438134066,
+    0.5169671872374054,
+    0.006249898787007587,
+    0.2257948156819314,
+    0.13025468788307082,
+    -0.4494039330803276,
+    0.31081331123891226
+   ],
+   [
+    -0.08818164904399095,
+    -0.12807887313753522,
+    0.05433316197056068,
+    -0.5158942655018204,
+    0.10335063114932715,
+    0.15684866893563437,
+    -0.19846905780883795,
+    -0.26217983509462983,
+    0.07953825992267118,
+    0.0,
+    0.2799158123450097,
+    0.09974464392912961,
+    0.35473813188328535,
+    -0.4519740520741594,
+    0.33710881474905474,
+    0.5885018059399688,
+    0.1964093889016799,
+    0.14139849706892207,
+    -0.7962972415773121,
+    0.47306887468224446,
+    -0.9510650358205333,
+    -0.10251278904954822,
+    0.3652864746316853,
+    -0.3091087083706494,
+    0.4295878531342895,
+    -0.6282648491918906,
+    -0.016484937144031767,
+    -0.36516738246939245,
+    0.09399974438975635,
+    0.14276953185625868,
+    -0.3855451304598998,
+    0.3342217093534716,
+    -0.23242212238277757,
+    0.004107785312051089,
+    0.09127595629435105,
+    -0.040680064412171694,
+    0.23107449096444987,
+    -0.2015683173894947
+   ],
+   [
+    -0.12247517033842793,
+    -0.15948912113251446,
+    -0.20397750292755226,
+    -0.10879699823445538,
+    0.1978763393075728,
+    -0.03414328694959876,
+    0.07596456688360284,
+    -0.3588364375747043,
+    -0.04120284622656853,
+    0.0,
+    -0.07594618309842524,
+    0.15655144772435,
+    -0.05069315104871853,
+    -0.4610367847748856,
+    0.16969602437839962,
+    -0.01252793143551817,
+    -0.18607765213061037,
+    0.35121775614026934,
+    -0.268169942929681,
+    -0.6718387284906037,
+    1.518187032916379,
+    0.1853607690203359,
+    0.195575364587923,
+    -0.012796902741395255,
+    -0.07650394298137506,
+    -0.3154259123262454,
+    0.0746228687949101,
+    -0.03416699171060429,
+    0.09614433312272085,
+    -0.1465323828810575,
+    0.16177210117035734,
+    -0.04785553790990176,
+    -0.07686406369738721,
+    -0.0011644875571949623,
+    -0.02460361683660018,
+    0.3283849025700798,
+    -0.016565477153669298,
+    0.005826469796750115
+   ],
+   [
+    -0.376445535413108,
+    0.15237138744173567,
+    0.006841212891875764,
+    0.525066841726651,
+    -0.011586949468513902,
+    -0.3017766405700298,
+    -0.07480926566283845,
+    0.3888056311677841,
+    0.12840263589485595,
+    0.0,
+    0.3969192480808623,
+    -0.17078150075547688,
+    0.11003093464335621,
+    0.5810511152668045,
+    0.1330433911915633,
+    -0.1402463378103474,
+    0.31079440114043344,
+    -0.08936387648445028,
+    -0.04223263416458794,
+    -0.06484796834535167,
+    -0.46780284181463716,
+    0.11306066452048727,
+    -0.9760078751244065,
+    -0.6841971183109056,
+    -0.22620158088962072,
+    0.8118983151653909,
+    -0.3248137308146764,
+    -0.36350682708880805,
+    -0.04575858279486257,
+    0.24837110795350237,
+    0.31189284499668135,
+    0.006995882937770676,
+    -0.20768100115724045,
+    -0.009193196541863971,
+    -0.2924671551396821,
+    -0.41795952604097875,
+    0.23489491926954734,
+    -0.11507146364616747
+   ]
+  ],
+  "intercept": [
+   2.48674979325494,
+   0.6035728914630453,
+   -2.3668371691012564,
+   -0.723485515616728
+  ],
+  "counts": {
+   "rock": 198,
+   "sand_ripple": 111,
+   "natural_shadow": 58,
+   "seabed_texture": 59
+  },
+  "cv_accuracy": 0.7864,
+  "cv_recall": {
+   "rock": 0.8384,
+   "sand_ripple": 0.7387,
+   "natural_shadow": 0.931,
+   "seabed_texture": 0.5593
+  },
+  "majority_baseline": 0.4648
+ },
+ "decision_threshold": 0.46,
+ "metrics": {
+  "classifier": {
+   "auc": 0.6851,
+   "average_precision": 0.5506,
+   "precision": 0.4618,
+   "recall": 0.8254,
+   "f1": 0.5923,
+   "false_alarms_rejected_at_95pct_recall": 0.1621
+  },
+  "classifier_alone": {
+   "auc": 0.7202,
+   "average_precision": 0.576,
+   "precision": 0.475,
+   "recall": 0.8397,
+   "f1": 0.6067,
+   "false_alarms_rejected_at_95pct_recall": 0.2052
+  },
+  "rules_baseline": {
+   "auc": 0.5901,
+   "average_precision": 0.4252,
+   "precision": 0.4237,
+   "recall": 0.8038,
+   "f1": 0.5549,
+   "false_alarms_rejected_at_95pct_recall": 0.0732
+  },
+  "decision_threshold": 0.46,
+  "classifier_weight": 0.5,
+  "regularisation_C": 0.01,
+  "mean_dataset_ap_by_C": {
+   "0.003": 0.5883,
+   "0.01": 0.595,
+   "0.03": 0.5897,
+   "0.1": 0.585,
+   "0.3": 0.5794,
+   "1.0": 0.577
+  },
+  "validation": "grouped 5-fold cross-validation (groups: synthetic survey areas, AI4Shipwrecks wreck sites)",
+  "by_dataset": {
+   "ai4shipwrecks": {
+    "classifier": {
+     "auc": 0.7299,
+     "average_precision": 0.7292,
+     "precision": 0.5694,
+     "recall": 0.8,
+     "f1": 0.6653,
+     "false_alarms_rejected_at_95pct_recall": 0.1429
+    },
+    "classifier_alone": {
+     "auc": 0.6864,
+     "average_precision": 0.6979,
+     "precision": 0.5443,
+     "recall": 0.8683,
+     "f1": 0.6692,
+     "false_alarms_rejected_at_95pct_recall": 0.2054
+    },
+    "rules_baseline": {
+     "auc": 0.7219,
+     "average_precision": 0.7117,
+     "precision": 0.564,
+     "recall": 0.7951,
+     "f1": 0.6599,
+     "false_alarms_rejected_at_95pct_recall": 0.0848
+    },
+    "candidates": 429,
+    "man_made": 205
+   },
+   "ai4shipwrecks/ai": {
+    "classifier": {
+     "auc": 0.7376,
+     "average_precision": 0.7653,
+     "precision": 0.5827,
+     "recall": 0.7864,
+     "f1": 0.6694,
+     "false_alarms_rejected_at_95pct_recall": 0.2019
+    },
+    "classifier_alone": {
+     "auc": 0.7125,
+     "average_precision": 0.7357,
+     "precision": 0.5696,
+     "recall": 0.8738,
+     "f1": 0.6897,
+     "false_alarms_rejected_at_95pct_recall": 0.2019
+    },
+    "rules_baseline": {
+     "auc": 0.7166,
+     "average_precision": 0.7163,
+     "precision": 0.5745,
+     "recall": 0.7864,
+     "f1": 0.6639,
+     "false_alarms_rejected_at_95pct_recall": 0.125
+    },
+    "candidates": 207,
+    "man_made": 103
+   },
+   "ai4shipwrecks/raw": {
+    "classifier": {
+     "auc": 0.721,
+     "average_precision": 0.7025,
+     "precision": 0.557,
+     "recall": 0.8137,
+     "f1": 0.6614,
+     "false_alarms_rejected_at_95pct_recall": 0.1167
+    },
+    "classifier_alone": {
+     "auc": 0.6613,
+     "average_precision": 0.665,
+     "precision": 0.5207,
+     "recall": 0.8627,
+     "f1": 0.6494,
+     "false_alarms_rejected_at_95pct_recall": 0.2083
+    },
+    "rules_baseline": {
+     "auc": 0.7266,
+     "average_precision": 0.7121,
+     "precision": 0.5541,
+     "recall": 0.8039,
+     "f1": 0.656,
+     "false_alarms_rejected_at_95pct_recall": 0.05
+    },
+    "candidates": 222,
+    "man_made": 102
+   },
+   "synthetic": {
+    "classifier": {
+     "auc": 0.6648,
+     "average_precision": 0.4607,
+     "precision": 0.3943,
+     "recall": 0.8498,
+     "f1": 0.5387,
+     "false_alarms_rejected_at_95pct_recall": 0.1268
+    },
+    "classifier_alone": {
+     "auc": 0.7338,
+     "average_precision": 0.5192,
+     "precision": 0.4199,
+     "recall": 0.8122,
+     "f1": 0.5536,
+     "false_alarms_rejected_at_95pct_recall": 0.1586
+    },
+    "rules_baseline": {
+     "auc": 0.522,
+     "average_precision": 0.3148,
+     "precision": 0.3433,
+     "recall": 0.8122,
+     "f1": 0.4826,
+     "false_alarms_rejected_at_95pct_recall": 0.1438
+    },
+    "candidates": 686,
+    "man_made": 213
+   },
+   "synthetic/ai": {
+    "classifier": {
+     "auc": 0.6642,
+     "average_precision": 0.478,
+     "precision": 0.3937,
+     "recall": 0.87,
+     "f1": 0.5421,
+     "false_alarms_rejected_at_95pct_recall": 0.1546
+    },
+    "classifier_alone": {
+     "auc": 0.7436,
+     "average_precision": 0.5306,
+     "precision": 0.4286,
+     "recall": 0.81,
+     "f1": 0.5606,
+     "false_alarms_rejected_at_95pct_recall": 0.256
+    },
+    "rules_baseline": {
+     "auc": 0.4852,
+     "average_precision": 0.3199,
+     "precision": 0.3443,
+     "recall": 0.84,
+     "f1": 0.4884,
+     "false_alarms_rejected_at_95pct_recall": 0.1111
+    },
+    "candidates": 307,
+    "man_made": 100
+   },
+   "synthetic/raw": {
+    "classifier": {
+     "auc": 0.6655,
+     "average_precision": 0.4481,
+     "precision": 0.395,
+     "recall": 0.8319,
+     "f1": 0.5356,
+     "false_alarms_rejected_at_95pct_recall": 0.1128
+    },
+    "classifier_alone": {
+     "auc": 0.7199,
+     "average_precision": 0.5108,
+     "precision": 0.4126,
+     "recall": 0.8142,
+     "f1": 0.5476,
+     "false_alarms_rejected_at_95pct_recall": 0.0827
+    },
+    "rules_baseline": {
+     "auc": 0.5509,
+     "average_precision": 0.3147,
+     "precision": 0.3423,
+     "recall": 0.7876,
+     "f1": 0.4772,
+     "false_alarms_rejected_at_95pct_recall": 0.1654
+    },
+    "candidates": 379,
+    "man_made": 113
+   }
+  }
+ },
+ "training": {
+  "candidates": 1115,
+  "man_made": 418,
+  "natural": 697,
+  "groups": [
+   "AND",
+   "CHN",
+   "GOA",
+   "KOC",
+   "MAN",
+   "MUM",
+   "VIZ",
+   "ai4s/Artificial_Reef",
+   "ai4s/Barge_No_1",
+   "ai4s/Corsair",
+   "ai4s/Corsican",
+   "ai4s/Exploratory_A",
+   "ai4s/Exploratory_B",
+   "ai4s/Exploratory_C",
+   "ai4s/Haltiner_Barge",
+   "ai4s/James_Davidson",
+   "ai4s/Lucinda_van_Valkenburg",
+   "ai4s/Mischelley_Reef",
+   "ai4s/Monohansett",
+   "ai4s/Monrovia",
+   "ai4s/Shamrock",
+   "ai4s/Viator",
+   "ai4s/WH_Gilbert",
+   "ai4s/WP_Thew"
+  ],
+  "datasets": "synthetic XTF campaign (raw + AI-profile cleaned) and AI4Shipwrecks test + terrain"
+ },
+ "phrases": {
+  "model_conf": [
+   "weak detector response",
+   "strong detector response"
+  ],
+  "calibrated": [
+   "below the detector's calibrated threshold",
+   "well above the detector's calibrated threshold"
+  ],
+  "agreement": [
+   "only one model found it",
+   "detector and segmenter agree"
+  ],
+  "from_segmenter": [
+   "",
+   "outlined by the wreck segmenter"
+  ],
+  "log_width": [
+   "very narrow",
+   "large across-track extent"
+  ],
+  "log_height": [
+   "very short along-track",
+   "long along-track"
+  ],
+  "aspect": [
+   "compact blob",
+   "elongated shape"
+  ],
+  "range_pos": [
+   "near the nadir",
+   "at far range"
+  ],
+  "at_edge": [
+   "cut by the image edge",
+   ""
+  ],
+  "contrast": [
+   "barely stands out from the seabed",
+   "stands out clearly from the seabed"
+  ],
+  "linearity": [
+   "no straight edges",
+   "long straight edges"
+  ],
+  "shadow_evidence": [
+   "no dark acoustic shadow behind it",
+   "dark acoustic shadow behind it"
+  ],
+  "texture_ratio": [
+   "same texture as the surrounding seabed",
+   "texture unlike the surrounding seabed"
+  ],
+  "brightness_ratio": [
+   "no brighter than the seabed",
+   "bright echo"
+  ],
+  "dark_box": [
+   "a dark patch, not an echo",
+   ""
+  ],
+  "shadow_found": [
+   "no shadow attached to it",
+   "shadow attached to it"
+  ],
+  "shadow_length_ratio": [
+   "short or no shadow",
+   "long shadow: stands well above the seabed"
+  ],
+  "shadow_area_ratio": [
+   "small shadow",
+   "substantial shadow"
+  ],
+  "shadow_solidity": [
+   "ragged, irregular shadow",
+   "compact, regular shadow"
+  ],
+  "shadow_sharpness": [
+   "blurred shadow edges",
+   "sharp shadow edges"
+  ],
+  "shadow_darkness": [
+   "shadow not dark",
+   "deep shadow"
+  ],
+  "shadow_pieces": [
+   "many separate shadows around (rocky ground)",
+   ""
+  ],
+  "isolation": [
+   "the pattern continues outside the box (part of the seabed)",
+   "isolated object on plain seabed"
+  ],
+  "periodicity": [
+   "periodic ripple pattern",
+   ""
+  ],
+  "orientation_coherence": [
+   "uniformly oriented texture (bedforms)",
+   ""
+  ],
+  "blob_density": [
+   "many similar bright blobs nearby (rock cluster)",
+   ""
+  ],
+  "blob_similarity": [
+   "looks like its neighbours (natural cluster)",
+   "unlike anything around it"
+  ],
+  "in_water_column": [
+   "in the water column (above the seabed)",
+   ""
+  ],
+  "near_nadir": [
+   "near the nadir, where geometry is poor",
+   ""
+  ],
+  "repaired_pings": [
+   "on interpolated (repaired) pings",
+   ""
+  ],
+  "motion_flagged": [
+   "on pings with excessive vehicle motion",
+   ""
+  ],
+  "interference": [
+   "on pings hit by interference",
+   ""
+  ]
+ }
+}
